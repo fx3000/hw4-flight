@@ -6,6 +6,10 @@ using System.Net.Http;
 using System.Web.Http;
 using HtmlAgilityPack;
 using SearchFlight.Models;
+using System.Text;
+using System.IO;
+using System.Xml;
+using System.Xml.Linq;
 
 namespace SearchFlight.Controllers
 {
@@ -21,13 +25,79 @@ namespace SearchFlight.Controllers
             {             
                 FlightInfo info = new FlightInfo();
                 List<string> fee = new List<string>();
+
                 // direction=1 - 1chieu, direction=2 - 2chieu
                 string dic;
+                #region Jet
+                string Url1 = "__EVENTTARGET=" +
+                "&__EVENTARGUMENT=" +
+                "&__VIEWSTATE=/wEPDwUBMGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgEFJ01lbWJlckxvZ2luU2VhcmNoVmlldyRtZW1iZXJfUmVtZW1iZXJtZTxtWS/I2BXFBfalk96y3LBuGXXD" +
+                "&pageToken=" +
+                "&total_price=" +
+                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$RadioButtonMarketStructure=RoundTrip" +
+                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextBoxMarketOrigin1=Hà Nội (HAN)" +
+                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextBoxMarketDestination1=Tp.Hồ Chí Minh (SGN)" +
+                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextboxDepartureDate1=24/12/2012" +
+                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextboxDestinationDate1=18/01/2013" +
+                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$DropDownListCurrency=VND" +
+                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextBoxMarketOrigin2=Tp.Hồ Chí Minh (SGN)" +
+                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextBoxMarketDestination2=Hà Nội (HAN)" +
+                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextboxDepartureDate2=18/01/2013" +
+                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextboxDestinationDate2=" +
+                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextBoxMarketOrigin3=" +
+                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextBoxMarketDestination3=" +
+                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextboxDepartureDate3=25/12/2012" +
+                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextboxDestinationDate3=" +
+                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextBoxMarketOrigin4=" +
+                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextBoxMarketDestination4=" +
+                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextboxDepartureDate4=01/01/2013" +
+                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextboxDestinationDate4=" +
+                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextBoxMarketOrigin5=" +
+                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextBoxMarketDestination5=" +
+                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextboxDepartureDate5=08/01/2013" +
+                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextboxDestinationDate5=" +
+                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextBoxMarketOrigin6=" +
+                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextBoxMarketDestination6=" +
+                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextboxDepartureDate6=15/01/2013" +
+                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextboxDestinationDate6=" +
+                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$DropDownListPassengerType_ADT=1" +
+                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$DropDownListPassengerType_CHD=0" +
+                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$DropDownListPassengerType_INFANT=0" +
+                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$ButtonSubmit=";
+
+
+                WebRequest request = WebRequest.Create("http://booknow.jetstar.com/Search.aspx");
+                request.Method = "POST";
+                string data = Url1;
+                byte[] byteArray = Encoding.UTF8.GetBytes(data);
+                request.ContentLength = byteArray.Length;
+                request.ContentType = "application/x-www-form-urlencoded";
+                Stream dataStream = request.GetRequestStream();
+                dataStream.Write(byteArray, 0, byteArray.Length);
+                dataStream.Close();
+                WebResponse response = request.GetResponse();
+                dataStream = response.GetResponseStream();
+                XmlTextReader reader = new XmlTextReader(dataStream);
+                try
+                {
+                    //Process the XML to display on the form
+                    
+                }
+                catch (Exception ex)
+                {
+
+                }
+
+
+
+
+                #endregion
+                #region VN Airlines
                 if (direction == 1)
                     dic = "onewaytravel";
                 else
                     dic = "returntravel";
-                #region VN Airlines
+                
                 string Url = "https://cat.sabresonicweb.com/SSWVN/meridia?language=vi&posid=B3QE&page=requestAirMessage_air&action=airRequest&realrequestAir=realRequestAir&actionType=nonFlex&classService=CoachClass&currency=VND&"
                 + "depTime=0600"
                 + "&retTime=0600"
@@ -134,6 +204,7 @@ namespace SearchFlight.Controllers
                                 break;
                             }
                         }
+                        info.Hang = "VietName Airlines";
                         list.Add(info);
                         
                         info = new FlightInfo();
@@ -142,44 +213,7 @@ namespace SearchFlight.Controllers
                     }
 
                 }
-                #endregion
-                #region Jet
-                Url = "http://booknow.jetstar.com/Search.aspx?__EVENTTARGET=" +
-                "&__EVENTARGUMENT=" +
-                "&__VIEWSTATE=/wEPDwUBMGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgEFJ01lbWJlckxvZ2luU2VhcmNoVmlldyRtZW1iZXJfUmVtZW1iZXJtZTxtWS/I2BXFBfalk96y3LBuGXXD" +
-                "&pageToken=" +
-                "&total_price=" +
-                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$RadioButtonMarketStructure=RoundTrip" +
-                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextBoxMarketOrigin1=Hà Nội (HAN)" +
-                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextBoxMarketDestination1=Tp.Hồ Chí Minh (SGN)" +
-                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextboxDepartureDate1=24/12/2012" +
-                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextboxDestinationDate1=18/01/2013" +
-                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$DropDownListCurrency=VND" +
-                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextBoxMarketOrigin2=Tp.Hồ Chí Minh (SGN)" +
-                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextBoxMarketDestination2=Hà Nội (HAN)" +
-                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextboxDepartureDate2=18/01/2013" +
-                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextboxDestinationDate2=" +
-                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextBoxMarketOrigin3=" +
-                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextBoxMarketDestination3=" +
-                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextboxDepartureDate3=25/12/2012" +
-                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextboxDestinationDate3=" +
-                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextBoxMarketOrigin4=" +
-                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextBoxMarketDestination4=" +
-                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextboxDepartureDate4=01/01/2013" +
-                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextboxDestinationDate4=" +
-                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextBoxMarketOrigin5=" +
-                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextBoxMarketDestination5=" +
-                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextboxDepartureDate5=08/01/2013" +
-                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextboxDestinationDate5=" +
-                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextBoxMarketOrigin6=" +
-                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextBoxMarketDestination6=" +
-                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextboxDepartureDate6=15/01/2013" +
-                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextboxDestinationDate6=" +
-                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$DropDownListPassengerType_ADT=1" +
-                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$DropDownListPassengerType_CHD=0" +
-                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$DropDownListPassengerType_INFANT=0" +
-                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$ButtonSubmit=";
-                #endregion
+                #endregion               
 
                 #region select flight
                 for (int b = 0; b < list.Count; b++)

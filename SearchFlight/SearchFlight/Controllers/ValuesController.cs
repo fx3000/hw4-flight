@@ -21,7 +21,6 @@ namespace SearchFlight.Controllers
             {             
                 FlightInfo info = new FlightInfo();
                 List<string> fee = new List<string>();
-                List<string> stt = new List<string>();
                 // direction=1 - 1chieu, direction=2 - 2chieu
                 string dic;
                 if (direction == 1)
@@ -55,11 +54,10 @@ namespace SearchFlight.Controllers
                     {
                         string xx = temp.XPath;
                         HtmlNode a = temp.SelectSingleNode(xx + "/div[@class='hoverTaxes']/table[1]/tr[4]/td[2]");
-                        HtmlNode seat = temp.SelectSingleNode(xx + "/div[@class='matrix_cal_seatsRemaining_text1']");
                         if (a == null)
                         {
                             fee.Add("Không Có");
-                            stt.Add("");
+                            
                         }
                         else
                         {
@@ -69,24 +67,7 @@ namespace SearchFlight.Controllers
                             t = t.Replace("\t", "");
                             t = t.Replace(" ", "");
                             fee.Add(t);
-                            if (stt.Count == 32)
-                            {
-                                int aaa ;
-                            }
-                            if (seat == null)
-                            {
-                                stt.Add("");
-                            }
-                            else
-                            {
-                                t = seat.InnerText;
-                                t = t.Replace("\r", "");
-                                t = t.Replace("\n", "");
-                                t = t.Replace("\t", "");
-                                t = t.Replace(" ", "");
-                                stt.Add(t);
-                            }
-                            
+                                                   
                         }
                             count++;                        
                     }
@@ -95,7 +76,6 @@ namespace SearchFlight.Controllers
                         for (int j = 0; j < 5 - count; j++)
                         {
                             fee.Add("Không Có");
-                            stt.Add("");
                         }
                         count = 0;
                     }
@@ -144,31 +124,16 @@ namespace SearchFlight.Controllers
                     {
                         #region
                         info.Image = "https://cat.sabresonicweb.com/SSWVN/application/images/B3QE/airplane.gif";
-                        HtmlNode temp = link1.SelectSingleNode(Xpath+"/div[1]/span[3]/span[1]");
-                        t = temp.InnerText;
-                        t = t.Remove(2, 6);
-                        t = t.Replace(';', '-');
-                        info.MaChuyenBay = t;
-                        temp = link1.SelectSingleNode(Xpath + "/div[1]/span[4]");
-                        t = temp.InnerText;
-                        t = t.Replace("\r", "");
-                        t = t.Replace("\n", "");
-                        t = t.Replace("\t", "");
-                        t = t.Replace(" ", "");
-                        info.LoaiMayBay = t;
                         #endregion
-                        
-                        info.ThuongGia=fee[count*5+0];
-                        info.PTLinhHoat = fee[count * 5 + 1];
-                        info.TKLinhHoat = fee[count * 5 + 2];
-                        info.TietKiem = fee[count * 5 + 3];
-                        info.SieuTK = fee[count * 5 + 4];
 
-                        info.sttThuongGia = stt[count * 5 + 0];
-                        info.sttPTLinhHoat = stt[count * 5 + 1];
-                        info.sttTKLinhHoat = stt[count * 5 + 2];
-                        info.sttTietKiem = stt[count * 5 + 3];
-                        info.sttSieuTK = stt[count * 5 + 4];
+                        for (int flag = count * 5 + 4; flag >= count * 5; flag--)
+                        {
+                            if (fee[flag] != "Không Có")
+                            {
+                                info.GiaTien = fee[flag];
+                                break;
+                            }
+                        }
                         list.Add(info);
                         
                         info = new FlightInfo();
@@ -187,7 +152,7 @@ namespace SearchFlight.Controllers
                 "&ControlGroupSearchView$AvailabilitySearchInputSearchView$RadioButtonMarketStructure=RoundTrip" +
                 "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextBoxMarketOrigin1=Hà Nội (HAN)" +
                 "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextBoxMarketDestination1=Tp.Hồ Chí Minh (SGN)" +
-                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextboxDepartureDate1=13/12/2012" +
+                "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextboxDepartureDate1=24/12/2012" +
                 "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextboxDestinationDate1=18/01/2013" +
                 "&ControlGroupSearchView$AvailabilitySearchInputSearchView$DropDownListCurrency=VND" +
                 "&ControlGroupSearchView$AvailabilitySearchInputSearchView$TextBoxMarketOrigin2=Tp.Hồ Chí Minh (SGN)" +

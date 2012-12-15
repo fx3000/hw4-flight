@@ -13,7 +13,7 @@ namespace SearchFlight.Models
         public string TimeTo{get;set;}
         public string Image { get; set; }
         public string GiaTien{get;set;}
-        
+        public string Hang { get; set; }
         
     }
 }

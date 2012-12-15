@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<div class="hentry">
+    <div class="post-title">
+        <a>Tìm kiếm chuyến bay</a>
+    </div>
+    <div class="search-box">
+        
+        <table>
+            <tbody>
+                <tr>
+                    <td><input type="radio"/><span>Một chiều</span></td>
+                    <td><input type="radio"/><span>Khứ hồi</span></td>
+                </tr>
+                <tr>
+                    <td><b>Điểm đi:</b><i>Thành phố hoặc tên sân bay</i></td>
+                    <td><b>Điểm đến:</b><i>Thành phố hoặc tên sân bay</i></td>
+                </tr>
+                <tr>
+                    <td><input type="text"/></td>
+                    <td><input type="text"/></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table style="width: 49% !important; margin-top: -15px; float: left;">
+            <tbody>
+                <tr>
+                    <td>Ngày đi</td>
+                    <td>Ngày đến</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="datestart"/></td>
+                    <td><input type="text" id="dateend"/></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <table style="width: 49% !important; margin-top: 10px; float: left;">
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" checked="checked"/><span>Tìm giá rẻ nhất</span></td>
+                </tr>
+            </tbody>
+        </table>
+    
+        <div class="search-button">
+            <input type="submit" value="Tìm kiếm chuyến bay"/>
+        </div>
+    </div>
+    
+    <div class="search-result">
+        <div class="post-title">
+            <a>Tìm được tất cả 10 chuyến bay</a>
+        </div>
+        
+        @{Html.RenderPartial("Partials/_SearchResultPartial");}
+    </div>
+
+</div>
+
+<script>
+    $(function () {
+        $("#datestart").datepicker();
+        $("#dateend").datepicker();
+    });
+    </script>

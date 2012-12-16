@@ -1,4 +1,14 @@
-﻿
+﻿@using Hw4FlightClient.Models
+
+@model List<FlightInfo>
+
 <div>
-    <h1 class="widget-title">Chuyến 1</h1>
+    <div class="post-title">
+        <a>Tìm được tất cả @Model.Count chuyến bay</a>
+    </div>
+
+    @foreach (FlightInfo flight in Model)
+    {
+        <h1 class="widget-title">@flight.From</h1>
+    }
 </div>

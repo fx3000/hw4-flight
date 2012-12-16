@@ -12,34 +12,40 @@
         <table>
             <tbody>
                 <tr>
-                    <td><input type="radio"/><span>Một chiều</span></td>
-                    <td><input type="radio"/><span>Khứ hồi</span></td>
+                    <td><input type="radio" id="1way"/><span>Một chiều</span></td>
+                    <td><input type="radio" id="2way"/><span>Khứ hồi</span></td>
                 </tr>
                 <tr>
                     <td><b>Điểm đi:</b><i>Thành phố hoặc tên sân bay</i></td>
                     <td><b>Điểm đến:</b><i>Thành phố hoặc tên sân bay</i></td>
                 </tr>
                 <tr>
-                    <td><input type="text"/></td>
-                    <td><input type="text"/></td>
+                    <td><input type="text" id="placestart"/></td>
+                    <td><input type="text" id="placeend"/></td>
                 </tr>
             </tbody>
         </table>
 
-        <table style="width: 49% !important; margin-top: -15px; float: left;">
+        <table style="width: 69% !important; margin-top: -15px; float: left;">
             <tbody>
                 <tr>
                     <td>Ngày đi</td>
                     <td>Ngày đến</td>
                 </tr>
                 <tr>
-                    <td><input type="text" id="datestart"/></td>
-                    <td><input type="text" id="dateend"/></td>
+                    <td>
+                        <input type="text" id="datestart" style="width: 45% !important; float: left;"/>
+                        <input type="text" id="timestart" style="width: 45% !important; float: left;"/>
+                    </td>
+                    <td>
+                        <input type="text" id="dateend" style="width: 45% !important; float: left;"/>
+                        <input type="text" id="timeend" style="width: 45% !important; float: left;"/>
+                    </td>
                 </tr>
             </tbody>
         </table>
         
-        <table style="width: 49% !important; margin-top: 10px; float: left;">
+        <table style="width: 29% !important; margin-top: 10px; float: left;">
             <tbody>
                 <tr>
                     <td><input type="checkbox" checked="checked"/><span>Tìm giá rẻ nhất</span></td>
@@ -48,23 +54,53 @@
         </table>
     
         <div class="search-button">
-            <input type="submit" value="Tìm kiếm chuyến bay"/>
+            <input type="submit" onclick="Search()" value="Tìm kiếm chuyến bay"/>
         </div>
     </div>
     
     <div class="search-result">
-        <div class="post-title">
-            <a>Tìm được tất cả 10 chuyến bay</a>
+        <div id="loadingImage">
+            <img src="../../Contents/Images/loading.gif" />
         </div>
-        
-        @{Html.RenderPartial("Partials/_SearchResultPartial");}
+        <div id="result">
+        </div>
     </div>
 
 </div>
 
 <script>
     $(function () {
-        $("#datestart").datepicker();
-        $("#dateend").datepicker();
+        $("#dateend").datetimepicker({
+            altField: "#timeend",
+            dateFormat: "dd/mm/yy"
+        });
+        $('#datestart').datetimepicker({
+	        altField: "#timestart",
+	        dateFormat: "dd/mm/yy"
+        });
     });
+
+    function Search() {
+        
+        var  timefrom = $('#timestart').val();
+        var timeto = $('#timeend').val();
+        var direction = 1;
+        var from = $('#placestart').val();;
+        var to = $('#placeend').val(); ;
+        var datefrom = $('#datestart').val(); ;
+        var dateto = $('#dateend').val(); ;
+        //alert(timefrom);
+        $.ajax({
+        type: 'POST',
+        url: '/Home/Search?timefrom='+timefrom+'&timeto='+timeto+'&direction='+direction+'&from='+from+'&to='+to+'&datefrom='+datefrom+'&dateto=' + dateto,
+        before: $('#loadingImage').fadeIn("fast"),
+        success: function(result) { 
+            $('#result').html(result);
+            //alert(result);
+            $('#loadingImage').fadeOut("fast");           
+        },
+        complete: function() { $('#loadingImage').fadeOut("fast"); },
+        //timeout: 1000
+    });
+    }
     </script>

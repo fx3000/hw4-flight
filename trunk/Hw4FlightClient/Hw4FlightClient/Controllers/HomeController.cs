@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Hw4FlightClient.Models;
 
 namespace Hw4FlightClient.Controllers
 {
@@ -24,82 +25,14 @@ namespace Hw4FlightClient.Controllers
             return View();
         }
 
-        //
-        // GET: /Home/Create
-
-        public ActionResult Create()
+        public PartialViewResult Search(string timefrom, string timeto, int direction, string from, string to, string datefrom, string dateto)
         {
-            return View();
-        }
+            DateTime dateFrom = Convert.ToDateTime(datefrom);
+            DateTime dateTo = Convert.ToDateTime(dateto);
 
-        //
-        // POST: /Home/Create
+            var flightInfos = DbContext.SearchFlight(timefrom, timeto, direction, from, to, dateFrom, dateTo);
 
-        [HttpPost]
-        public ActionResult Create(FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        //
-        // GET: /Home/Edit/5
-
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        //
-        // POST: /Home/Edit/5
-
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        //
-        // GET: /Home/Delete/5
-
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        //
-        // POST: /Home/Delete/5
-
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            return PartialView("Partials/_SearchResultPartial", flightInfos.ToList());
         }
     }
 }

@@ -1,0 +1,2452 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Air Mekong Site</title>
+    <link rel="stylesheet" type="text/css" href="css/Base/standard.css"><script type="text/javascript" src="js/Base/json.js"></script><script type="text/javascript" src="js/Base/jquery.js"></script><script type="text/javascript" src="js/Base/ui.datePicker.js"></script><script type="text/javascript" src="js/Base/jquery.metaobjects.js"></script><script type="text/javascript" src="js/Base/common.js"></script><script type="text/javascript">
+                                                                                                                                                                                                                                                                                                                                                                                                                             SKYSALES.datepicker = {};
+                                                                                                                                                                                                                                                                                                                                                                                                                             SKYSALES.datepicker.datePickerFormat = '';
+                                                                                                                                                                                                                                                                                                                                                                                                                             SKYSALES.datepicker.datePickerDelimiter = '';
+
+                                                                                                                                                                                                                                                                                                                                                                                                                             if (SKYSALES.datepicker.datePickerFormat.length !== 3) {
+                                                                                                                                                                                                                                                                                                                                                                                                                                 SKYSALES.datepicker.datePickerFormat = 'mdy';
+                                                                                                                                                                                                                                                                                                                                                                                                                                 SKYSALES.datepicker.datePickerDelimiter = '/';
+                                                                                                                                                                                                                                                                                                                                                                                                                             }
+                                                                                                                                                                                                                                                                                                                                                                                                                             SKYSALES.datepicker.closeText = 'Đóng';
+                                                                                                                                                                                                                                                                                                                                                                                                                             SKYSALES.datepicker.prevText = 'Tháng trước';
+                                                                                                                                                                                                                                                                                                                                                                                                                             SKYSALES.datepicker.nextText = 'Tháng sau';
+                                                                                                                                                                                                                                                                                                                                                                                                                             SKYSALES.datepicker.currentText = 'Chọn ngày';
+        </script><script language="javascript" type="text/javascript">
+                     function erase(element, defaultValue) {
+                         if (element.value == defaultValue) element.value = '';
+                     }
+
+                     function set(element, defaultValue) {
+                         if (element.value == '') element.value = defaultValue;
+                     }
+                     function changeCountry() {
+                         PersonInput_UpdateCountry();
+                     }
+                     function changeResidence() {
+                         PersonInput_UpdateResidence();
+                     }
+                     function changeNationality() {
+                         PersonInput_UpdateNationality();
+                     }
+        </script></head>
+  <body>
+    <noscript><em>
+      
+				ERROR:
+				Javascript hiện chưa được kích hoạt, để sử dụng dịch vụ này. Vui lòng
+				nhấn <a href='activateJavascript.htm' class='error'>vào đây</a> để kích hoạt.
+        
+    	</em></noscript><form name="SkySales" method="post" action="ScheduleSelect.aspx" id="SkySales" ><input id="eventTarget" type="hidden" value="" name="eventTarget"><input id="eventArgument" type="hidden" value="" name="eventArgument"><input id="viewState" type="hidden" value="/wEPDwUBMGRk77h9CNekodLMZhdJu3riPx9ebN8=" name="viewState"><input type="hidden" name="pageToken" value=""><div id="header">
+      <div id="LoginTop">
+        <div id="changeLanguaDiv"><script language="javascript" type="text/javascript">
+                                      function Checkvalidate(eventArg) {
+                                          var mes = 'Please input keyword.';
+                                          var ds = document['SkySales'];
+                                          if (ds['TextBoxSearch'].value == '') {
+                                              alert(mes);
+                                              ds['TextBoxSearch'].focus();
+                                              return false;
+                                          } else {
+                                              var t = "http://www.airmekong.com.vn/Sites/Web/Results.aspx?Key=" + ds['TextBoxSearch'].value;
+                                              window.open(t, 'Air Mekong Search', 'width=600,height=500');
+                                              return true;
+
+                                          }
+
+                                      }
+
+       </script><a href="Search.aspx" title=""><img id="icon_earth" src="images/Base/AmImage/icon_earth.gif"></a><label id="sdfsdf" class="changelanguageTitle">Đổi ngôn ngữ</label><a href="?culture=vi-VN" title="Tiếng Việt"><img id="flag_vietnam" src="images/Base/AmImage/flag_vietnam.gif"></a><a href="?culture=en-US" title="Tiếng anh"><img id="flag_england" src="images/Base/AmImage/flag_england.jpg"></a></div>
+        <div id="searchDiv"><input id="TextBoxSearch" value="" class="wLrg3t"><input type="button" id="ButtonSubmit" class="buttonN_Small" value="  Tìm  " style="padding:0px 0px 0px 0px; height:22px; margin-left:3px;" onclick="return Checkvalidate(this)"></div>
+      </div>
+      <div id="logotop" style="float:left;width:294px; height:96px;"><a class="" href="http://www.airmekong.com.vn" title=""><img src="images/Base/AMKlogofile.jpg" id="logiimg" alt=""></a></div><script type="text/javascript" src="js/Base/ddsmoothmenu.js"></script><script type="text/javascript">
+                                                                                                                                                                                                                                                                            ddsmoothmenu.init({
+                                                                                                                                                                                                                                                                                mainmenuid: "menuDiv_am", //menu DIV id
+                                                                                                                                                                                                                                                                                orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+                                                                                                                                                                                                                                                                                classname: 'menu_am', //class added to menu's outer DIV
+                                                                                                                                                                                                                                                                                //customtheme: ["#1c5a80", "#18374a"],
+                                                                                                                                                                                                                                                                                contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+                                                                                                                                                                                                                                                                            })
+    </script><div id="outMenuDiv">
+        <div id="menuDiv_am" class="menu_am">
+          <ul>
+            <li style="padding-left:25px;"><a id="flyAirMekong" href="javascript:void(0);" class="">Bay cùng Air Mekong</a><ul>
+                <li><a href="http://airmekong.com.vn/Sites/Web/vi-Vn/Detail/66/41/mang-duong-bay/mang-duong-bay" title="Mạng đường bay">Mạng đường bay</a></li>
+                <li><a href="http://airmekong.com.vn/Sites/Web/vi-Vn/Detail/68/12/anh-may-bay/doi-tau-bay-air-mekong" title="Ảnh máy bay">Ảnh máy bay</a></li>
+                <li><a href="http://airmekong.com.vn/Sites/Web/vi-Vn/Detail/72/42/so-do-cho-ngoi-tren-may-bay/so-do-cho-ngoi-tren-may-bay" title="Sơ đồ chỗ ngồi trên máy bay">Sơ đồ chỗ ngồi trên máy bay</a></li>
+                <li><a href="http://airmekong.com.vn/Sites/Web/vi-Vn/426/bay-cung-air-mekong/lich-bay" title="Lịch bay">Lịch bay</a></li>
+                <li><a href="http://airmekong.com.vn/Sites/Web/vi-Vn/429/bay-cung-air-mekong/huong-dan-thanh-toan-truc-tuyen" title="Hướng dẫn thanh toán trực tuyến">Hướng dẫn thanh toán trực tuyến</a></li>
+                <li><a href="http://airmekong.com.vn/Sites/Web/vi-Vn/446/bay-cung-air-mekong/chuong-trinh-lien-ket" title="Chương trình liên kết">Chương trình liên kết</a></li>
+              </ul>
+            </li>
+            <li style="padding-left:25px;"><a id="AboutUs" href="javascript:void(0);" class="">Về chúng tôi</a><ul>
+                <li><a href="http://airmekong.com.vn/Sites/Web/vi-Vn/Detail/102/49/gioi-thieu-air-mekong/gioi-thieu-air-mekong" title="Giới thiệu Air Mekong">Giới thiệu Air Mekong</a></li>
+                <li><a href="http://airmekong.com.vn/Sites/Web/vi-Vn/Detail/104/55/su-menh/su-menh" title="Sứ mệnh">Sứ mệnh</a></li>
+                <li><a href="http://airmekong.com.vn/Sites/Web/vi-Vn/Detail/391/114/chinh-sach-an-toan-chat-luong/chinh-sach-an-toan-cua-air-mekong" title="Chính sách an toàn chất lượng">Chính sách an toàn chất lượng</a></li>
+                <li><a href="http://www.airmekong.com.vn/Sites/Web/vi-Vn/435/ve-chung-toi/thong-cao-bao-chi" title="Thông cáo báo chí">Thông cáo báo chí</a></li>
+                <li><a href="http://www.airmekong.com.vn/Sites/Web/vi-Vn/436/ve-chung-toi/tap-chi-tren-chuyen-bay" title="Tạp chí trên chuyến bay">Tạp chí trên chuyến bay</a></li>
+              </ul>
+            </li>
+            <li style="padding-left:25px;"><a id="Media" href="javascript:void(0);" class="">Mekong Club</a><ul>
+                <li><a href="http://www.airmekong.com.vn/Sites/Web/vi-Vn/162/mekong-club/thong-tin-ve-mekong-club" title="Thông tin về Mekong club">Thông tin về Mekong club</a></li>
+                <li><a href="http://www.airmekong.com.vn/Sites/Web/vi-Vn/437/mekong-club/quyen-loi-hoi-vien" title="Quyền lợi hội viên">Quyền lợi hội viên</a></li>
+                <li><a href="http://www.airmekong.com.vn/Sites/Web/vi-Vn/438/mekong-club/thong-bao-tu-mekong-club" title="Thông báo từ Mekong club">Thông báo từ Mekong club</a></li>
+                <li><a href="http://booking.airmekong.com.vn/Register.aspx" title="Đăng ký hội viên">Đăng ký hội viên</a></li>
+              </ul>
+            </li>
+            <li style="padding-left:25px;"><a id="Careers" href="http://www.airmekong.com.vn/Sites/Web/vi-Vn/Detail/434/192/hang-hoa/quy-dinh-van-chuyen-hang-hoa" class="">Hàng hóa</a><ul></ul>
+            </li>
+            <li style="padding-left:25px;"><a id="Contact" href="http://www.airmekong.com.vn/Sites/Web/vi-Vn/8/lien-he" class="">Liên hệ</a><ul>
+                <li><a href="http://www.airmekong.com.vn/Sites/Web/vi-Vn/Detail/418/187/thong-tin-chung/thong-tin-chung" title="Thông tin chung">Thông tin chung</a></li>
+                <li><a href="http://www.airmekong.com.vn/Sites/Web/vi-Vn/Detail/419/101/lam-dai-ly-air-mekong/lam-dai-ly-air-mekong" title="Làm đại lý Air Mekong">Làm đại lý Air Mekong</a></li>
+              </ul>
+            </li>
+            <li style="padding-left:25px;"><a id="Member" href="javascript:void(0);" class="">
+            ĐĂNG NHẬP
+          </a><ul>
+                <li><a href="LoginAgent.aspx" title="Đại lý">Đại lý</a></li>
+                <li><a href="Login.aspx" title="Thành viên">Thành viên</a></li>
+                <li><a href="http://www.airmekong.com.vn/Sites/Web/Register.aspx?LangID=vi-Vn" title="Đăng ký nhận tin">Đăng ký nhận tin</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="atAGlanceContent"><script type="text/javascript" src="js/Base/TaxAndFeeInclusiveDisplay.js"></script><div id="taxAndFeeInclusiveDivHeader" class="atAGlanceDivHeader">Sơ lược hành trình </div>
+        <div id="taxAndFeeInclusiveDivBody" class="atAGlanceDivBody">
+          <p class="validationErrorLabel"></p>
+        </div>
+        <div id="taxAndFeeInclusiveDivFooter" class="atAGlanceDivFooter"></div><script type="text/javascript" src="js/Base/myscript.js"></script><script language="javascript" type="text/javascript">
+
+
+
+                                                                                                                                                     function CONTROLGROUPSEARCHINPUT_SelectFlightView_Validate(eventArgs, from, to) {
+
+                                                                                                                                                         var ds = document['SkySales'];
+
+                                                                                                                                                         if (ds['originStation1'].value == "") {
+
+                                                                                                                                                             alert(from);
+                                                                                                                                                             return false;
+                                                                                                                                                         }
+                                                                                                                                                         else if (ds['destinationStation1'].value == "") {
+                                                                                                                                                             alert(to);
+                                                                                                                                                             return false;
+                                                                                                                                                         }
+                                                                                                                                                         else {
+                                                                                                                                                             return true;
+                                                                                                                                                         }
+
+                                                                                                                                                     }
+
+    </script><script type="text/javascript">
+                 if (SKYSALES.Class.FlightSearch.createObject) {
+                     SKYSALES.Class.FlightSearch.createObject(
+            {
+                "containerId": "flightSearchContainer",
+                "flightTypeInputIdArray":
+            [
+                {
+                    "flightTypeId": "AvailabilitySearchInputScheduleSelectView_RoundTrip",
+                    "hideInputIdArray": [
+                                                    "marketCityPair_2"
+                                                    ]
+                },
+                {
+                    "flightTypeId": "AvailabilitySearchInputScheduleSelectView_OneWay",
+                    "hideInputIdArray": [
+                                                    "marketCityPair_2",
+                                                    "marketDate_2"
+                                                    ]
+                }
+            ]
+        ,
+                "countryInputIdArray":
+            [
+                {
+                    "countryInputId": "AvailabilitySearchInputScheduleSelectView_DropDownListResidentCountry"
+                }
+            ]
+        ,
+
+                "marketArray": [
+
+                {
+
+
+
+                    "validationObjectIdArray":
+                    [
+                        {
+                            "key": "AvailabilitySearchInputScheduleSelectView_TextBoxMarketOrigin1",
+                            "value": "AvailabilitySearchInputScheduleSelectVieworiginStation1"
+                        },
+                        {
+                            "key": "AvailabilitySearchInputScheduleSelectView_TextBoxMarketDestination1",
+                            "value": "AvailabilitySearchInputScheduleSelectViewdestinationStation1"
+                        }
+                    ]
+                ,
+                    "marketInputIdArray":
+                    [
+                        {
+                            "originId": "AvailabilitySearchInputScheduleSelectVieworiginStation1",
+                            "destinationId": "AvailabilitySearchInputScheduleSelectViewdestinationStation1"
+                        },
+                        {
+                            "originId": "AvailabilitySearchInputScheduleSelectView_TextBoxMarketOrigin1",
+                            "destinationId": "AvailabilitySearchInputScheduleSelectView_TextBoxMarketDestination1"
+                        },
+                        {
+                            "originId": "AvailabilitySearchInputScheduleSelectView_DropDownListMarketOrigin1",
+                            "destinationId": "AvailabilitySearchInputScheduleSelectView_DropDownListMarketDestination1"
+                        }
+                    ]
+                ,
+                    "stationInputIdArray":
+                    [
+                        "AvailabilitySearchInputScheduleSelectView_TextBoxMarketOrigin1",
+                        "AvailabilitySearchInputScheduleSelectView_TextBoxMarketDestination1"
+                    ]
+				,
+                    "stationDropDownIdArray":
+                    [
+                            {
+                                "inputId": "AvailabilitySearchInputScheduleSelectView_TextBoxMarketOrigin1",
+                                "selectBoxId": "AvailabilitySearchInputScheduleSelectVieworiginStation1"
+                            },
+                            {
+                                "inputId": "AvailabilitySearchInputScheduleSelectView_TextBoxMarketDestination1",
+                                "selectBoxId": "AvailabilitySearchInputScheduleSelectViewdestinationStation1"
+                            }
+                    ]
+				,
+                    "macInputIdArray":
+                    [
+                        {
+                            "stationInputId": "AvailabilitySearchInputScheduleSelectView_TextBoxMarketOrigin1",
+                            "macContainerId": "originMac1",
+                            "macLabelId": "macOriginCodeList1",
+                            "macInputId": "AvailabilitySearchInputScheduleSelectView_CheckBoxUseMacOrigin1"
+                        },
+                        {
+                            "stationInputId": "AvailabilitySearchInputScheduleSelectView_TextBoxMarketDestination1",
+                            "macContainerId": "destinationMac1",
+                            "macLabelId": "macDestinationCodeList1",
+                            "macInputId": "AvailabilitySearchInputScheduleSelectView_CheckBoxUseMacDestination1"
+                        }
+                    ]
+                ,
+                    "marketDateIdArray":
+                    [
+                        {
+                            "marketDateId": "date_picker_id_1",
+                            "marketDayId": "AvailabilitySearchInputScheduleSelectView_DropDownListMarketDay1",
+                            "marketMonthYearId": "AvailabilitySearchInputScheduleSelectView_DropDownListMarketMonth1"
+                        }
+                    ]
+
+
+
+                },
+                {
+
+
+
+                    "validationObjectIdArray":
+                    [
+                        {
+                            "key": "AvailabilitySearchInputScheduleSelectView_TextBoxMarketOrigin2",
+                            "value": "AvailabilitySearchInputScheduleSelectVieworiginStation2"
+                        },
+                        {
+                            "key": "AvailabilitySearchInputScheduleSelectView_TextBoxMarketDestination2",
+                            "value": "AvailabilitySearchInputScheduleSelectViewdestinationStation2"
+                        }
+                    ]
+                ,
+                    "marketInputIdArray":
+                    [
+                        {
+                            "originId": "AvailabilitySearchInputScheduleSelectVieworiginStation2",
+                            "destinationId": "AvailabilitySearchInputScheduleSelectViewdestinationStation2"
+                        },
+                        {
+                            "originId": "AvailabilitySearchInputScheduleSelectView_TextBoxMarketOrigin2",
+                            "destinationId": "AvailabilitySearchInputScheduleSelectView_TextBoxMarketDestination2"
+                        },
+                        {
+                            "originId": "AvailabilitySearchInputScheduleSelectView_DropDownListMarketOrigin2",
+                            "destinationId": "AvailabilitySearchInputScheduleSelectView_DropDownListMarketDestination2"
+                        }
+                    ]
+                ,
+                    "stationInputIdArray":
+                    [
+                        "AvailabilitySearchInputScheduleSelectView_TextBoxMarketOrigin2",
+                        "AvailabilitySearchInputScheduleSelectView_TextBoxMarketDestination2"
+                    ]
+				,
+                    "stationDropDownIdArray":
+                    [
+                            {
+                                "inputId": "AvailabilitySearchInputScheduleSelectView_TextBoxMarketOrigin2",
+                                "selectBoxId": "AvailabilitySearchInputScheduleSelectVieworiginStation2"
+                            },
+                            {
+                                "inputId": "AvailabilitySearchInputScheduleSelectView_TextBoxMarketDestination2",
+                                "selectBoxId": "AvailabilitySearchInputScheduleSelectViewdestinationStation2"
+                            }
+                    ]
+				,
+                    "macInputIdArray":
+                    [
+                        {
+                            "stationInputId": "AvailabilitySearchInputScheduleSelectView_TextBoxMarketOrigin2",
+                            "macContainerId": "originMac2",
+                            "macLabelId": "macOriginCodeList2",
+                            "macInputId": "AvailabilitySearchInputScheduleSelectView_CheckBoxUseMacOrigin2"
+                        },
+                        {
+                            "stationInputId": "AvailabilitySearchInputScheduleSelectView_TextBoxMarketDestination2",
+                            "macContainerId": "destinationMac2",
+                            "macLabelId": "macDestinationCodeList2",
+                            "macInputId": "AvailabilitySearchInputScheduleSelectView_CheckBoxUseMacDestination2"
+                        }
+                    ]
+                ,
+                    "marketDateIdArray":
+                    [
+                        {
+                            "marketDateId": "date_picker_id_2",
+                            "marketDayId": "AvailabilitySearchInputScheduleSelectView_DropDownListMarketDay2",
+                            "marketMonthYearId": "AvailabilitySearchInputScheduleSelectView_DropDownListMarketMonth2"
+                        }
+                    ]
+
+
+
+                }
+            ]
+
+
+            }
+        );
+                 }
+        </script><div id="searchDivHeader" class="atAGlanceDivHeader">Đặt chuyến bay</div>
+        <div class="atAGlanceDivBody availabilitySearchContainer flightSearchContainer" id="flightSearchContainer">
+          <div id="travelOptions"><input id="AvailabilitySearchInputScheduleSelectView_RoundTrip" type="radio" name="AvailabilitySearchInputScheduleSelectView$RadioButtonMarketStructure" value="RoundTrip" checked><label for="AvailabilitySearchInputScheduleSelectView_RoundTrip">Khứ hồi</label><input id="AvailabilitySearchInputScheduleSelectView_OneWay" type="radio" name="AvailabilitySearchInputScheduleSelectView$RadioButtonMarketStructure" value="OneWay"><label for="AvailabilitySearchInputScheduleSelectView_OneWay">Một lượt</label></div>
+          <div id="marketCityPair_1">
+            <p><label for="AvailabilitySearchInputScheduleSelectView_TextBoxMarketOrigin1" id="AvailabilitySearchInputScheduleSelectView_LabelMarketStation1">Điểm đi</label></p>
+            <p><select id="AvailabilitySearchInputScheduleSelectVieworiginStation1" name="originStation1" class="wHuges"><option value="">Điểm đi...</option></select><input id="AvailabilitySearchInputScheduleSelectView_TextBoxMarketOrigin1" class="hidden" name="AvailabilitySearchInputScheduleSelectView$TextBoxMarketOrigin1" type="text" value="HAN"></p>
+            <p class="checkbox" id="originMac1"><input id="AvailabilitySearchInputScheduleSelectView_CheckBoxUseMacOrigin1" type="checkbox" name="AvailabilitySearchInputScheduleSelectView$CheckBoxUseMacOrigin1" value="on"><label for="AvailabilitySearchInputScheduleSelectView_CheckBoxUseMacOrigin1" id="AvailabilitySearchInputScheduleSelectView_LabelUseMacOrigin1">Tìm tất cả</label><span id="macOriginCodeList1"></span></p>
+            <p><label for="AvailabilitySearchInputScheduleSelectView_TextBoxMarketDestination1" id="AvailabilitySearchInputScheduleSelectView_LabelMarketStationOut1">Điểm đến</label></p>
+            <p><select id="AvailabilitySearchInputScheduleSelectViewdestinationStation1" name="destinationStation1" class="wHuges"><option value="">Điểm đến...</option></select><input id="AvailabilitySearchInputScheduleSelectView_TextBoxMarketDestination1" class="hidden" name="AvailabilitySearchInputScheduleSelectView$TextBoxMarketDestination1" type="text" value="SGN"></p>
+            <p class="checkbox" id="destinationMac1"><input id="AvailabilitySearchInputScheduleSelectView_CheckBoxUseMacDestination1" type="checkbox" name="AvailabilitySearchInputScheduleSelectView$CheckBoxUseMacDestination1" value="on"><label for="AvailabilitySearchInputScheduleSelectView_CheckBoxUseMacDestination1" id="AvailabilitySearchInputScheduleSelectView_LabelUseMacDestination1">Tìm tất cả</label><span id="macDestinationCodeList1"></span></p>
+          </div>
+          <div id="marketDate_1">
+            <p id="AvailabilitySearchInputScheduleSelectView_DropDownListMarketDay1Header"><label for="AvailabilitySearchInputScheduleSelectView_DropDownListMarketDay1" id="AvailabilitySearchInputScheduleSelectView_DropDownListMarketDay1Label">Ngày khởi hành</label></p><select id="AvailabilitySearchInputScheduleSelectView_DropDownListMarketDay1" class="wSml1s" name="AvailabilitySearchInputScheduleSelectView$DropDownListMarketDay1"><option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option selected value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option></select><select id="AvailabilitySearchInputScheduleSelectView_DropDownListMarketMonth1" class="wLrg1s" name="AvailabilitySearchInputScheduleSelectView$DropDownListMarketMonth1"><option selected value="2012-12">Tháng Mười Hai 2012</option>
+              <option value="2013-01">Tháng Giêng 2013</option>
+              <option value="2013-02">Tháng Hai 2013</option>
+              <option value="2013-03">Tháng Ba 2013</option>
+              <option value="2013-04">Tháng Tư 2013</option>
+              <option value="2013-05">Tháng Năm 2013</option>
+              <option value="2013-06">Tháng Sáu 2013</option>
+              <option value="2013-07">Tháng Bảy 2013</option>
+              <option value="2013-08">Tháng Tám 2013</option>
+              <option value="2013-09">Tháng Chín 2013</option>
+              <option value="2013-10">Tháng Mười 2013</option>
+              <option value="2013-11">Tháng Mười Một 2013</option>
+              <option value="2013-12">Tháng Mười Hai 2013</option></select><div style="display: none;"><select id="AvailabilitySearchInputScheduleSelectView_DropDownListMarketDateRange1" class="wSml3s" name="AvailabilitySearchInputScheduleSelectView$DropDownListMarketDateRange1"><option selected value="0|4">Trước và sau 2 ngày</option></select></div><input id="date_picker_id_1" type="hidden" name="date_picker" value=""></div>
+          <div id="marketCityPair_2">
+            <p><label for="AvailabilitySearchInputScheduleSelectView_TextBoxMarketOrigin2" id="AvailabilitySearchInputScheduleSelectView_LabelMarketStation2">Điểm đi</label></p>
+            <p><select id="AvailabilitySearchInputScheduleSelectVieworiginStation2" name="originStation2" class="wHuges"><option value="">Điểm đi...</option></select><input id="AvailabilitySearchInputScheduleSelectView_TextBoxMarketOrigin2" class="hidden" name="AvailabilitySearchInputScheduleSelectView$TextBoxMarketOrigin2" type="text" value="SGN"></p>
+            <p class="checkbox" id="originMac2"><input id="AvailabilitySearchInputScheduleSelectView_CheckBoxUseMacOrigin2" type="checkbox" name="AvailabilitySearchInputScheduleSelectView$CheckBoxUseMacOrigin2" value="on"><label for="AvailabilitySearchInputScheduleSelectView_CheckBoxUseMacOrigin2" id="AvailabilitySearchInputScheduleSelectView_LabelUseMacOrigin2">Tìm tất cả</label><span id="macOriginCodeList2"></span></p>
+            <p><label for="AvailabilitySearchInputScheduleSelectView_TextBoxMarketDestination2" id="AvailabilitySearchInputScheduleSelectView_LabelMarketStationOut2">Điểm đến</label></p>
+            <p><select id="AvailabilitySearchInputScheduleSelectViewdestinationStation2" name="destinationStation2" class="wHuges"><option value="">Điểm đến...</option></select><input id="AvailabilitySearchInputScheduleSelectView_TextBoxMarketDestination2" class="hidden" name="AvailabilitySearchInputScheduleSelectView$TextBoxMarketDestination2" type="text" value="HAN"></p>
+            <p class="checkbox" id="destinationMac2"><input id="AvailabilitySearchInputScheduleSelectView_CheckBoxUseMacDestination2" type="checkbox" name="AvailabilitySearchInputScheduleSelectView$CheckBoxUseMacDestination2" value="on"><label for="AvailabilitySearchInputScheduleSelectView_CheckBoxUseMacDestination2" id="AvailabilitySearchInputScheduleSelectView_LabelUseMacDestination2">Tìm tất cả</label><span id="macDestinationCodeList2"></span></p>
+          </div>
+          <div id="marketDate_2">
+            <p id="AvailabilitySearchInputScheduleSelectView_DropDownListMarketDay2Header"><label for="AvailabilitySearchInputScheduleSelectView_DropDownListMarketDay2" id="AvailabilitySearchInputScheduleSelectView_DropDownListMarketDay2Label">Ngày về</label></p><select id="AvailabilitySearchInputScheduleSelectView_DropDownListMarketDay2" class="wSml1s" name="AvailabilitySearchInputScheduleSelectView$DropDownListMarketDay2"><option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option selected value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option></select><select id="AvailabilitySearchInputScheduleSelectView_DropDownListMarketMonth2" class="wLrg1s" name="AvailabilitySearchInputScheduleSelectView$DropDownListMarketMonth2"><option selected value="2012-12">Tháng Mười Hai 2012</option>
+              <option value="2013-01">Tháng Giêng 2013</option>
+              <option value="2013-02">Tháng Hai 2013</option>
+              <option value="2013-03">Tháng Ba 2013</option>
+              <option value="2013-04">Tháng Tư 2013</option>
+              <option value="2013-05">Tháng Năm 2013</option>
+              <option value="2013-06">Tháng Sáu 2013</option>
+              <option value="2013-07">Tháng Bảy 2013</option>
+              <option value="2013-08">Tháng Tám 2013</option>
+              <option value="2013-09">Tháng Chín 2013</option>
+              <option value="2013-10">Tháng Mười 2013</option>
+              <option value="2013-11">Tháng Mười Một 2013</option>
+              <option value="2013-12">Tháng Mười Hai 2013</option></select><div style="display: none;"><select id="AvailabilitySearchInputScheduleSelectView_DropDownListMarketDateRange2" class="wSml3s" name="AvailabilitySearchInputScheduleSelectView$DropDownListMarketDateRange2"><option selected value="0|4">Trước và sau 2 ngày</option></select></div><input id="date_picker_id_2" type="hidden" name="date_picker" value=""></div>
+          <p id="paxshow"><span><label for="AvailabilitySearchInputScheduleSelectView_DropDownListPassengerType_ADT" id="AvailabilitySearchInputScheduleSelectView_DropDownListPassengerType_ADT_label">Người lớn</label><select id="AvailabilitySearchInputScheduleSelectView_DropDownListPassengerType_ADT" name="AvailabilitySearchInputScheduleSelectView$DropDownListPassengerType_ADT"><option value="0">0</option>
+                <option selected value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option></select></span><span><label for="AvailabilitySearchInputScheduleSelectView_DropDownListPassengerType_CHD" id="AvailabilitySearchInputScheduleSelectView_DropDownListPassengerType_CHD_label">Trẻ em</label><select id="AvailabilitySearchInputScheduleSelectView_DropDownListPassengerType_CHD" name="AvailabilitySearchInputScheduleSelectView$DropDownListPassengerType_CHD"><option selected value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option></select></span><span><label for="AvailabilitySearchInputScheduleSelectView_DropDownListPassengerType_INFANT" id="AvailabilitySearchInputScheduleSelectView_DropDownListPassengerType_INFANT_label">Em bé</label><select id="AvailabilitySearchInputScheduleSelectView_DropDownListPassengerType_INFANT" name="AvailabilitySearchInputScheduleSelectView$DropDownListPassengerType_INFANT"><option selected value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option></select></span></p><script type="text/javascript">
+                                                                    //disabledropH();
+                                                                    function disabledropH() {
+                                                                        var dH = document.getElementById('AvailabilitySearchInputSearchWebCheckinView_DropDownListPassengerType_INFANT');
+                                                                        var i;
+                                                                        for (i = dH.options.length - 1; i > 0; i--) {
+                                                                            //if(i==7)
+                                                                            //{
+                                                                            dH.remove(i);
+                                                                            //break;
+                                                                            //}
+                                                                        }
+                                                                    }
+      </script><script type="text/javascript">
+                   //disabledropI();
+                   function disabledropI() {
+                       var dI = document.getElementById('AvailabilitySearchInputScheduleSelectView_DropDownListPassengerType_INFANT');
+                       var i;
+                       for (i = dI.options.length - 1; i > 0; i--) {
+                           //if(i==7)
+                           //{
+                           dI.remove(i);
+                           //break;
+                           //}
+                       }
+                   }
+      </script><script language="javascript" type="text/javascript">
+                   //disabledropB();
+                   function disabledropB() {
+                       var dB = document.getElementById('AvailabilitySearchInputRetrieveBookingView_DropDownListPassengerType_INFANT');
+                       var i;
+                       for (i = dB.options.length - 1; i > 0; i--) {
+                           //if(i==7)
+                           //{
+                           dB.remove(i);
+                           //break;
+                           //}
+                       }
+                   }
+      </script><script type="text/javascript">
+                   //disabledropC();
+                   function disabledropC() {
+                       var dC = document.getElementById('AvailabilitySearchInputBookingListView_DropDownListPassengerType_INFANT');
+                       var i;
+                       for (i = dC.options.length - 1; i > 0; i--) {
+                           //if(i==7)
+                           //{
+                           dC.remove(i);
+                           //break;
+                           //}
+                       }
+                   }
+      </script><script type="text/javascript">
+                   //disabledropD();
+                   function disabledropD() {
+                       var dD = document.getElementById('AvailabilitySearchInputUpdateProfileAgentView_DropDownListPassengerType_INFANT');
+                       var i;
+                       for (i = dD.options.length - 1; i > 0; i--) {
+                           //if(i==7)
+                           //{
+                           dD.remove(i);
+                           //break;
+                           //}
+                       }
+                   }
+      </script><script type="text/javascript">
+                   //disabledropE();
+                   function disabledropE() {
+                       var dE = document.getElementById('AvailabilitySearchInputUpdateProfileAgencyView_DropDownListPassengerType_INFANT');
+                       var i;
+                       for (i = dE.options.length - 1; i > 0; i--) {
+                           //if(i==7)
+                           //{
+                           dE.remove(i);
+                           //break;
+                           //}
+                       }
+                   }
+      </script><script type="text/javascript">
+                   //disabledropF();
+                   function disabledropF() {
+                       var dF = document.getElementById('AvailabilitySearchInputItineraryView_DropDownListPassengerType_INFANT');
+                       var i;
+                       for (i = dF.options.length - 1; i > 0; i--) {
+                           //if(i==7)
+                           //{
+                           dF.remove(i);
+                           //break;
+                           //}
+                       }
+                   }
+      </script><script type="text/javascript">
+                   //disabledropG();
+                   function disabledropG() {
+                       var dG = document.getElementById('AvailabilitySearchInputViewFlightView_DropDownListPassengerType_INFANT');
+                       var i;
+                       for (i = dG.options.length - 1; i > 0; i--) {
+                           //if(i==7)
+                           //{
+                           dG.remove(i);
+                           //break;
+                           //}
+                       }
+                   }
+      </script><script type="text/javascript">
+                   //disabledropK();
+                   function disabledropK() {
+                       var dK = document.getElementById('AvailabilitySearchInputLoginView_DropDownListPassengerType_INFANT');
+                       var i;
+                       for (i = dK.options.length - 1; i > 0; i--) {
+                           //if(i==7)
+                           //{
+                           dK.remove(i);
+                           //break;
+                           //}
+                       }
+                   }
+    </script><script type="text/javascript">
+                 //disabledropM();
+                 function disabledropM() {
+                     var dM = document.getElementById('AvailabilitySearchInputRegisterView_DropDownListPassengerType_INFANT');
+                     var i;
+                     for (i = dM.options.length - 1; i > 0; i--) {
+                         //if(i==7)
+                         //{
+                         dM.remove(i);
+                         //break;
+                         //}
+                     }
+                 }
+      </script><script type="text/javascript">
+                   //disabledropN();
+                   function disabledropN() {
+                       var dN = document.getElementById('AvailabilitySearchInputPaymentView_DropDownListPassengerType_INFANT');
+                       var i;
+                       for (i = dN.options.length - 1; i > 0; i--) {
+                           //if(i==7)
+                           //{
+                           dN.remove(i);
+                           //break;
+                           //}
+                       }
+                   }
+      </script><p class="clearBoth"></p>
+          <p style="display:none;"><select id="AvailabilitySearchInputScheduleSelectView_DropDownListSearchBy" name="AvailabilitySearchInputScheduleSelectView$DropDownListSearchBy"><option value=""></option>
+              <option selected value="columnView">Schedule</option>
+              <option value="calendarView">Price</option></select></p><script language="javascript" type="text/javascript">
+                                                                          selectted_searchby1();
+        </script><a href="http://airmekong.com.vn/Sites/Web/vi-Vn/Detail/392/79/dich-vu-dac-biet/dich-vu-dac-biet">Em bé dưới 2 tuổi, vui lòng xe thông tin bổ sung tại đây</a><p class="floatRightPT"><input type="submit" name="AvailabilitySearchInputScheduleSelectView$ButtonSubmit" value="Tìm chuyến bay" onclick="return CONTROLGROUPSEARCHINPUT_SelectFlightView_Validate(this,'Chọn điểm khởi hành.','Chọn điểm đến.');" id="AvailabilitySearchInputScheduleSelectView_ButtonSubmit" class="buttonN"></p>
+        </div>
+        <div id="searchDivFooter" class="atAGlanceDivFooter"></div><object class="metaobject hidden"><param name="metaparam" value="{target:'#AvailabilitySearchInputScheduleSelectView_RoundTrip'}">
+          <param name="required" value="'true'">
+          <param name="requirederror" value="'Quý khách phải chọn chuyến đi là Khứ hồi hay Một lượt.'"></object><object class="metaobject hidden"><param name="metaparam" value="{target:'#AvailabilitySearchInputScheduleSelectView_TextBoxMarketOrigin1'}">
+          <param name="required" value="'true'">
+          <param name="requirederror" value="'Vui lòng chọn điểm đi.'"></object><object class="metaobject hidden"><param name="metaparam" value="{target:'#AvailabilitySearchInputScheduleSelectView_TextBoxMarketDestination1'}">
+          <param name="required" value="'true'">
+          <param name="requirederror" value="'Vui lòng chọn điểm đến.'"></object><object class="metaobject hidden"><param name="metaparam" value="{target:'#AvailabilitySearchInputScheduleSelectView_DropDownListResidentCountry'}">
+          <param name="required" value="'true'"></object><object class="metaobject hidden"><param name="metaparam" value="{target:'#AvailabilitySearchInputScheduleSelectView_DropDownListMarketMonth1'}">
+          <param name="daterange" value="'true'">
+          <param name="daterangeerror" value="'\nVui lòng chắc chắn rằng ngày về không sớm hơn ngày đi.\n'">
+          <param name="date1hiddenid" value="'date_picker_id_1'">
+          <param name="date2hiddenid" value="'date_picker_id_2'"></object><object class="metaobject hidden"><param name="metaparam" value="{target:'#AvailabilitySearchInputScheduleSelectView_DropDownListMarketMonth2'}">
+          <param name="daterange" value="'true'">
+          <param name="daterangeerror" value="'\nVui lòng chắc chắn rằng ngày về không sớm hơn ngày đi.\n'">
+          <param name="date1hiddenid" value="'date_picker_id_1'">
+          <param name="date2hiddenid" value="'date_picker_id_2'"></object><object class="metaobject hidden"><param name="metaparam" value="{target:'#AvailabilitySearchInputScheduleSelectView_DropDownListPassengerType_ADT'}">
+          <param name="preselectedlistcontrolvalue" value="'1'"></object><object class="metaobject hidden"><param name="metaparam" value="{target:'#AvailabilitySearchInputScheduleSelectView_DropDownListPassengerType_CHD'}">
+          <param name="preselectedlistcontrolvalue" value="'0'"></object><object class="metaobject hidden"><param name="metaparam" value="{target:'#AvailabilitySearchInputScheduleSelectView_DropDownListPassengerType_INFANT'}">
+          <param name="preselectedlistcontrolvalue" value="'0'"></object></div>
+      <div id="errorDiv"></div>
+      <div id="mainContent">
+        <div id="mainContentHeaderDiv">
+          <div id="pageTitle">
+            <table width="100%" border="0" style="margin-left:40px;">
+              <tr>
+                <td>
+                  <div id="HeaderButtom_r">
+                    <p class="HeaderStyleTitle_w">1</p>
+                  </div>
+                </td>
+                <td>
+                  <div id="HeaderButtom_w">
+                    <p class="HeaderStyleTitle_r">2</p>
+                  </div>
+                </td>
+                <td>
+                  <div id="HeaderButtom_w">
+                    <p class="HeaderStyleTitle_r">3</p>
+                  </div>
+                </td>
+                <td>
+                  <div id="HeaderButtom_w">
+                    <p class="HeaderStyleTitle_r">4</p>
+                  </div>
+                </td>
+                <td>
+                  <div id="HeaderButtom_w">
+                    <p class="HeaderStyleTitle_r">5</p>
+                  </div>
+                </td>
+              </tr>
+            </table><span class="step2Header" style="color:#FF6C3D;">Chọn Chuyến Bay</span><span class="step3Header">Liên hệ</span><span class="step4Header">Thông tin Hành khách</span><span class="step5Header">Thanh toán</span><span class="step5Header">Xác nhận hành trình</span></div>
+          <div class="stepHeaderBox" style="background:url(images/Base/AmImage/step1.jpg)"></div>
+        </div>
+        <div id="selectMainBody" class="mainBody"><script type="text/javascript" src="js/Base/myscript.js"></script><script type="text/javascript" src="js/Base/AvailabilityInput.js"></script><style type="text/css">
+
+      #fixedtipdiv{
+      position:absolute;
+      padding: 10px 5px;
+      border:1px solid #3455AD;
+      font:normal 12px Verdana;
+      line-height:20px;
+      z-index:100;
+      color:#fff;
+      }
+
+    </style><script language="javascript" type="text/javascript">
+                function makeFare(code, name, textArray) {
+                    this.code = code;
+                    this.name = name;
+                    this.text = new Array();
+                    this.text = textArray;
+                }
+
+                function displayCityInfo(market, fltType, station, arriveTime, deptTime, layoverTime, dropTime) {
+                    var direction = '';
+                    var message = '';
+
+                    if (market === 1) {
+                        direction = "lượt đi";
+                    }
+                    else if (market === 2) {
+                        direction = "lượt về";
+                    }
+
+                    if (fltType === "Leave") {
+                        message += "Chuyến bay " + direction + " sẽ khởi hành \n";
+                        message += "tại " + station + ".\n\n";
+                        message += "Thời gian khởi hành vào lúc " + deptTime + ".";
+                    }
+                    else if (fltType === "Thru") {
+                        message += "Chuyến bay " + direction + " sẽ dừng để nối chuyến \n";
+                        message += "tại " + station + ".\n\n";
+                        message += "Thời gian dự kiến bay là " + dropTime + ".\n";
+                        message += "Thời gian khởi hành vào lúc " + deptTime + ".\n";
+                        message += "Tổng thời gian là " + layoverTime + ".\n\n";
+                        message += "Thời gian dừng để nghỉ trong \n tại thành phố này, sau đó hành trình sẽ \n tiếp tục trên cùng chuyến bay" + ".";
+                    }
+                    else if (fltType === "Connect") {
+                        message += "Chuyến bay " + direction + " sẽ được nối chuyến \n";
+                        message += "tại " + station + ".\n\n";
+                        message += "Thời gian dự kiến bay là " + dropTime + ".\n";
+                        message += "Thời gian khởi hành vào lúc " + deptTime + ".\n";
+                        message += "Tổng thời gian là " + layoverTime + ".\n\n";
+                        message += "Theo lịch trình nối tiếp của chuyến bay. \nQuý khách sẽ phải \nrời khỏi máy bay và đăng ký làm thủ tục lên máy bay khác \ntại sân bay này. Quý khách yên tâm; các \nchuyến bay của chúng tôi đã được sắp xếp để Quý khách có đủ thời gian di chuyển đến cửa \ncần làm thủ tục." + "";
+                    }
+                    else if (fltType === "Arrive") {
+                        message += "Chuyến bay " + direction + " sẽ hạ cánh \n";
+                        message += "tại " + station + ".\n\n";
+                        message += "Thời gian dự kiến của chuyến bay là " + arriveTime + ".";
+                    }
+                    alert(message);
+                }
+
+                function displayFlightInfo(airline, flightNum, departureStation, arrivalStation, equipment, airTimeHour, airTimeMinutes) {
+                    var message = "Chi tiết chuyến bay" + "\n\n";
+                    message += "Đây là " + airline + ", ";
+                    message += "Chuyến bay " + flightNum + ", \n";
+                    message += "bay từ " + departureStation + "\n";
+                    message += "đến " + arrivalStation + ".\n\n";
+                    message += "Loại máy bay " + equipment + ".\n";
+                    message += "Thời gian dự kiến bay là " + airTimeHour + " giờ";
+                    message += " " + airTimeMinutes + " phút.";
+                    alert(message);
+                }
+
+                SKYSALES.setTabIndex = function (marketIndex, index) {
+                    var postBack = function () {
+                        __doPostBack('ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView', '');
+                    };
+
+                    if (0 === marketIndex) {
+                        document.getElementById('ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_HiddenFieldTabIndex1').value = index;
+                    }
+                    else {
+                        document.getElementById('ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_HiddenFieldTabIndex2').value = index;
+                    }
+                    postBack();
+                };
+    </script><script type="text/javascript">
+                 if (SKYSALES.Class.AvailabilityInput) {
+                     SKYSALES.availabilityInput = new SKYSALES.Class.AvailabilityInput();
+                     SKYSALES.availabilityInput.dateMarketLowestFareList = [
+
+            {
+                "tripIndex": "0",
+                "marketIndex": "0",
+                "dateMarketIndex": "0",
+                "lowestFareControlId": "ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt1Fare13"
+            },
+            {
+                "tripIndex": "0",
+                "marketIndex": "0",
+                "dateMarketIndex": "1",
+                "lowestFareControlId": "ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt1Fare21"
+            },
+            {
+                "tripIndex": "0",
+                "marketIndex": "0",
+                "dateMarketIndex": "2",
+                "lowestFareControlId": "ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt1Fare44"
+            },
+            {
+                "tripIndex": "0",
+                "marketIndex": "0",
+                "dateMarketIndex": "3",
+                "lowestFareControlId": "ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt1Fare50"
+            },
+            {
+                "tripIndex": "0",
+                "marketIndex": "0",
+                "dateMarketIndex": "4",
+                "lowestFareControlId": "ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt1Fare65"
+            },
+            {
+                "tripIndex": "0",
+                "marketIndex": "1",
+                "dateMarketIndex": "0",
+                "lowestFareControlId": "ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt2Fare6"
+            },
+            {
+                "tripIndex": "0",
+                "marketIndex": "1",
+                "dateMarketIndex": "1",
+                "lowestFareControlId": "ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt2Fare15"
+            },
+            {
+                "tripIndex": "0",
+                "marketIndex": "1",
+                "dateMarketIndex": "2",
+                "lowestFareControlId": "ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt2Fare24"
+            },
+            {
+                "tripIndex": "0",
+                "marketIndex": "1",
+                "dateMarketIndex": "3",
+                "lowestFareControlId": "ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt2Fare33"
+            },
+            {
+                "tripIndex": "0",
+                "marketIndex": "1",
+                "dateMarketIndex": "4",
+                "lowestFareControlId": "ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt2Fare40"
+            }
+      ];
+                     SKYSALES.availabilityInput.journeyInfoList = [
+
+              {
+                  "tripIndex": "0",
+                  "marketIndex": "0",
+                  "dateMarketIndex": "0",
+                  "journeyIndex": "0",
+                  "key": "0_0_0_0",
+                  "activateJourneyId": "activateJourney_0_0_0_0",
+                  "deactivateJourneyId": "deactivateJourney_0_0_0_0",
+                  "journeyContainerId": "journey_0_0_0_0",
+                  "legInfoArray": [
+
+              ]
+              },
+
+              {
+                  "tripIndex": "0",
+                  "marketIndex": "0",
+                  "dateMarketIndex": "0",
+                  "journeyIndex": "1",
+                  "key": "0_0_0_1",
+                  "activateJourneyId": "activateJourney_0_0_0_1",
+                  "deactivateJourneyId": "deactivateJourney_0_0_0_1",
+                  "journeyContainerId": "journey_0_0_0_1",
+                  "legInfoArray": [
+
+              ]
+              },
+
+              {
+                  "tripIndex": "0",
+                  "marketIndex": "0",
+                  "dateMarketIndex": "0",
+                  "journeyIndex": "2",
+                  "key": "0_0_0_2",
+                  "activateJourneyId": "activateJourney_0_0_0_2",
+                  "deactivateJourneyId": "deactivateJourney_0_0_0_2",
+                  "journeyContainerId": "journey_0_0_0_2",
+                  "legInfoArray": [
+
+              ]
+              },
+
+              {
+                  "tripIndex": "0",
+                  "marketIndex": "0",
+                  "dateMarketIndex": "0",
+                  "journeyIndex": "3",
+                  "key": "0_0_0_3",
+                  "activateJourneyId": "activateJourney_0_0_0_3",
+                  "deactivateJourneyId": "deactivateJourney_0_0_0_3",
+                  "journeyContainerId": "journey_0_0_0_3",
+                  "legInfoArray": [
+
+              ]
+              },
+
+              {
+                  "tripIndex": "0",
+                  "marketIndex": "0",
+                  "dateMarketIndex": "1",
+                  "journeyIndex": "0",
+                  "key": "0_0_1_0",
+                  "activateJourneyId": "activateJourney_0_0_1_0",
+                  "deactivateJourneyId": "deactivateJourney_0_0_1_0",
+                  "journeyContainerId": "journey_0_0_1_0",
+                  "legInfoArray": [
+
+              ]
+              },
+
+              {
+                  "tripIndex": "0",
+                  "marketIndex": "0",
+                  "dateMarketIndex": "1",
+                  "journeyIndex": "1",
+                  "key": "0_0_1_1",
+                  "activateJourneyId": "activateJourney_0_0_1_1",
+                  "deactivateJourneyId": "deactivateJourney_0_0_1_1",
+                  "journeyContainerId": "journey_0_0_1_1",
+                  "legInfoArray": [
+
+              ]
+              },
+
+              {
+                  "tripIndex": "0",
+                  "marketIndex": "0",
+                  "dateMarketIndex": "1",
+                  "journeyIndex": "2",
+                  "key": "0_0_1_2",
+                  "activateJourneyId": "activateJourney_0_0_1_2",
+                  "deactivateJourneyId": "deactivateJourney_0_0_1_2",
+                  "journeyContainerId": "journey_0_0_1_2",
+                  "legInfoArray": [
+
+              ]
+              },
+
+              {
+                  "tripIndex": "0",
+                  "marketIndex": "0",
+                  "dateMarketIndex": "2",
+                  "journeyIndex": "0",
+                  "key": "0_0_2_0",
+                  "activateJourneyId": "activateJourney_0_0_2_0",
+                  "deactivateJourneyId": "deactivateJourney_0_0_2_0",
+                  "journeyContainerId": "journey_0_0_2_0",
+                  "legInfoArray": [
+
+                {
+                    "legIndex": "0",
+                    "equipmentType": "C10",
+                    "equipmentTypeSuffix": "900",
+                    "std": "2012-12-20T06:30:00.0000000+11:00",
+                    "departureStation": "HAN",
+                    "arrivalStation": "PQC",
+                    "carrierCode": "P8",
+                    "flightNumber": " 915",
+                    "opSuffix": "",
+                    "marketingCode": "",
+                    "marketingOverride": "False"
+                },
+                {
+                    "legIndex": "1",
+                    "equipmentType": "C10",
+                    "equipmentTypeSuffix": "900",
+                    "std": "2012-12-20T09:15:00.0000000+11:00",
+                    "departureStation": "PQC",
+                    "arrivalStation": "SGN",
+                    "carrierCode": "P8",
+                    "flightNumber": " 906",
+                    "opSuffix": "",
+                    "marketingCode": "",
+                    "marketingOverride": "False"
+                }
+              ]
+              },
+
+              {
+                  "tripIndex": "0",
+                  "marketIndex": "0",
+                  "dateMarketIndex": "2",
+                  "journeyIndex": "1",
+                  "key": "0_0_2_1",
+                  "activateJourneyId": "activateJourney_0_0_2_1",
+                  "deactivateJourneyId": "deactivateJourney_0_0_2_1",
+                  "journeyContainerId": "journey_0_0_2_1",
+                  "legInfoArray": [
+
+                {
+                    "legIndex": "0",
+                    "equipmentType": "C10",
+                    "equipmentTypeSuffix": "900",
+                    "std": "2012-12-20T10:15:00.0000000+11:00",
+                    "departureStation": "HAN",
+                    "arrivalStation": "BMV",
+                    "carrierCode": "P8",
+                    "flightNumber": " 563",
+                    "opSuffix": "",
+                    "marketingCode": "",
+                    "marketingOverride": "False"
+                },
+                {
+                    "legIndex": "1",
+                    "equipmentType": "C10",
+                    "equipmentTypeSuffix": "900",
+                    "std": "2012-12-20T18:50:00.0000000+11:00",
+                    "departureStation": "BMV",
+                    "arrivalStation": "SGN",
+                    "carrierCode": "P8",
+                    "flightNumber": " 569",
+                    "opSuffix": "",
+                    "marketingCode": "",
+                    "marketingOverride": "False"
+                }
+              ]
+              },
+
+              {
+                  "tripIndex": "0",
+                  "marketIndex": "0",
+                  "dateMarketIndex": "2",
+                  "journeyIndex": "2",
+                  "key": "0_0_2_2",
+                  "activateJourneyId": "activateJourney_0_0_2_2",
+                  "deactivateJourneyId": "deactivateJourney_0_0_2_2",
+                  "journeyContainerId": "journey_0_0_2_2",
+                  "legInfoArray": [
+
+                {
+                    "legIndex": "0",
+                    "equipmentType": "C10",
+                    "equipmentTypeSuffix": "900",
+                    "std": "2012-12-20T10:15:00.0000000+11:00",
+                    "departureStation": "HAN",
+                    "arrivalStation": "BMV",
+                    "carrierCode": "P8",
+                    "flightNumber": " 563",
+                    "opSuffix": "",
+                    "marketingCode": "",
+                    "marketingOverride": "False"
+                },
+                {
+                    "legIndex": "1",
+                    "equipmentType": "C10",
+                    "equipmentTypeSuffix": "900",
+                    "std": "2012-12-20T20:45:00.0000000+11:00",
+                    "departureStation": "BMV",
+                    "arrivalStation": "SGN",
+                    "carrierCode": "P8",
+                    "flightNumber": " 565",
+                    "opSuffix": "",
+                    "marketingCode": "",
+                    "marketingOverride": "False"
+                }
+              ]
+              },
+
+              {
+                  "tripIndex": "0",
+                  "marketIndex": "0",
+                  "dateMarketIndex": "2",
+                  "journeyIndex": "3",
+                  "key": "0_0_2_3",
+                  "activateJourneyId": "activateJourney_0_0_2_3",
+                  "deactivateJourneyId": "deactivateJourney_0_0_2_3",
+                  "journeyContainerId": "journey_0_0_2_3",
+                  "legInfoArray": [
+
+                {
+                    "legIndex": "0",
+                    "equipmentType": "C10",
+                    "equipmentTypeSuffix": "900",
+                    "std": "2012-12-20T14:35:00.0000000+11:00",
+                    "departureStation": "HAN",
+                    "arrivalStation": "PXU",
+                    "carrierCode": "P8",
+                    "flightNumber": " 545",
+                    "opSuffix": "",
+                    "marketingCode": "",
+                    "marketingOverride": "False"
+                },
+                {
+                    "legIndex": "1",
+                    "equipmentType": "C10",
+                    "equipmentTypeSuffix": "900",
+                    "std": "2012-12-20T16:30:00.0000000+11:00",
+                    "departureStation": "PXU",
+                    "arrivalStation": "SGN",
+                    "carrierCode": "P8",
+                    "flightNumber": " 545",
+                    "opSuffix": "",
+                    "marketingCode": "",
+                    "marketingOverride": "False"
+                }
+              ]
+              },
+
+              {
+                  "tripIndex": "0",
+                  "marketIndex": "0",
+                  "dateMarketIndex": "2",
+                  "journeyIndex": "4",
+                  "key": "0_0_2_4",
+                  "activateJourneyId": "activateJourney_0_0_2_4",
+                  "deactivateJourneyId": "deactivateJourney_0_0_2_4",
+                  "journeyContainerId": "journey_0_0_2_4",
+                  "legInfoArray": [
+
+                {
+                    "legIndex": "0",
+                    "equipmentType": "C10",
+                    "equipmentTypeSuffix": "900",
+                    "std": "2012-12-20T18:40:00.0000000+11:00",
+                    "departureStation": "HAN",
+                    "arrivalStation": "BMV",
+                    "carrierCode": "P8",
+                    "flightNumber": " 565",
+                    "opSuffix": "",
+                    "marketingCode": "",
+                    "marketingOverride": "False"
+                },
+                {
+                    "legIndex": "1",
+                    "equipmentType": "C10",
+                    "equipmentTypeSuffix": "900",
+                    "std": "2012-12-20T20:45:00.0000000+11:00",
+                    "departureStation": "BMV",
+                    "arrivalStation": "SGN",
+                    "carrierCode": "P8",
+                    "flightNumber": " 565",
+                    "opSuffix": "",
+                    "marketingCode": "",
+                    "marketingOverride": "False"
+                }
+              ]
+              },
+
+              {
+                  "tripIndex": "0",
+                  "marketIndex": "0",
+                  "dateMarketIndex": "3",
+                  "journeyIndex": "0",
+                  "key": "0_0_3_0",
+                  "activateJourneyId": "activateJourney_0_0_3_0",
+                  "deactivateJourneyId": "deactivateJourney_0_0_3_0",
+                  "journeyContainerId": "journey_0_0_3_0",
+                  "legInfoArray": [
+
+              ]
+              },
+
+              {
+                  "tripIndex": "0",
+                  "marketIndex": "0",
+                  "dateMarketIndex": "3",
+                  "journeyIndex": "1",
+                  "key": "0_0_3_1",
+                  "activateJourneyId": "activateJourney_0_0_3_1",
+                  "deactivateJourneyId": "deactivateJourney_0_0_3_1",
+                  "journeyContainerId": "journey_0_0_3_1",
+                  "legInfoArray": [
+
+              ]
+              },
+
+              {
+                  "tripIndex": "0",
+                  "marketIndex": "0",
+                  "dateMarketIndex": "3",
+                  "journeyIndex": "2",
+                  "key": "0_0_3_2",
+                  "activateJourneyId": "activateJourney_0_0_3_2",
+                  "deactivateJourneyId": "deactivateJourney_0_0_3_2",
+                  "journeyContainerId": "journey_0_0_3_2",
+                  "legInfoArray": [
+
+              ]
+              },
+
+              {
+                  "tripIndex": "0",
+                  "marketIndex": "0",
+                  "dateMarketIndex": "4",
+                  "journeyIndex": "0",
+                  "key": "0_0_4_0",
+                  "activateJourneyId": "activateJourney_0_0_4_0",
+                  "deactivateJourneyId": "deactivateJourney_0_0_4_0",
+                  "journeyContainerId": "journey_0_0_4_0",
+                  "legInfoArray": [
+
+              ]
+              },
+
+              {
+                  "tripIndex": "0",
+                  "marketIndex": "0",
+                  "dateMarketIndex": "4",
+                  "journeyIndex": "1",
+                  "key": "0_0_4_1",
+                  "activateJourneyId": "activateJourney_0_0_4_1",
+                  "deactivateJourneyId": "deactivateJourney_0_0_4_1",
+                  "journeyContainerId": "journey_0_0_4_1",
+                  "legInfoArray": [
+
+              ]
+              },
+
+              {
+                  "tripIndex": "0",
+                  "marketIndex": "0",
+                  "dateMarketIndex": "4",
+                  "journeyIndex": "2",
+                  "key": "0_0_4_2",
+                  "activateJourneyId": "activateJourney_0_0_4_2",
+                  "deactivateJourneyId": "deactivateJourney_0_0_4_2",
+                  "journeyContainerId": "journey_0_0_4_2",
+                  "legInfoArray": [
+
+              ]
+              },
+
+              {
+                  "tripIndex": "0",
+                  "marketIndex": "0",
+                  "dateMarketIndex": "4",
+                  "journeyIndex": "3",
+                  "key": "0_0_4_3",
+                  "activateJourneyId": "activateJourney_0_0_4_3",
+                  "deactivateJourneyId": "deactivateJourney_0_0_4_3",
+                  "journeyContainerId": "journey_0_0_4_3",
+                  "legInfoArray": [
+
+              ]
+              },
+
+              {
+                  "tripIndex": "0",
+                  "marketIndex": "0",
+                  "dateMarketIndex": "4",
+                  "journeyIndex": "4",
+                  "key": "0_0_4_4",
+                  "activateJourneyId": "activateJourney_0_0_4_4",
+                  "deactivateJourneyId": "deactivateJourney_0_0_4_4",
+                  "journeyContainerId": "journey_0_0_4_4",
+                  "legInfoArray": [
+
+              ]
+              },
+
+              {
+                  "tripIndex": "0",
+                  "marketIndex": "1",
+                  "dateMarketIndex": "0",
+                  "journeyIndex": "0",
+                  "key": "0_1_0_0",
+                  "activateJourneyId": "activateJourney_0_1_0_0",
+                  "deactivateJourneyId": "deactivateJourney_0_1_0_0",
+                  "journeyContainerId": "journey_0_1_0_0",
+                  "legInfoArray": [
+
+              ]
+              },
+
+              {
+                  "tripIndex": "0",
+                  "marketIndex": "1",
+                  "dateMarketIndex": "0",
+                  "journeyIndex": "1",
+                  "key": "0_1_0_1",
+                  "activateJourneyId": "activateJourney_0_1_0_1",
+                  "deactivateJourneyId": "deactivateJourney_0_1_0_1",
+                  "journeyContainerId": "journey_0_1_0_1",
+                  "legInfoArray": [
+
+              ]
+              },
+
+              {
+                  "tripIndex": "0",
+                  "marketIndex": "1",
+                  "dateMarketIndex": "0",
+                  "journeyIndex": "2",
+                  "key": "0_1_0_2",
+                  "activateJourneyId": "activateJourney_0_1_0_2",
+                  "deactivateJourneyId": "deactivateJourney_0_1_0_2",
+                  "journeyContainerId": "journey_0_1_0_2",
+                  "legInfoArray": [
+
+              ]
+              },
+
+              {
+                  "tripIndex": "0",
+                  "marketIndex": "1",
+                  "dateMarketIndex": "1",
+                  "journeyIndex": "0",
+                  "key": "0_1_1_0",
+                  "activateJourneyId": "activateJourney_0_1_1_0",
+                  "deactivateJourneyId": "deactivateJourney_0_1_1_0",
+                  "journeyContainerId": "journey_0_1_1_0",
+                  "legInfoArray": [
+
+              ]
+              },
+
+              {
+                  "tripIndex": "0",
+                  "marketIndex": "1",
+                  "dateMarketIndex": "1",
+                  "journeyIndex": "1",
+                  "key": "0_1_1_1",
+                  "activateJourneyId": "activateJourney_0_1_1_1",
+                  "deactivateJourneyId": "deactivateJourney_0_1_1_1",
+                  "journeyContainerId": "journey_0_1_1_1",
+                  "legInfoArray": [
+
+              ]
+              },
+
+              {
+                  "tripIndex": "0",
+                  "marketIndex": "1",
+                  "dateMarketIndex": "1",
+                  "journeyIndex": "2",
+                  "key": "0_1_1_2",
+                  "activateJourneyId": "activateJourney_0_1_1_2",
+                  "deactivateJourneyId": "deactivateJourney_0_1_1_2",
+                  "journeyContainerId": "journey_0_1_1_2",
+                  "legInfoArray": [
+
+              ]
+              },
+
+              {
+                  "tripIndex": "0",
+                  "marketIndex": "1",
+                  "dateMarketIndex": "2",
+                  "journeyIndex": "0",
+                  "key": "0_1_2_0",
+                  "activateJourneyId": "activateJourney_0_1_2_0",
+                  "deactivateJourneyId": "deactivateJourney_0_1_2_0",
+                  "journeyContainerId": "journey_0_1_2_0",
+                  "legInfoArray": [
+
+                {
+                    "legIndex": "0",
+                    "equipmentType": "C10",
+                    "equipmentTypeSuffix": "900",
+                    "std": "2012-12-24T07:05:00.0000000+11:00",
+                    "departureStation": "SGN",
+                    "arrivalStation": "BMV",
+                    "carrierCode": "P8",
+                    "flightNumber": " 574",
+                    "opSuffix": "",
+                    "marketingCode": "",
+                    "marketingOverride": "False"
+                },
+                {
+                    "legIndex": "1",
+                    "equipmentType": "C14",
+                    "equipmentTypeSuffix": "900",
+                    "std": "2012-12-24T11:50:00.0000000+11:00",
+                    "departureStation": "BMV",
+                    "arrivalStation": "HAN",
+                    "carrierCode": "P8",
+                    "flightNumber": " 564",
+                    "opSuffix": "",
+                    "marketingCode": "",
+                    "marketingOverride": "False"
+                }
+              ]
+              },
+
+              {
+                  "tripIndex": "0",
+                  "marketIndex": "1",
+                  "dateMarketIndex": "2",
+                  "journeyIndex": "1",
+                  "key": "0_1_2_1",
+                  "activateJourneyId": "activateJourney_0_1_2_1",
+                  "deactivateJourneyId": "deactivateJourney_0_1_2_1",
+                  "journeyContainerId": "journey_0_1_2_1",
+                  "legInfoArray": [
+
+                {
+                    "legIndex": "0",
+                    "equipmentType": "C10",
+                    "equipmentTypeSuffix": "900",
+                    "std": "2012-12-24T09:40:00.0000000+11:00",
+                    "departureStation": "SGN",
+                    "arrivalStation": "PXU",
+                    "carrierCode": "P8",
+                    "flightNumber": " 542",
+                    "opSuffix": "",
+                    "marketingCode": "",
+                    "marketingOverride": "False"
+                },
+                {
+                    "legIndex": "1",
+                    "equipmentType": "C10",
+                    "equipmentTypeSuffix": "900",
+                    "std": "2012-12-24T11:05:00.0000000+11:00",
+                    "departureStation": "PXU",
+                    "arrivalStation": "HAN",
+                    "carrierCode": "P8",
+                    "flightNumber": " 542",
+                    "opSuffix": "",
+                    "marketingCode": "",
+                    "marketingOverride": "False"
+                }
+              ]
+              },
+
+              {
+                  "tripIndex": "0",
+                  "marketIndex": "1",
+                  "dateMarketIndex": "2",
+                  "journeyIndex": "2",
+                  "key": "0_1_2_2",
+                  "activateJourneyId": "activateJourney_0_1_2_2",
+                  "deactivateJourneyId": "deactivateJourney_0_1_2_2",
+                  "journeyContainerId": "journey_0_1_2_2",
+                  "legInfoArray": [
+
+                {
+                    "legIndex": "0",
+                    "equipmentType": "C10",
+                    "equipmentTypeSuffix": "900",
+                    "std": "2012-12-24T15:00:00.0000000+11:00",
+                    "departureStation": "SGN",
+                    "arrivalStation": "HAN",
+                    "carrierCode": "P8",
+                    "flightNumber": " 920",
+                    "opSuffix": "",
+                    "marketingCode": "",
+                    "marketingOverride": "False"
+                }
+              ]
+              },
+
+              {
+                  "tripIndex": "0",
+                  "marketIndex": "1",
+                  "dateMarketIndex": "3",
+                  "journeyIndex": "0",
+                  "key": "0_1_3_0",
+                  "activateJourneyId": "activateJourney_0_1_3_0",
+                  "deactivateJourneyId": "deactivateJourney_0_1_3_0",
+                  "journeyContainerId": "journey_0_1_3_0",
+                  "legInfoArray": [
+
+              ]
+              },
+
+              {
+                  "tripIndex": "0",
+                  "marketIndex": "1",
+                  "dateMarketIndex": "3",
+                  "journeyIndex": "1",
+                  "key": "0_1_3_1",
+                  "activateJourneyId": "activateJourney_0_1_3_1",
+                  "deactivateJourneyId": "deactivateJourney_0_1_3_1",
+                  "journeyContainerId": "journey_0_1_3_1",
+                  "legInfoArray": [
+
+              ]
+              },
+
+              {
+                  "tripIndex": "0",
+                  "marketIndex": "1",
+                  "dateMarketIndex": "3",
+                  "journeyIndex": "2",
+                  "key": "0_1_3_2",
+                  "activateJourneyId": "activateJourney_0_1_3_2",
+                  "deactivateJourneyId": "deactivateJourney_0_1_3_2",
+                  "journeyContainerId": "journey_0_1_3_2",
+                  "legInfoArray": [
+
+              ]
+              },
+
+              {
+                  "tripIndex": "0",
+                  "marketIndex": "1",
+                  "dateMarketIndex": "4",
+                  "journeyIndex": "0",
+                  "key": "0_1_4_0",
+                  "activateJourneyId": "activateJourney_0_1_4_0",
+                  "deactivateJourneyId": "deactivateJourney_0_1_4_0",
+                  "journeyContainerId": "journey_0_1_4_0",
+                  "legInfoArray": [
+
+              ]
+              },
+
+              {
+                  "tripIndex": "0",
+                  "marketIndex": "1",
+                  "dateMarketIndex": "4",
+                  "journeyIndex": "1",
+                  "key": "0_1_4_1",
+                  "activateJourneyId": "activateJourney_0_1_4_1",
+                  "deactivateJourneyId": "deactivateJourney_0_1_4_1",
+                  "journeyContainerId": "journey_0_1_4_1",
+                  "legInfoArray": [
+
+              ]
+              },
+
+      ];
+                     $(document).ready(SKYSALES.availabilityInput.init);
+                 }
+    </script><div class="sectionHeader2">Lượt đi<span>Hà Nội (HAN) 
+          đến 
+          TP. Hồ Chí Minh (SGN)
+        </span><div class="verticalSpcr"></div><span>Thứ Năm, 20/12/2012
+               (5  chuyến bay)
+            </span></div>
+          <div id="availabilityInputContent_1" class="availabilityInputColumnViewSectionContent">
+            <div class="tabsHeader"><input id="ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_HiddenFieldTabIndex1" type="hidden" name="ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$HiddenFieldTabIndex1" value="3"><div class="leftArrowButton"><a id="ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_LinkButtonPreviousWeek1" href="javascript:__doPostBack('ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$LinkButtonPreviousWeek1','')"></a></div>
+              <div class="dayHeaders dayHeaderImage"><a href="javascript:SKYSALES.setTabIndex(0, '1')">Thứ ba<span> 18 Tháng mười hai</span><span id="idPriteTop_1_0"></span></a></div>
+              <div class="dayHeaderImageSeparator"></div>
+              <div class="dayHeaders dayHeaderImage"><a href="javascript:SKYSALES.setTabIndex(0, '2')">Thứ tư<span> 19 Tháng mười hai</span><span id="idPriteTop_2_0"></span></a></div>
+              <div class="dayHeadersLarge dayHeaderTodayImage"><a href="javascript:SKYSALES.setTabIndex(0, '3')">Thứ năm<span> 20 Tháng mười hai</span><span id="idPriteTop_3_0"></span></a></div>
+              <div class="dayHeaders dayHeaderImage"><a href="javascript:SKYSALES.setTabIndex(0, '4')">Thứ sáu<span> 21 Tháng mười hai</span><span id="idPriteTop_4_0"></span></a></div>
+              <div class="dayHeaderImageSeparator"></div>
+              <div class="dayHeaders dayHeaderImage"><a href="javascript:SKYSALES.setTabIndex(0, '5')">Thứ bảy<span> 22 Tháng mười hai</span><span id="idPriteTop_5_0"></span></a></div>
+              <div class="rightArrowButton"><a id="ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_LinkButtonNextWeek1" href="javascript:__doPostBack('ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$LinkButtonNextWeek1','')"></a></div>
+            </div>
+            <table id="availabilityTable0" class="w98 availabilityTable">
+              <tr>
+                <td colspan="8" align="right"><em>Tất cả giá vé trên được tính trên đơn vị tiền tệ VNĐ</em></td>
+              </tr>
+              <tr>
+                <th scope="col" class="center">Chuyến bay</th>
+                <th scope="col" class="center">Khởi hành</th>
+                <th scope="col" class="center" style="width:100px;">Đến</th>
+                <th scope="col" class="center">Full Deluxe</th>
+                <th scope="col" class="center">Deluxe Saver</th>
+                <th scope="col" class="center">Super Flex</th>
+                <th scope="col" class="center">Eco Flex</th>
+                <th scope="col" class="center">Promo.(*E)</th>
+              </tr>
+              <tr class="altRowItem">
+                <td class="left footnote">
+                    P8-915
+                    P8-906<a style="text-decoration:none;font-size:.7em;" href="javascript:;" onMouseover="fixedtooltip('Chuyến bay này có một điểm dừng tại sân bay Phú Quốc', this, event, 'auto')" onMouseout="delayhidetip()">
+                      *       
+                    </a></td>
+                <td class="center">6:30 SA</td>
+                <td class="center">10:15 SA</td>
+                <td class="fareCol1" style="font-style:italic; color:#F60;">
+                          Hết vé</td>
+                <td class="fareCol2">
+                  <p><input id="ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt1Fare31" onclick="return raise('SelectFare', new SelectFareEventArgs(1, 8, 'I'))" type="radio" name="ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$market1" value="0~I~I63~6101~~None~X|P8~ 915~ ~~HAN~12/20/2012 06:30~PQC~12/20/2012 08:47^P8~ 906~ ~~PQC~12/20/2012 09:15~SGN~12/20/2012 10:15">3.700.000</p>
+                </td>
+                <td class="fareCol3">
+                  <p><input id="ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt1Fare30" onclick="return raise('SelectFare', new SelectFareEventArgs(1, 8, 'WT'))" type="radio" name="ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$market1" value="0~WT~WT63~6102~~None~X|P8~ 915~ ~~HAN~12/20/2012 06:30~PQC~12/20/2012 08:47^P8~ 906~ ~~PQC~12/20/2012 09:15~SGN~12/20/2012 10:15">2.645.000</p>
+                </td>
+                <td class="fareCol4">
+                  <p><input id="ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt1Fare29" onclick="return raise('SelectFare', new SelectFareEventArgs(1, 8, 'N'))" type="radio" name="ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$market1" value="0~N~N62~6103~~None~X|P8~ 915~ ~~HAN~12/20/2012 06:30~PQC~12/20/2012 08:47^P8~ 906~ ~~PQC~12/20/2012 09:15~SGN~12/20/2012 10:15">1.525.000</p>
+                </td>
+                <td class="fareCol5" style="font-style:italic; color:#F60;">
+                            Hết vé</td>
+              </tr>
+              <tr>
+                <td class="left footnote">
+                    P8-563
+                    P8-569<a style="text-decoration:none;font-size:.7em;" href="javascript:;" onMouseover="fixedtooltip('Chuyến bay này có một điểm dừng tại sân bay Buôn Mê Thuột', this, event, 'auto')" onMouseout="delayhidetip()">
+                      *       
+                    </a></td>
+                <td class="center">10:15 SA</td>
+                <td class="center">19:45 CH</td>
+                <td class="fareCol1" style="font-style:italic; color:#F60;">
+                          Hết vé</td>
+                <td class="fareCol2">
+                  <p><input id="ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt1Fare35" onclick="return raise('SelectFare', new SelectFareEventArgs(1, 9, 'I'))" type="radio" name="ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$market1" value="0~I~I63~6101~~None~X|P8~ 563~ ~~HAN~12/20/2012 10:15~BMV~12/20/2012 12:00^P8~ 569~ ~~BMV~12/20/2012 18:50~SGN~12/20/2012 19:45">3.700.000</p>
+                </td>
+                <td class="fareCol3">
+                  <p><input id="ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt1Fare34" onclick="return raise('SelectFare', new SelectFareEventArgs(1, 9, 'WT'))" type="radio" name="ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$market1" value="0~WT~WT63~6102~~None~X|P8~ 563~ ~~HAN~12/20/2012 10:15~BMV~12/20/2012 12:00^P8~ 569~ ~~BMV~12/20/2012 18:50~SGN~12/20/2012 19:45">2.645.000</p>
+                </td>
+                <td class="fareCol4">
+                  <p><input id="ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt1Fare33" onclick="return raise('SelectFare', new SelectFareEventArgs(1, 9, 'N'))" type="radio" name="ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$market1" value="0~N~N62~6103~~None~X|P8~ 563~ ~~HAN~12/20/2012 10:15~BMV~12/20/2012 12:00^P8~ 569~ ~~BMV~12/20/2012 18:50~SGN~12/20/2012 19:45">1.525.000</p>
+                </td>
+                <td class="fareCol5">
+                  <p><input id="ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt1Fare32" onclick="return raise('SelectFare', new SelectFareEventArgs(1, 9, 'T'))" type="radio" name="ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$market1" value="0~T~T61~6104~~None~X|P8~ 563~ ~~HAN~12/20/2012 10:15~BMV~12/20/2012 12:00^P8~ 569~ ~~BMV~12/20/2012 18:50~SGN~12/20/2012 19:45">1.325.000</p>
+                </td>
+              </tr>
+              <tr class="altRowItem">
+                <td class="left footnote">
+                    P8-563
+                    P8-565<a style="text-decoration:none;font-size:.7em;" href="javascript:;" onMouseover="fixedtooltip('Chuyến bay này có một điểm dừng tại sân bay Buôn Mê Thuột', this, event, 'auto')" onMouseout="delayhidetip()">
+                      *       
+                    </a></td>
+                <td class="center">10:15 SA</td>
+                <td class="center">21:40 CH</td>
+                <td class="fareCol1" style="font-style:italic; color:#F60;">
+                          Hết vé</td>
+                <td class="fareCol2">
+                  <p><input id="ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt1Fare39" onclick="return raise('SelectFare', new SelectFareEventArgs(1, 10, 'I'))" type="radio" name="ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$market1" value="0~I~I63~6101~~None~X|P8~ 563~ ~~HAN~12/20/2012 10:15~BMV~12/20/2012 12:00^P8~ 565~ ~~BMV~12/20/2012 20:45~SGN~12/20/2012 21:40">3.700.000</p>
+                </td>
+                <td class="fareCol3">
+                  <p><input id="ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt1Fare38" onclick="return raise('SelectFare', new SelectFareEventArgs(1, 10, 'WT'))" type="radio" name="ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$market1" value="0~WT~WT63~6102~~None~X|P8~ 563~ ~~HAN~12/20/2012 10:15~BMV~12/20/2012 12:00^P8~ 565~ ~~BMV~12/20/2012 20:45~SGN~12/20/2012 21:40">2.645.000</p>
+                </td>
+                <td class="fareCol4">
+                  <p><input id="ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt1Fare37" onclick="return raise('SelectFare', new SelectFareEventArgs(1, 10, 'N'))" type="radio" name="ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$market1" value="0~N~N62~6103~~None~X|P8~ 563~ ~~HAN~12/20/2012 10:15~BMV~12/20/2012 12:00^P8~ 565~ ~~BMV~12/20/2012 20:45~SGN~12/20/2012 21:40">1.525.000</p>
+                </td>
+                <td class="fareCol5">
+                  <p><input id="ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt1Fare36" onclick="return raise('SelectFare', new SelectFareEventArgs(1, 10, 'T'))" type="radio" name="ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$market1" value="0~T~T61~6104~~None~X|P8~ 563~ ~~HAN~12/20/2012 10:15~BMV~12/20/2012 12:00^P8~ 565~ ~~BMV~12/20/2012 20:45~SGN~12/20/2012 21:40">1.325.000</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="left footnote">
+                    P8-545<a style="text-decoration:none;font-size:.7em;" href="javascript:;" onMouseover="fixedtooltip('Chuyến bay này có một điểm dừng tại sân bay Pleiku', this, event, 'auto')" onMouseout="delayhidetip()">
+                      *</a></td>
+                <td class="center">14:35 CH</td>
+                <td class="center">17:35 CH</td>
+                <td class="fareCol1" style="font-style:italic; color:#F60;">
+                          Hết vé</td>
+                <td class="fareCol2">
+                  <p><input id="ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt1Fare43" onclick="return raise('SelectFare', new SelectFareEventArgs(1, 11, 'I'))" type="radio" name="ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$market1" value="0~I~I63~6101~~None~X|P8~ 545~ ~~HAN~12/20/2012 14:35~SGN~12/20/2012 17:35">3.700.000</p>
+                </td>
+                <td class="fareCol3">
+                  <p><input id="ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt1Fare42" onclick="return raise('SelectFare', new SelectFareEventArgs(1, 11, 'WT'))" type="radio" name="ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$market1" value="0~WT~WT63~6102~~None~X|P8~ 545~ ~~HAN~12/20/2012 14:35~SGN~12/20/2012 17:35">2.645.000</p>
+                </td>
+                <td class="fareCol4">
+                  <p><input id="ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt1Fare41" onclick="return raise('SelectFare', new SelectFareEventArgs(1, 11, 'N'))" type="radio" name="ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$market1" value="0~N~N62~6103~~None~X|P8~ 545~ ~~HAN~12/20/2012 14:35~SGN~12/20/2012 17:35">1.525.000</p>
+                </td>
+                <td class="fareCol5">
+                  <p><input id="ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt1Fare40" onclick="return raise('SelectFare', new SelectFareEventArgs(1, 11, 'T'))" type="radio" name="ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$market1" value="0~T~T61~6104~~None~X|P8~ 545~ ~~HAN~12/20/2012 14:35~SGN~12/20/2012 17:35">1.325.000</p>
+                </td>
+              </tr>
+              <tr class="altRowItem">
+                <td class="left footnote">
+                    P8-565<a style="text-decoration:none;font-size:.7em;" href="javascript:;" onMouseover="fixedtooltip('Chuyến bay này có một điểm dừng tại sân bay Buôn Mê Thuột', this, event, 'auto')" onMouseout="delayhidetip()">
+                      *</a></td>
+                <td class="center">18:40 CH</td>
+                <td class="center">21:40 CH</td>
+                <td class="fareCol1" style="font-style:italic; color:#F60;">
+                          Hết vé</td>
+                <td class="fareCol2">
+                  <p><input id="ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt1Fare47" onclick="return raise('SelectFare', new SelectFareEventArgs(1, 12, 'I'))" type="radio" name="ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$market1" value="0~I~I63~6101~~None~X|P8~ 565~ ~~HAN~12/20/2012 18:40~SGN~12/20/2012 21:40">3.700.000</p>
+                </td>
+                <td class="fareCol3">
+                  <p><input id="ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt1Fare46" onclick="return raise('SelectFare', new SelectFareEventArgs(1, 12, 'WT'))" type="radio" name="ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$market1" value="0~WT~WT63~6102~~None~X|P8~ 565~ ~~HAN~12/20/2012 18:40~SGN~12/20/2012 21:40">2.645.000</p>
+                </td>
+                <td class="fareCol4">
+                  <p><input id="ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt1Fare45" onclick="return raise('SelectFare', new SelectFareEventArgs(1, 12, 'N'))" type="radio" name="ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$market1" value="0~N~N62~6103~~None~X|P8~ 565~ ~~HAN~12/20/2012 18:40~SGN~12/20/2012 21:40">1.525.000</p>
+                </td>
+                <td class="fareCol5">
+                  <p><input id="ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt1Fare44" onclick="return raise('SelectFare', new SelectFareEventArgs(1, 12, 'T'))" type="radio" name="ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$market1" value="0~T~T61~6104~~None~X|P8~ 565~ ~~HAN~12/20/2012 18:40~SGN~12/20/2012 21:40">1.325.000</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="sectionHeader2">Lượt về<span>TP. Hồ Chí Minh (SGN) 
+          đến 
+          Hà Nội (HAN)
+        </span><div class="verticalSpcr"></div><span>Thứ Hai, 24/12/2012
+               (3  chuyến bay)
+            </span></div>
+          <div id="availabilityInputContent_2" class="availabilityInputColumnViewSectionContent">
+            <div class="tabsHeader"><input id="ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_HiddenFieldTabIndex2" type="hidden" name="ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$HiddenFieldTabIndex2" value="3"><div class="leftArrowButton"><a id="ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_LinkButtonPreviousWeek2" href="javascript:__doPostBack('ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$LinkButtonPreviousWeek2','')"></a></div>
+              <div class="dayHeaders dayHeaderImage"><a href="javascript:SKYSALES.setTabIndex(1, '1')">Thứ bảy<span> 22 Tháng mười hai</span><span id="idPriteTop_1_1"></span></a></div>
+              <div class="dayHeaderImageSeparator"></div>
+              <div class="dayHeaders dayHeaderImage"><a href="javascript:SKYSALES.setTabIndex(1, '2')">Chủ nhật<span> 23 Tháng mười hai</span><span id="idPriteTop_2_1"></span></a></div>
+              <div class="dayHeadersLarge dayHeaderTodayImage"><a href="javascript:SKYSALES.setTabIndex(1, '3')">Thứ hai<span> 24 Tháng mười hai</span><span id="idPriteTop_3_1"></span></a></div>
+              <div class="dayHeaders dayHeaderImage"><a href="javascript:SKYSALES.setTabIndex(1, '4')">Thứ ba<span> 25 Tháng mười hai</span><span id="idPriteTop_4_1"></span></a></div>
+              <div class="dayHeaderImageSeparator"></div>
+              <div class="dayHeaders dayHeaderImage"><a href="javascript:SKYSALES.setTabIndex(1, '5')">Thứ tư<span> 26 Tháng mười hai</span><span id="idPriteTop_5_1"></span></a></div>
+              <div class="rightArrowButton"><a id="ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_LinkButtonNextWeek2" href="javascript:__doPostBack('ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$LinkButtonNextWeek2','')"></a></div>
+            </div>
+            <table id="availabilityTable1" class="w98 availabilityTable">
+              <tr>
+                <td colspan="8" align="right"><em>Tất cả giá vé trên được tính trên đơn vị tiền tệ VNĐ</em></td>
+              </tr>
+              <tr>
+                <th scope="col" class="center">Chuyến bay</th>
+                <th scope="col" class="center">Khởi hành</th>
+                <th scope="col" class="center" style="width:100px;">Đến</th>
+                <th scope="col" class="center">Full Deluxe</th>
+                <th scope="col" class="center">Deluxe Saver</th>
+                <th scope="col" class="center">Super Flex</th>
+                <th scope="col" class="center">Eco Flex</th>
+                <th scope="col" class="center">Promo.(*E)</th>
+              </tr>
+              <tr class="altRowItem">
+                <td class="left footnote">
+                    P8-574
+                    P8-564<a style="text-decoration:none;font-size:.7em;" href="javascript:;" onMouseover="fixedtooltip('Chuyến bay này có một điểm dừng tại sân bay Buôn Mê Thuột', this, event, 'auto')" onMouseout="delayhidetip()">
+                      *       
+                    </a></td>
+                <td class="center">7:05 SA</td>
+                <td class="center">13:35 CH</td>
+                <td class="fareCol1" style="font-style:italic; color:#F60;">
+                          Hết vé</td>
+                <td class="fareCol2" style="font-style:italic; color:#F60;">
+                          Hết vé</td>
+                <td class="fareCol3">
+                  <p><input id="ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt2Fare21" onclick="return raise('SelectFare', new SelectFareEventArgs(2, 7, 'WT'))" type="radio" name="ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$market2" value="0~WT~WT61~6102~~None~X|P8~ 574~ ~~SGN~12/24/2012 07:05~BMV~12/24/2012 08:00^P8~ 564~ ~~BMV~12/24/2012 11:50~HAN~12/24/2012 13:35">2.645.000</p>
+                </td>
+                <td class="fareCol4">
+                  <p><input id="ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt2Fare20" onclick="return raise('SelectFare', new SelectFareEventArgs(2, 7, 'L'))" type="radio" name="ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$market2" value="0~L~L61~6103~~None~X|P8~ 574~ ~~SGN~12/24/2012 07:05~BMV~12/24/2012 08:00^P8~ 564~ ~~BMV~12/24/2012 11:50~HAN~12/24/2012 13:35">1.775.000</p>
+                </td>
+                <td class="fareCol5" style="font-style:italic; color:#F60;">
+                            Hết vé</td>
+              </tr>
+              <tr>
+                <td class="left footnote">
+                    P8-542<a style="text-decoration:none;font-size:.7em;" href="javascript:;" onMouseover="fixedtooltip('Chuyến bay này có một điểm dừng tại sân bay Pleiku', this, event, 'auto')" onMouseout="delayhidetip()">
+                      *</a></td>
+                <td class="center">9:40 SA</td>
+                <td class="center">12:40 CH</td>
+                <td class="fareCol1" style="font-style:italic; color:#F60;">
+                          Hết vé</td>
+                <td class="fareCol2" style="font-style:italic; color:#F60;">
+                          Hết vé</td>
+                <td class="fareCol3">
+                  <p><input id="ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt2Fare23" onclick="return raise('SelectFare', new SelectFareEventArgs(2, 8, 'WT'))" type="radio" name="ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$market2" value="0~WT~WT61~6102~~None~X|P8~ 542~ ~~SGN~12/24/2012 09:40~HAN~12/24/2012 12:40">2.645.000</p>
+                </td>
+                <td class="fareCol4">
+                  <p><input id="ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt2Fare22" onclick="return raise('SelectFare', new SelectFareEventArgs(2, 8, 'N'))" type="radio" name="ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$market2" value="0~N~N61~6103~~None~X|P8~ 542~ ~~SGN~12/24/2012 09:40~HAN~12/24/2012 12:40">1.525.000</p>
+                </td>
+                <td class="fareCol5" style="font-style:italic; color:#F60;">
+                            Hết vé</td>
+              </tr>
+              <tr class="altRowItem">
+                <td class="left footnote">
+                    P8-920</td>
+                <td class="center">15:00 CH</td>
+                <td class="center">17:05 CH</td>
+                <td class="fareCol1">
+                  <p><input id="ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt2Fare28" onclick="return raise('SelectFare', new SelectFareEventArgs(2, 9, 'D'))" type="radio" name="ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$market2" value="0~D~D61~6100~~None~X|P8~ 920~ ~~SGN~12/24/2012 15:00~HAN~12/24/2012 17:05">4.100.000</p>
+                </td>
+                <td class="fareCol2">
+                  <p><input id="ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt2Fare27" onclick="return raise('SelectFare', new SelectFareEventArgs(2, 9, 'I'))" type="radio" name="ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$market2" value="0~I~I61~6101~~None~X|P8~ 920~ ~~SGN~12/24/2012 15:00~HAN~12/24/2012 17:05">3.700.000</p>
+                </td>
+                <td class="fareCol3">
+                  <p><input id="ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt2Fare26" onclick="return raise('SelectFare', new SelectFareEventArgs(2, 9, 'WT'))" type="radio" name="ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$market2" value="0~WT~WT61~6102~~None~X|P8~ 920~ ~~SGN~12/24/2012 15:00~HAN~12/24/2012 17:05">2.645.000</p>
+                </td>
+                <td class="fareCol4">
+                  <p><input id="ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt2Fare25" onclick="return raise('SelectFare', new SelectFareEventArgs(2, 9, 'H'))" type="radio" name="ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$market2" value="0~H~H61~6103~~None~X|P8~ 920~ ~~SGN~12/24/2012 15:00~HAN~12/24/2012 17:05">2.175.000</p>
+                </td>
+                <td class="fareCol5">
+                  <p><input id="ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt2Fare24" onclick="return raise('SelectFare', new SelectFareEventArgs(2, 9, 'EPN'))" type="radio" name="ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$market2" value="0~EPN~E61PN~6103~~None~X|P8~ 920~ ~~SGN~12/24/2012 15:00~HAN~12/24/2012 17:05">1.480.000</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="sectionHeader">Thông tin quan trọng</div>
+          <p>- Các chuyến bay có dấu (*) là chuyến bay có điểm tạm dừng (transit).Quý khách vui lòng bấm vào số hiệu chuyến bay để biết về điểm tạm dừng<br><a href="javascript:void(0);" onclick="return SKYSALES.Util.displayPopUpTransit();" id="PriceDisplayContactView_popUpConverter">Hướng dẫn dành cho khách tạm dừng (khách transit)</a><br><b>-  Lưu ý: Quý khách kiểm tra kỹ điều kiện giá vé Promo. Chỉ riêng giá *E (giá 1.480.000 VND) áp dụng trên đường bay giữa Hà Nội, Vinh và TP. Hồ Chí Minh được phép thay đổi đặt chỗ.</b><br><a href="http://airmekong.vn/Sites/Web/vi-Vn/Detail/392/242/dich-vu/hanh-khach-dat-cho-co-kem-tre-so-sinh">Hành khách đặt chỗ có kèm trẻ sơ sinh xem thông tin tại đây</a></p><br><p>- Các giá vé đều có điều kiện kèm theo, nhấn vào đây để xem các <a href="http://airmekong.com.vn/Sites/Web/vi-Vn/Detail/397/43/loai-gia-ve-va-dieu-kien/cac-loai-gia-ve-va-dieu-kien">điều kiện giá vé</a> và <a href="http://airmekong.com.vn/Sites/Web/vi-Vn/Detail/396/73/dieu-le-van-chuyen/dieu-le-van-chuyen">điều lệ vận chuyển.</a><br><b>Quý khách lưu ý sẽ không được phục vụ suất ăn khi đặt chỗ trong vòng 3 giờ trước chuyến bay</b></p><br><br><div class="clearAll"></div>
+          <div id="agreementInput">
+            <p class="formCheckbox"><input id="ControlGroupScheduleSelectView_AgreementInputScheduleSelectView_CheckBoxAgreement" type="checkbox" name="ControlGroupScheduleSelectView$AgreementInputScheduleSelectView$CheckBoxAgreement" value="on"><strong><em><label for="ControlGroupScheduleSelectView_AgreementInputScheduleSelectView_CheckBoxAgreement">Tôi đồng ý với các Điều lệ vận chuyển và Điều kiện giá</label></em></strong></p>
+          </div><object class="metaobject hidden"><param name="metaparam" value="{target:'#ControlGroupScheduleSelectView_AgreementInputScheduleSelectView_CheckBoxAgreement'}">
+            <param name="required" value="'true'">
+            <param name="requirederror" value="'Vui lòng xác nhận đồng ý với các Điều Khoản và Điều Lệ Giá để tiếp tục.'"></object><p class="floatRightPT"><input type="submit" name="ControlGroupScheduleSelectView$ButtonSubmit" value="Tiếp tục" onclick="return validate(this) &amp;&amp; preventDoubleClick();" id="ControlGroupScheduleSelectView_ButtonSubmit" class="buttonN"></p>
+        </div>
+        <div id="mainContentFooterDiv"></div>
+      </div>
+    </div>
+    <div class="clearAll"></div>
+    <div id="footer">
+      <ul>
+        <li><a href="http://airmekong.com.vn/Sites/Web/vi-Vn/2/bay-cung-air-mekong" title="Bay cùng Air Mekong">Bay cùng Air Mekong</a></li>
+        <li><a href="http://airmekong.com.vn/Sites/Web/vi-Vn/4/ve-chung-toi" title="Về chúng tôi">Về chúng tôi</a></li>
+        <li><a href="http://airmekong.com.vn/Sites/Web/vi-Vn/6/mekong-club" title="Mekong club">Mekong club</a></li>
+        <li><a href="http://www.airmekong.com.vn/Sites/Web/vi-Vn/150/tuyen-dung/co-hoi-viec-lam" title="Tuyển dụng">Tuyển dụng</a></li>
+        <li><a href="http://airmekong.com.vn/Sites/Web/vi-Vn/Detail/418/99/thong-tin-chung/thong-tin-chung" title="Liên hệ">Liên hệ</a></li>
+        <li><a href="http://airmekong.com.vn/Sites/Web/vi-Vn/385/dieu-khoan-su-dung" title="Điều khoản sử dụng">Điều khoản sử dụng</a></li>
+        <li><a href="http://airmekong.com.vn/Sites/Web/vi-Vn/Detail/396/73/dieu-le-van-chuyen/dieu-le-van-chuyen" title="Điều lệ vận chuyển">Điều lệ vận chuyển</a></li>
+      </ul>
+      <ul style="margin:0px">
+        <li class="coppyrightTitle" style="border-right:0px solid;"><a href="http://www.airmekong.com.vn" title="Air Mekong @ 2010.">Air Mekong @ 2010.</a></li>
+      </ul>
+    </div>
+    <div class="clearAll"></div><script type="text/javascript">
+                                    var theForm = document.forms['SkySales'];
+                                    if (!theForm) {
+                                        theForm = document.SkySales;
+                                    }
+      </script><script language="javascript" type="text/javascript"><!--
+                   function ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_Validate(eventArgs) {
+
+                       var dots;
+                       var sel;
+                       var numOfMkts = 2;
+                       var msg = new Array(
+				"Vui lòng chọn chuyến bay lượt đi", "Vui lòng chọn chuyến bay lượt về",
+
+					0);
+
+                       for (var i = 1; i <= numOfMkts; i++) {
+                           sel = '';
+                           dots = document['SkySales']["ControlGroupScheduleSelectView$AvailabilityInputScheduleSelectView$market" + i];
+
+                           if (dots == null) {
+                               alert("Rất tiếc, không có chuyến bay hay giá vé nào \ncho hành trình của Quý khách. Vui lòng chọn ngày hoặc địa điểm khác \nvà thử lại.");
+                               return false;
+                           }
+                           else if (dots[0]) // array
+                           {
+                               for (var j = 0; j < dots.length; j++) {
+                                   if (dots[j].checked) {
+                                       sel = dots[j].value;
+                                       break;
+                                   }
+                               }
+                           }
+                           else // single
+                           {
+                               if (dots.checked) {
+                                   sel = dots.value;
+                               }
+                           }
+
+                           if (sel == '') {
+                               alert(msg[i - 1]);
+                               return false;
+                           }
+                       }
+
+                       return true;
+                   }
+
+
+                   function displayPopUpFareRule(classOfService, fareRuleKeys, paxTypes) {
+                       var url = '/FareRules.aspx?fareRuleKeys=' + fareRuleKeys + '&class=' + classOfService + '&paxTypes=' + paxTypes;
+
+                       if (!window.fareRuleWindow || fareRuleWindow.closed)	// has not yet been defined
+                       {
+                           fareRuleWindow = window.open(url, 'fareRule', 'width=250,height=251,toolbar=0,status=0,location=0,menubar=0,scrollbars=1,resizable=0');
+                       }
+                       else {
+                           fareRuleWindow.open(url, 'fareRule', 'width=250,height=251,toolbar=0,status=0,location=0,menubar=0,scrollbars=1,resizable=0');
+                           fareRuleWindow.focus();
+                       }
+                   }
+
+				// --></script><script language="javascript" type="text/javascript"><!--
+				                   function paxFare(paxTypeDesc, classDesc, fareRuleKey) {
+				                       this.paxTypeDesc = paxTypeDesc;
+				                       this.classDesc = classDesc;
+				                       this.fareRuleKey = fareRuleKey;
+				                   }
+				                   var marketPaxFares = new Array();
+
+				                   marketPaxFares['mkt1|flt1|EL'] = new Array();
+
+				                   marketPaxFares['mkt1|flt1|EL'][0] = new paxFare('ADT', 'Class E', 'el62|el|p8|6107||vi-vn');
+
+				                   marketPaxFares['mkt1|flt1|ML'] = new Array();
+
+				                   marketPaxFares['mkt1|flt1|ML'][0] = new paxFare('ADT', 'Class M', 'm63|ml|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt1|flt1|WT'] = new Array();
+
+				                   marketPaxFares['mkt1|flt1|WT'][0] = new paxFare('ADT', 'Class WT', 'wt64|wt|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt1|flt1|I'] = new Array();
+
+				                   marketPaxFares['mkt1|flt1|I'][0] = new paxFare('ADT', 'DELUXE Hạng I', 'i64|i|p8|6101||vi-vn');
+
+				                   marketPaxFares['mkt1|flt2|EL'] = new Array();
+
+				                   marketPaxFares['mkt1|flt2|EL'][0] = new paxFare('ADT', 'Class E', 'el62|el|p8|6107||vi-vn');
+
+				                   marketPaxFares['mkt1|flt2|ML'] = new Array();
+
+				                   marketPaxFares['mkt1|flt2|ML'][0] = new paxFare('ADT', 'Class M', 'm63|ml|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt1|flt2|WT'] = new Array();
+
+				                   marketPaxFares['mkt1|flt2|WT'][0] = new paxFare('ADT', 'Class WT', 'wt64|wt|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt1|flt2|I'] = new Array();
+
+				                   marketPaxFares['mkt1|flt2|I'][0] = new paxFare('ADT', 'DELUXE Hạng I', 'i64|i|p8|6101||vi-vn');
+
+				                   marketPaxFares['mkt1|flt3|EL'] = new Array();
+
+				                   marketPaxFares['mkt1|flt3|EL'][0] = new paxFare('ADT', 'Class E', 'el62|el|p8|6107||vi-vn');
+
+				                   marketPaxFares['mkt1|flt3|LL'] = new Array();
+
+				                   marketPaxFares['mkt1|flt3|LL'][0] = new paxFare('ADT', 'Class L', 'l63|ll|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt1|flt3|WT'] = new Array();
+
+				                   marketPaxFares['mkt1|flt3|WT'][0] = new paxFare('ADT', 'Class WT', 'wt64|wt|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt1|flt3|I'] = new Array();
+
+				                   marketPaxFares['mkt1|flt3|I'][0] = new paxFare('ADT', 'DELUXE Hạng I', 'i64|i|p8|6101||vi-vn');
+
+				                   marketPaxFares['mkt1|flt4|EL'] = new Array();
+
+				                   marketPaxFares['mkt1|flt4|EL'][0] = new paxFare('ADT', 'Class E', 'el62|el|p8|6107||vi-vn');
+
+				                   marketPaxFares['mkt1|flt4|NL'] = new Array();
+
+				                   marketPaxFares['mkt1|flt4|NL'][0] = new paxFare('ADT', 'Class N', 'n63|nl|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt1|flt4|WT'] = new Array();
+
+				                   marketPaxFares['mkt1|flt4|WT'][0] = new paxFare('ADT', 'Class WT', 'wt64|wt|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt1|flt4|I'] = new Array();
+
+				                   marketPaxFares['mkt1|flt4|I'][0] = new paxFare('ADT', 'DELUXE Hạng I', 'i64|i|p8|6101||vi-vn');
+
+				                   marketPaxFares['mkt1|flt5|EL'] = new Array();
+
+				                   marketPaxFares['mkt1|flt5|EL'][0] = new paxFare('ADT', 'Class E', 'el62|el|p8|6107||vi-vn');
+
+				                   marketPaxFares['mkt1|flt5|N'] = new Array();
+
+				                   marketPaxFares['mkt1|flt5|N'][0] = new paxFare('ADT', 'ECO FLEX Hạng N', 'n62|n|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt1|flt5|WT'] = new Array();
+
+				                   marketPaxFares['mkt1|flt5|WT'][0] = new paxFare('ADT', 'Class WT', 'wt63|wt|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt1|flt5|I'] = new Array();
+
+				                   marketPaxFares['mkt1|flt5|I'][0] = new paxFare('ADT', 'DELUXE Hạng I', 'i63|i|p8|6101||vi-vn');
+
+				                   marketPaxFares['mkt1|flt6|EL'] = new Array();
+
+				                   marketPaxFares['mkt1|flt6|EL'][0] = new paxFare('ADT', 'Class E', 'el62|el|p8|6107||vi-vn');
+
+				                   marketPaxFares['mkt1|flt6|N'] = new Array();
+
+				                   marketPaxFares['mkt1|flt6|N'][0] = new paxFare('ADT', 'ECO FLEX Hạng N', 'n62|n|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt1|flt6|WT'] = new Array();
+
+				                   marketPaxFares['mkt1|flt6|WT'][0] = new paxFare('ADT', 'Class WT', 'wt63|wt|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt1|flt6|I'] = new Array();
+
+				                   marketPaxFares['mkt1|flt6|I'][0] = new paxFare('ADT', 'DELUXE Hạng I', 'i63|i|p8|6101||vi-vn');
+
+				                   marketPaxFares['mkt1|flt7|TL'] = new Array();
+
+				                   marketPaxFares['mkt1|flt7|TL'][0] = new paxFare('ADT', 'Class T', 't63|tl|p8|6104||vi-vn');
+
+				                   marketPaxFares['mkt1|flt7|L'] = new Array();
+
+				                   marketPaxFares['mkt1|flt7|L'][0] = new paxFare('ADT', 'ECO FLEX Hạng L', 'l62|l|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt1|flt7|WT'] = new Array();
+
+				                   marketPaxFares['mkt1|flt7|WT'][0] = new paxFare('ADT', 'Class WT', 'wt63|wt|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt1|flt7|I'] = new Array();
+
+				                   marketPaxFares['mkt1|flt7|I'][0] = new paxFare('ADT', 'DELUXE Hạng I', 'i63|i|p8|6101||vi-vn');
+
+				                   marketPaxFares['mkt1|flt8|N'] = new Array();
+
+				                   marketPaxFares['mkt1|flt8|N'][0] = new paxFare('ADT', 'ECO FLEX Hạng N', 'n62|n|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt1|flt8|WT'] = new Array();
+
+				                   marketPaxFares['mkt1|flt8|WT'][0] = new paxFare('ADT', 'Class WT', 'wt63|wt|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt1|flt8|I'] = new Array();
+
+				                   marketPaxFares['mkt1|flt8|I'][0] = new paxFare('ADT', 'DELUXE Hạng I', 'i63|i|p8|6101||vi-vn');
+
+				                   marketPaxFares['mkt1|flt9|T'] = new Array();
+
+				                   marketPaxFares['mkt1|flt9|T'][0] = new paxFare('ADT', 'PROMOTION Hạng T', 't61|t|p8|6104||vi-vn');
+
+				                   marketPaxFares['mkt1|flt9|N'] = new Array();
+
+				                   marketPaxFares['mkt1|flt9|N'][0] = new paxFare('ADT', 'ECO FLEX Hạng N', 'n62|n|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt1|flt9|WT'] = new Array();
+
+				                   marketPaxFares['mkt1|flt9|WT'][0] = new paxFare('ADT', 'Class WT', 'wt63|wt|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt1|flt9|I'] = new Array();
+
+				                   marketPaxFares['mkt1|flt9|I'][0] = new paxFare('ADT', 'DELUXE Hạng I', 'i63|i|p8|6101||vi-vn');
+
+				                   marketPaxFares['mkt1|flt10|T'] = new Array();
+
+				                   marketPaxFares['mkt1|flt10|T'][0] = new paxFare('ADT', 'PROMOTION Hạng T', 't61|t|p8|6104||vi-vn');
+
+				                   marketPaxFares['mkt1|flt10|N'] = new Array();
+
+				                   marketPaxFares['mkt1|flt10|N'][0] = new paxFare('ADT', 'ECO FLEX Hạng N', 'n62|n|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt1|flt10|WT'] = new Array();
+
+				                   marketPaxFares['mkt1|flt10|WT'][0] = new paxFare('ADT', 'Class WT', 'wt63|wt|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt1|flt10|I'] = new Array();
+
+				                   marketPaxFares['mkt1|flt10|I'][0] = new paxFare('ADT', 'DELUXE Hạng I', 'i63|i|p8|6101||vi-vn');
+
+				                   marketPaxFares['mkt1|flt11|T'] = new Array();
+
+				                   marketPaxFares['mkt1|flt11|T'][0] = new paxFare('ADT', 'PROMOTION Hạng T', 't61|t|p8|6104||vi-vn');
+
+				                   marketPaxFares['mkt1|flt11|N'] = new Array();
+
+				                   marketPaxFares['mkt1|flt11|N'][0] = new paxFare('ADT', 'ECO FLEX Hạng N', 'n62|n|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt1|flt11|WT'] = new Array();
+
+				                   marketPaxFares['mkt1|flt11|WT'][0] = new paxFare('ADT', 'Class WT', 'wt63|wt|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt1|flt11|I'] = new Array();
+
+				                   marketPaxFares['mkt1|flt11|I'][0] = new paxFare('ADT', 'DELUXE Hạng I', 'i63|i|p8|6101||vi-vn');
+
+				                   marketPaxFares['mkt1|flt12|T'] = new Array();
+
+				                   marketPaxFares['mkt1|flt12|T'][0] = new paxFare('ADT', 'PROMOTION Hạng T', 't61|t|p8|6104||vi-vn');
+
+				                   marketPaxFares['mkt1|flt12|N'] = new Array();
+
+				                   marketPaxFares['mkt1|flt12|N'][0] = new paxFare('ADT', 'ECO FLEX Hạng N', 'n62|n|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt1|flt12|WT'] = new Array();
+
+				                   marketPaxFares['mkt1|flt12|WT'][0] = new paxFare('ADT', 'Class WT', 'wt63|wt|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt1|flt12|I'] = new Array();
+
+				                   marketPaxFares['mkt1|flt12|I'][0] = new paxFare('ADT', 'DELUXE Hạng I', 'i63|i|p8|6101||vi-vn');
+
+				                   marketPaxFares['mkt1|flt13|W'] = new Array();
+
+				                   marketPaxFares['mkt1|flt13|W'][0] = new paxFare('ADT', 'Class W', 'w61|w|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt1|flt13|WT'] = new Array();
+
+				                   marketPaxFares['mkt1|flt13|WT'][0] = new paxFare('ADT', 'Class WT', 'wt62|wt|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt1|flt14|N'] = new Array();
+
+				                   marketPaxFares['mkt1|flt14|N'][0] = new paxFare('ADT', 'ECO FLEX Hạng N', 'n61|n|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt1|flt14|WT'] = new Array();
+
+				                   marketPaxFares['mkt1|flt14|WT'][0] = new paxFare('ADT', 'Class WT', 'wt62|wt|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt1|flt14|I'] = new Array();
+
+				                   marketPaxFares['mkt1|flt14|I'][0] = new paxFare('ADT', 'DELUXE Hạng I', 'i62|i|p8|6101||vi-vn');
+
+				                   marketPaxFares['mkt1|flt15|M'] = new Array();
+
+				                   marketPaxFares['mkt1|flt15|M'][0] = new paxFare('ADT', 'ECO FLEX Hạng M', 'm61|m|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt1|flt15|WT'] = new Array();
+
+				                   marketPaxFares['mkt1|flt15|WT'][0] = new paxFare('ADT', 'Class WT', 'wt62|wt|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt1|flt15|I'] = new Array();
+
+				                   marketPaxFares['mkt1|flt15|I'][0] = new paxFare('ADT', 'DELUXE Hạng I', 'i62|i|p8|6101||vi-vn');
+
+				                   marketPaxFares['mkt1|flt16|N'] = new Array();
+
+				                   marketPaxFares['mkt1|flt16|N'][0] = new paxFare('ADT', 'ECO FLEX Hạng N', 'n61|n|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt1|flt16|WT'] = new Array();
+
+				                   marketPaxFares['mkt1|flt16|WT'][0] = new paxFare('ADT', 'Class WT', 'wt62|wt|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt1|flt16|I'] = new Array();
+
+				                   marketPaxFares['mkt1|flt16|I'][0] = new paxFare('ADT', 'DELUXE Hạng I', 'i62|i|p8|6101||vi-vn');
+
+				                   marketPaxFares['mkt1|flt17|N'] = new Array();
+
+				                   marketPaxFares['mkt1|flt17|N'][0] = new paxFare('ADT', 'ECO FLEX Hạng N', 'n61|n|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt1|flt17|WT'] = new Array();
+
+				                   marketPaxFares['mkt1|flt17|WT'][0] = new paxFare('ADT', 'Class WT', 'wt62|wt|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt1|flt17|I'] = new Array();
+
+				                   marketPaxFares['mkt1|flt17|I'][0] = new paxFare('ADT', 'DELUXE Hạng I', 'i62|i|p8|6101||vi-vn');
+
+				                   marketPaxFares['mkt1|flt18|N'] = new Array();
+
+				                   marketPaxFares['mkt1|flt18|N'][0] = new paxFare('ADT', 'ECO FLEX Hạng N', 'n61|n|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt1|flt18|WT'] = new Array();
+
+				                   marketPaxFares['mkt1|flt18|WT'][0] = new paxFare('ADT', 'Class WT', 'wt62|wt|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt1|flt18|I'] = new Array();
+
+				                   marketPaxFares['mkt1|flt18|I'][0] = new paxFare('ADT', 'DELUXE Hạng I', 'i62|i|p8|6101||vi-vn');
+
+				                   marketPaxFares['mkt1|flt19|N'] = new Array();
+
+				                   marketPaxFares['mkt1|flt19|N'][0] = new paxFare('ADT', 'ECO FLEX Hạng N', 'n61|n|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt1|flt19|WT'] = new Array();
+
+				                   marketPaxFares['mkt1|flt19|WT'][0] = new paxFare('ADT', 'Class WT', 'wt62|wt|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt1|flt19|I'] = new Array();
+
+				                   marketPaxFares['mkt1|flt19|I'][0] = new paxFare('ADT', 'DELUXE Hạng I', 'i62|i|p8|6101||vi-vn');
+
+				                   marketPaxFares['mkt1|flt20|L'] = new Array();
+
+				                   marketPaxFares['mkt1|flt20|L'][0] = new paxFare('ADT', 'ECO FLEX Hạng L', 'l61|l|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt1|flt20|WT'] = new Array();
+
+				                   marketPaxFares['mkt1|flt20|WT'][0] = new paxFare('ADT', 'Class WT', 'wt62|wt|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt1|flt20|I'] = new Array();
+
+				                   marketPaxFares['mkt1|flt20|I'][0] = new paxFare('ADT', 'DELUXE Hạng I', 'i62|i|p8|6101||vi-vn');
+
+				                   marketPaxFares['mkt2|flt1|L'] = new Array();
+
+				                   marketPaxFares['mkt2|flt1|L'][0] = new paxFare('ADT', 'ECO FLEX Hạng L', 'l61|l|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt2|flt1|WT'] = new Array();
+
+				                   marketPaxFares['mkt2|flt1|WT'][0] = new paxFare('ADT', 'Class WT', 'wt62|wt|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt2|flt2|L'] = new Array();
+
+				                   marketPaxFares['mkt2|flt2|L'][0] = new paxFare('ADT', 'ECO FLEX Hạng L', 'l61|l|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt2|flt2|WT'] = new Array();
+
+				                   marketPaxFares['mkt2|flt2|WT'][0] = new paxFare('ADT', 'Class WT', 'wt62|wt|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt2|flt2|P'] = new Array();
+
+				                   marketPaxFares['mkt2|flt2|P'][0] = new paxFare('ADT', 'Class P', 'p62|p|p8|6101||vi-vn');
+
+				                   marketPaxFares['mkt2|flt3|EPN'] = new Array();
+
+				                   marketPaxFares['mkt2|flt3|EPN'][0] = new paxFare('ADT', 'Class E promotion as N', 'e61pn|epn|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt2|flt3|L'] = new Array();
+
+				                   marketPaxFares['mkt2|flt3|L'][0] = new paxFare('ADT', 'ECO FLEX Hạng L', 'l61|l|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt2|flt3|WT'] = new Array();
+
+				                   marketPaxFares['mkt2|flt3|WT'][0] = new paxFare('ADT', 'Class WT', 'wt62|wt|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt2|flt3|I'] = new Array();
+
+				                   marketPaxFares['mkt2|flt3|I'][0] = new paxFare('ADT', 'DELUXE Hạng I', 'i62|i|p8|6101||vi-vn');
+
+				                   marketPaxFares['mkt2|flt3|D'] = new Array();
+
+				                   marketPaxFares['mkt2|flt3|D'][0] = new paxFare('ADT', 'DELUXE Hạng D', 'd62|d|p8|6100||vi-vn');
+
+				                   marketPaxFares['mkt2|flt4|L'] = new Array();
+
+				                   marketPaxFares['mkt2|flt4|L'][0] = new paxFare('ADT', 'ECO FLEX Hạng L', 'l61|l|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt2|flt4|WT'] = new Array();
+
+				                   marketPaxFares['mkt2|flt4|WT'][0] = new paxFare('ADT', 'Class WT', 'wt61|wt|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt2|flt5|L'] = new Array();
+
+				                   marketPaxFares['mkt2|flt5|L'][0] = new paxFare('ADT', 'ECO FLEX Hạng L', 'l61|l|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt2|flt5|WT'] = new Array();
+
+				                   marketPaxFares['mkt2|flt5|WT'][0] = new paxFare('ADT', 'Class WT', 'wt61|wt|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt2|flt6|EPN'] = new Array();
+
+				                   marketPaxFares['mkt2|flt6|EPN'][0] = new paxFare('ADT', 'Class E promotion as N', 'e61pn|epn|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt2|flt6|L'] = new Array();
+
+				                   marketPaxFares['mkt2|flt6|L'][0] = new paxFare('ADT', 'ECO FLEX Hạng L', 'l61|l|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt2|flt6|WT'] = new Array();
+
+				                   marketPaxFares['mkt2|flt6|WT'][0] = new paxFare('ADT', 'Class WT', 'wt61|wt|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt2|flt6|I'] = new Array();
+
+				                   marketPaxFares['mkt2|flt6|I'][0] = new paxFare('ADT', 'DELUXE Hạng I', 'i61|i|p8|6101||vi-vn');
+
+				                   marketPaxFares['mkt2|flt6|D'] = new Array();
+
+				                   marketPaxFares['mkt2|flt6|D'][0] = new paxFare('ADT', 'DELUXE Hạng D', 'd61|d|p8|6100||vi-vn');
+
+				                   marketPaxFares['mkt2|flt7|L'] = new Array();
+
+				                   marketPaxFares['mkt2|flt7|L'][0] = new paxFare('ADT', 'ECO FLEX Hạng L', 'l61|l|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt2|flt7|WT'] = new Array();
+
+				                   marketPaxFares['mkt2|flt7|WT'][0] = new paxFare('ADT', 'Class WT', 'wt61|wt|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt2|flt8|N'] = new Array();
+
+				                   marketPaxFares['mkt2|flt8|N'][0] = new paxFare('ADT', 'ECO FLEX Hạng N', 'n61|n|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt2|flt8|WT'] = new Array();
+
+				                   marketPaxFares['mkt2|flt8|WT'][0] = new paxFare('ADT', 'Class WT', 'wt61|wt|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt2|flt9|EPN'] = new Array();
+
+				                   marketPaxFares['mkt2|flt9|EPN'][0] = new paxFare('ADT', 'Class E promotion as N', 'e61pn|epn|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt2|flt9|H'] = new Array();
+
+				                   marketPaxFares['mkt2|flt9|H'][0] = new paxFare('ADT', 'ECO FLEX Hạng H', 'h61|h|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt2|flt9|WT'] = new Array();
+
+				                   marketPaxFares['mkt2|flt9|WT'][0] = new paxFare('ADT', 'Class WT', 'wt61|wt|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt2|flt9|I'] = new Array();
+
+				                   marketPaxFares['mkt2|flt9|I'][0] = new paxFare('ADT', 'DELUXE Hạng I', 'i61|i|p8|6101||vi-vn');
+
+				                   marketPaxFares['mkt2|flt9|D'] = new Array();
+
+				                   marketPaxFares['mkt2|flt9|D'][0] = new paxFare('ADT', 'DELUXE Hạng D', 'd61|d|p8|6100||vi-vn');
+
+				                   marketPaxFares['mkt2|flt10|L'] = new Array();
+
+				                   marketPaxFares['mkt2|flt10|L'][0] = new paxFare('ADT', 'ECO FLEX Hạng L', 'l61|l|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt2|flt10|WT'] = new Array();
+
+				                   marketPaxFares['mkt2|flt10|WT'][0] = new paxFare('ADT', 'Class WT', 'wt61|wt|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt2|flt11|N'] = new Array();
+
+				                   marketPaxFares['mkt2|flt11|N'][0] = new paxFare('ADT', 'ECO FLEX Hạng N', 'n61|n|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt2|flt11|WT'] = new Array();
+
+				                   marketPaxFares['mkt2|flt11|WT'][0] = new paxFare('ADT', 'Class WT', 'wt61|wt|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt2|flt12|EPN'] = new Array();
+
+				                   marketPaxFares['mkt2|flt12|EPN'][0] = new paxFare('ADT', 'Class E promotion as N', 'e61pn|epn|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt2|flt12|L'] = new Array();
+
+				                   marketPaxFares['mkt2|flt12|L'][0] = new paxFare('ADT', 'ECO FLEX Hạng L', 'l61|l|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt2|flt12|WT'] = new Array();
+
+				                   marketPaxFares['mkt2|flt12|WT'][0] = new paxFare('ADT', 'Class WT', 'wt61|wt|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt2|flt12|I'] = new Array();
+
+				                   marketPaxFares['mkt2|flt12|I'][0] = new paxFare('ADT', 'DELUXE Hạng I', 'i61|i|p8|6101||vi-vn');
+
+				                   marketPaxFares['mkt2|flt12|D'] = new Array();
+
+				                   marketPaxFares['mkt2|flt12|D'][0] = new paxFare('ADT', 'DELUXE Hạng D', 'd61|d|p8|6100||vi-vn');
+
+				                   marketPaxFares['mkt2|flt13|N'] = new Array();
+
+				                   marketPaxFares['mkt2|flt13|N'][0] = new paxFare('ADT', 'ECO FLEX Hạng N', 'n61|n|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt2|flt13|WT'] = new Array();
+
+				                   marketPaxFares['mkt2|flt13|WT'][0] = new paxFare('ADT', 'Class WT', 'wt61|wt|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt2|flt14|EPN'] = new Array();
+
+				                   marketPaxFares['mkt2|flt14|EPN'][0] = new paxFare('ADT', 'Class E promotion as N', 'e61pn|epn|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt2|flt14|L'] = new Array();
+
+				                   marketPaxFares['mkt2|flt14|L'][0] = new paxFare('ADT', 'ECO FLEX Hạng L', 'l61|l|p8|6103||vi-vn');
+
+				                   marketPaxFares['mkt2|flt14|WT'] = new Array();
+
+				                   marketPaxFares['mkt2|flt14|WT'][0] = new paxFare('ADT', 'Class WT', 'wt61|wt|p8|6102||vi-vn');
+
+				                   marketPaxFares['mkt2|flt14|I'] = new Array();
+
+				                   marketPaxFares['mkt2|flt14|I'][0] = new paxFare('ADT', 'DELUXE Hạng I', 'i61|i|p8|6101||vi-vn');
+
+				                   marketPaxFares['mkt2|flt14|D'] = new Array();
+
+				                   marketPaxFares['mkt2|flt14|D'][0] = new paxFare('ADT', 'DELUXE Hạng D', 'd61|d|p8|6100||vi-vn');
+					
+				// --></script><script language="javascript" type="text/javascript"><!--
+				                   function ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_initialize() {
+
+				                   } // end of Availability_initialize
+
+				// --></script><script language="javascript" type="text/javascript"><!-- HIDE FROM XML AND NON-JSCRIPT BROWSERS
+			
+
+				function ControlGroupScheduleSelectView_AvailabilityFareRulesDisplayScheduleSelectView_displayHtmlFareRules(SelectFareEventArgs)
+				{
+					if(!document.getElementById || !document.createTextNode)
+						return true;
+
+					//	SelectFareEventArgs.paxFares	= array of paxFare(paxTypeDesc,classDesc,fareRuleKey)
+					var paxFares=SelectFareEventArgs.paxFares;
+					var rule = '';
+					var allRulesTheSame = true;
+					for (var i=0; i<paxFares.length; i++)
+					{
+						rule = rule + '<p>' + paxFares[i].paxTypeDesc + '-' + paxFares[i].classDesc + '<\/p><p>' + fareRules[paxFares[i].fareRuleKey] + '<\/p>';
+						if (i>0 && fareRules[paxFares[i].fareRuleKey] != fareRules[paxFares[i-1].fareRuleKey])
+						{
+								allRulesTheSame = false;				
+						}
+					}
+					if (allRulesTheSame)
+					{
+						rule = '<p>' + paxFares[0].classDesc + '<\/p><p>' + fareRules[paxFares[0].fareRuleKey] + '<\/p>';
+					}
+					document.getElementById('fareRule'+SelectFareEventArgs.marketIndex).innerHTML = rule;
+				}
+				function ControlGroupScheduleSelectView_AvailabilityFareRulesDisplayScheduleSelectView_Validate(eventArgs)
+				{
+			
+
+					return true;
+				}
+
+				function onShowFareRule(fareRuleKey)
+				{
+					var url = '/AvailabilityFareRulesDisplay.aspx?fareRuleKey=' + fareRuleKey;
+					fareRulesWindow = window.open(url,"AvailabilityFareRulesDisplay",'width=250,height=251,toolbar=0,status=0,location=0,menubar=0,scrollbars=0,resizable=1');
+				}
+
+				// STOP HIDING --></script><script language="javascript" type="text/javascript">
+				                               var fareRules = new Array();
+
+				                               fareRules['el62|el|p8|6107||vi-vn'] = "<span>Universal Fare Rule<br /><\/span>";
+
+				                               fareRules['m63|ml|p8|6103||vi-vn'] = "<span>Universal Fare Rule<br /><\/span>";
+
+				                               fareRules['wt64|wt|p8|6102||vi-vn'] = "<span>Universal Fare Rule<br /><\/span>";
+
+				                               fareRules['i64|i|p8|6101||vi-vn'] = "<span>-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Thay &#xf0;?i &#xf0;?t ch?: &#xd0;&#xfd;?c ph&#xe9;p thay &#xf0;?i kh&#xf4;ng m?t ph&#xed;, nh&#xfd;ng Qu&#xfd; kh&#xe1;ch ph?i thanh to&#xe1;n kho?n ti?n ch&#xea;nh l?ch gi&#xe1; v&#xe9; &#xe1;p d?ng trong th?i h?n thay &#xf0;?i (n?u c&#xf3;)<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Thay &#xf0;?i h&#xe0;nh tr&#xec;nh: C<\/span><span class='red0green0blue0'>h? &#xf0;&#xfd;?c ph&#xe9;p &#xf0;?i sang h&#xe0;nh tr&#xec;nh m?i b?ng ho?c cao ti?n h&#xf5;n. &#xd0;? &#xf0;?i sang h&#xe0;nh tr&#xec;nh m?i &#xed;t ti?n h&#xf5;n h&#xe0;nh tr&#xec;nh hi?n t?i, Qu&#xfd; kh&#xe1;ch ho&#xe0;n v&#xe9; v&#xe0; xu?t v&#xe9; m?i cho h&#xe0;nh tr&#xec;nh m?i, &#xf0;&#xf3;ng ph&#xed; v&#xe0; ch&#xea;nh l?ch gi&#xe1; v&#xe9; (n?u c&#xf3;)<\/span><span class='red0green0blue0'><br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ho&#xe0;n v&#xe9;: Qu&#xfd; kh&#xe1;ch ph?i thanh to&#xe1;n ph&#xed; h?y v&#xe9;<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Chuy?n nh&#xfd;?ng: Qu&#xfd; kh&#xe1;ch &#xf0;&#xfd;?c ph&#xe9;p chuy?n nh&#xfd;?ng cho ng&#xfd;?i kh&#xe1;c nh&#xfd;ng ph?i thanh to&#xe1;n ph&#xed; chuy?n nh&#xfd;?ng.<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;N&#xe2;ng h?ng d?ch v?: Mi?n ph&#xed;<\/span><span class='red0green0blue0'> n&#xe2;ng h?ng, nh&#xfd;ng Qu&#xfd; kh&#xe1;ch ph?i tr? ph?n ch&#xea;nh l?ch gi?a m?c gi&#xe1; cao h&#xf5;n v?i m?c gi&#xe1; kh&#xe1;ch h&#xe0;ng &#xf0;&#xe3; tr?.<\/span><span class='red0green0blue0'><br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ch?n ch? ng?i: Mi?n ph&#xed;<br />Ph&#xed; v&#xe0; c&#xe1;c d?ch v? k&#xe8;m theo: <\/span><span class='red0green0blue0'>Kh&#xf4;ng ho&#xe0;n l?i ph&#xed; thay &#xf0;?i/ ph&#xed; &#xf0;?i t&#xea;n/ ph&#xed; d?ch v? xu?t v&#xe9; trong m?i tr&#xfd;?ng h?p<\/span><span class='red0green0blue0'><br /><\/span>";
+
+				                               fareRules['l63|ll|p8|6103||vi-vn'] = "<span>Universal Fare Rule<br /><\/span>";
+
+				                               fareRules['n63|nl|p8|6103||vi-vn'] = "<span>Universal Fare Rule<br /><\/span>";
+
+				                               fareRules['n62|n|p8|6103||vi-vn'] = "<span>-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;&#xd0;?i v?i h?ng NGV3: &#xc1;p d?ng cho nh&#xf3;m kh&#xe1;ch t? 3 ng&#xfd;?i tr? l&#xea;n<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Thay &#xf0;?i &#xf0;?t ch?: &#xd0;&#xfd;?c ph&#xe9;p thay &#xf0;?i nh&#xfd;ng Qu&#xfd; kh&#xe1;ch ph?i thanh to&#xe1;n ph&#xed; thay &#xf0;?i v&#xe0; ch&#xea;nh l?ch gi&#xe1; v&#xe9; &#xe1;p d?ng trong th?i h?n thay &#xf0;?i (n?u c&#xf3;)<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Thay &#xf0;?i h&#xe0;nh tr&#xec;nh: C<\/span><span class='red0green0blue0'>h? &#xf0;&#xfd;?c ph&#xe9;p &#xf0;?i sang h&#xe0;nh tr&#xec;nh m?i b?ng ho?c cao ti?n h&#xf5;n. &#xd0;? &#xf0;?i sang h&#xe0;nh tr&#xec;nh m?i &#xed;t ti?n h&#xf5;n h&#xe0;nh tr&#xec;nh hi?n t?i, Qu&#xfd; kh&#xe1;ch ho&#xe0;n v&#xe9; v&#xe0; xu?t v&#xe9; m?i cho h&#xe0;nh tr&#xec;nh m?i, &#xf0;&#xf3;ng ph&#xed; v&#xe0; ch&#xea;nh l?ch gi&#xe1; v&#xe9; (n?u c&#xf3;)<\/span><span class='red0green0blue0'><br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ho&#xe0;n v&#xe9;: Qu&#xfd; kh&#xe1;ch ph?i thanh to&#xe1;n ph&#xed; h?y v&#xe9;<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Chuy?n nh&#xfd;?ng: Qu&#xfd; kh&#xe1;ch &#xf0;&#xfd;?c ph&#xe9;p chuy?n nh&#xfd;?ng cho ng&#xfd;?i kh&#xe1;c nh&#xfd;ng ph?i thanh to&#xe1;n ph&#xed; chuy?n nh&#xfd;?ng.<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;N&#xe2;ng h?ng d?ch v?: <\/span><span class='red0green0blue0'>Khi n&#xe2;ng h?ng, ngo&#xe0;i ph&#xed; n&#xe2;ng h?ng, Qu&#xfd; kh&#xe1;ch ph?i tr? ph?n ch&#xea;nh l?ch gi?a m?c gi&#xe1; cao h&#xf5;n v?i m?c gi&#xe1; kh&#xe1;ch h&#xe0;ng &#xf0;&#xe3; tr?.<\/span><span class='red0green0blue0'><br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ch?n ch? ng?i: Q&#xfa;y kh&#xe1;ch ph?i thanh to&#xe1;n ph&#xed;<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ph&#xed; v&#xe0; c&#xe1;c d?ch v? k&#xe8;m theo: <\/span><span class='red0green0blue0'>Kh&#xf4;ng ho&#xe0;n l?i ph&#xed; thay &#xf0;?i/ ph&#xed; &#xf0;?i t&#xea;n/ ph&#xed; d?ch v? xu?t v&#xe9; trong m?i tr&#xfd;?ng h?p<\/span><span class='red0green0blue0'><br /><\/span><span class='red0green0blue0'>(**) B? ch?/ Nonshow: l&#xe0; tr&#xfd;?ng h?p kh&#xe1;ch h&#xe0;ng h?y ch? trong v&#xf2;ng 01 ti?ng tr&#xfd;?c gi? kh?i h&#xe0;nh ho?c sau gi? kh?i h&#xe0;nh ghi tr&#xea;n v&#xe9;. &#xd0;? kh&#xf4;ng ph?i ch?u m?c ph&#xed; n&#xe0;y, &#xf0;? ngh? qu&#xfd; kh&#xe1;ch th&#xf4;ng b&#xe1;o h?y ch? cho Air Mekong t?i thi?u 01 ti?ng tr&#xfd;?c gi? kh?i h&#xe0;nh c?a ch?ng bay ghi tr&#xea;n v&#xe9;.<br /><\/span><span class='red0green0blue0'><br /><br /><br /><\/span>";
+
+				                               fareRules['wt63|wt|p8|6102||vi-vn'] = "<span>Universal Fare Rule<br /><\/span>";
+
+				                               fareRules['i63|i|p8|6101||vi-vn'] = "<span>-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Thay &#xf0;?i &#xf0;?t ch?: &#xd0;&#xfd;?c ph&#xe9;p thay &#xf0;?i kh&#xf4;ng m?t ph&#xed;, nh&#xfd;ng Qu&#xfd; kh&#xe1;ch ph?i thanh to&#xe1;n kho?n ti?n ch&#xea;nh l?ch gi&#xe1; v&#xe9; &#xe1;p d?ng trong th?i h?n thay &#xf0;?i (n?u c&#xf3;)<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Thay &#xf0;?i h&#xe0;nh tr&#xec;nh: C<\/span><span class='red0green0blue0'>h? &#xf0;&#xfd;?c ph&#xe9;p &#xf0;?i sang h&#xe0;nh tr&#xec;nh m?i b?ng ho?c cao ti?n h&#xf5;n. &#xd0;? &#xf0;?i sang h&#xe0;nh tr&#xec;nh m?i &#xed;t ti?n h&#xf5;n h&#xe0;nh tr&#xec;nh hi?n t?i, Qu&#xfd; kh&#xe1;ch ho&#xe0;n v&#xe9; v&#xe0; xu?t v&#xe9; m?i cho h&#xe0;nh tr&#xec;nh m?i, &#xf0;&#xf3;ng ph&#xed; v&#xe0; ch&#xea;nh l?ch gi&#xe1; v&#xe9; (n?u c&#xf3;)<\/span><span class='red0green0blue0'><br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ho&#xe0;n v&#xe9;: Qu&#xfd; kh&#xe1;ch ph?i thanh to&#xe1;n ph&#xed; h?y v&#xe9;<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Chuy?n nh&#xfd;?ng: Qu&#xfd; kh&#xe1;ch &#xf0;&#xfd;?c ph&#xe9;p chuy?n nh&#xfd;?ng cho ng&#xfd;?i kh&#xe1;c nh&#xfd;ng ph?i thanh to&#xe1;n ph&#xed; chuy?n nh&#xfd;?ng.<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;N&#xe2;ng h?ng d?ch v?: Mi?n ph&#xed;<\/span><span class='red0green0blue0'> n&#xe2;ng h?ng, nh&#xfd;ng Qu&#xfd; kh&#xe1;ch ph?i tr? ph?n ch&#xea;nh l?ch gi?a m?c gi&#xe1; cao h&#xf5;n v?i m?c gi&#xe1; kh&#xe1;ch h&#xe0;ng &#xf0;&#xe3; tr?.<\/span><span class='red0green0blue0'><br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ch?n ch? ng?i: Mi?n ph&#xed;<br />Ph&#xed; v&#xe0; c&#xe1;c d?ch v? k&#xe8;m theo: <\/span><span class='red0green0blue0'>Kh&#xf4;ng ho&#xe0;n l?i ph&#xed; thay &#xf0;?i/ ph&#xed; &#xf0;?i t&#xea;n/ ph&#xed; d?ch v? xu?t v&#xe9; trong m?i tr&#xfd;?ng h?p<\/span><span class='red0green0blue0'><br /><\/span>";
+
+				                               fareRules['t63|tl|p8|6104||vi-vn'] = "<span>Universal Fare Rule<br /><\/span>";
+
+				                               fareRules['l62|l|p8|6103||vi-vn'] = "<span>-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;&#xd0;?i v?i h?ng LGV3: &#xc1;p d?ng cho nh&#xf3;m kh&#xe1;ch t? 3 ng&#xfd;?i tr? l&#xea;n<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Thay &#xf0;?i &#xf0;?t ch?: &#xd0;&#xfd;?c ph&#xe9;p thay &#xf0;?i nh&#xfd;ng Qu&#xfd; kh&#xe1;ch ph?i thanh to&#xe1;n ph&#xed; thay &#xf0;?i v&#xe0; ch&#xea;nh l?ch gi&#xe1; v&#xe9; &#xe1;p d?ng trong th?i h?n thay &#xf0;?i (n?u c&#xf3;)<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Thay &#xf0;?i h&#xe0;nh tr&#xec;nh: C<\/span><span class='red0green0blue0'>h? &#xf0;&#xfd;?c ph&#xe9;p &#xf0;?i sang h&#xe0;nh tr&#xec;nh m?i b?ng ho?c cao ti?n h&#xf5;n. &#xd0;? &#xf0;?i sang h&#xe0;nh tr&#xec;nh m?i &#xed;t ti?n h&#xf5;n h&#xe0;nh tr&#xec;nh hi?n t?i, Qu&#xfd; kh&#xe1;ch ho&#xe0;n v&#xe9; v&#xe0; xu?t v&#xe9; m?i cho h&#xe0;nh tr&#xec;nh m?i, &#xf0;&#xf3;ng ph&#xed; v&#xe0; ch&#xea;nh l?ch gi&#xe1; v&#xe9; (n?u c&#xf3;)<\/span><span class='red0green0blue0'><br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ho&#xe0;n v&#xe9;: Qu&#xfd; kh&#xe1;ch ph?i thanh to&#xe1;n ph&#xed; h?y v&#xe9;<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Chuy?n nh&#xfd;?ng: Qu&#xfd; kh&#xe1;ch &#xf0;&#xfd;?c ph&#xe9;p chuy?n nh&#xfd;?ng cho ng&#xfd;?i kh&#xe1;c nh&#xfd;ng ph?i thanh to&#xe1;n ph&#xed; chuy?n nh&#xfd;?ng.<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;N&#xe2;ng h?ng d?ch v?: <\/span><span class='red0green0blue0'>Khi n&#xe2;ng h?ng, ngo&#xe0;i ph&#xed; n&#xe2;ng h?ng, Qu&#xfd; kh&#xe1;ch ph?i tr? ph?n ch&#xea;nh l?ch gi?a m?c gi&#xe1; cao h&#xf5;n v?i m?c gi&#xe1; kh&#xe1;ch h&#xe0;ng &#xf0;&#xe3; tr?.<\/span><span class='red0green0blue0'><br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ch?n ch? ng?i: Q&#xfa;y kh&#xe1;ch ph?i thanh to&#xe1;n ph&#xed;<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ph&#xed; v&#xe0; c&#xe1;c d?ch v? k&#xe8;m theo: <\/span><span class='red0green0blue0'>Kh&#xf4;ng ho&#xe0;n l?i ph&#xed; thay &#xf0;?i/ ph&#xed; &#xf0;?i t&#xea;n/ ph&#xed; d?ch v? xu?t v&#xe9; trong m?i tr&#xfd;?ng h?p<\/span><span class='red0green0blue0'><br /><\/span><span class='red0green0blue0'>(**) B? ch?/ Nonshow: l&#xe0; tr&#xfd;?ng h?p kh&#xe1;ch h&#xe0;ng h?y ch? trong v&#xf2;ng 01 ti?ng tr&#xfd;?c gi? kh?i h&#xe0;nh ho?c sau gi? kh?i h&#xe0;nh ghi tr&#xea;n v&#xe9;. &#xd0;? kh&#xf4;ng ph?i ch?u m?c ph&#xed; n&#xe0;y, &#xf0;? ngh? qu&#xfd; kh&#xe1;ch th&#xf4;ng b&#xe1;o h?y ch? cho Air Mekong t?i thi?u 01 ti?ng tr&#xfd;?c gi? kh?i h&#xe0;nh c?a ch?ng bay ghi tr&#xea;n v&#xe9;.<br /><\/span><span class='red0green0blue0'><br /><br /><\/span>";
+
+				                               fareRules['t61|t|p8|6104||vi-vn'] = "<span>-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Thay &#xf0;?i &#xf0;?t ch?: &#xd0;&#xfd;?c ph&#xe9;p thay &#xf0;?i nh&#xfd;ng Qu&#xfd; kh&#xe1;ch ph?i  thanh to&#xe1;n ph&#xed; thay &#xf0;?i v&#xe0; ch&#xea;nh l?ch gi&#xe1; v&#xe9; &#xe1;p d?ng trong th?i h?n thay &#xf0;?i (n?u c&#xf3;)<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Thay &#xf0;?i h&#xe0;nh tr&#xec;nh: C<\/span><span class='red0green0blue0'>h? &#xf0;&#xfd;?c ph&#xe9;p &#xf0;?i sang h&#xe0;nh tr&#xec;nh m?i b?ng ho?c cao ti?n h&#xf5;n. &#xd0;? &#xf0;?i sang h&#xe0;nh tr&#xec;nh m?i &#xed;t ti?n h&#xf5;n h&#xe0;nh tr&#xec;nh hi?n t?i, Qu&#xfd; kh&#xe1;ch ho&#xe0;n v&#xe9; v&#xe0; xu?t v&#xe9; m?i cho h&#xe0;nh tr&#xec;nh m?i, &#xf0;&#xf3;ng ph&#xed; v&#xe0; ch&#xea;nh l?ch gi&#xe1; v&#xe9; (n?u c&#xf3;)<\/span><span class='red0green0blue0'><br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ho&#xe0;n v&#xe9;: Qu&#xfd; kh&#xe1;ch ph?i thanh to&#xe1;n kho?n ti?n ph&#xed; h?y v&#xe9;<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Chuy?n nh&#xfd;?ng: Qu&#xfd; kh&#xe1;ch &#xf0;&#xfd;?c ph&#xe9;p chuy?n nh&#xfd;?ng cho ng&#xfd;?i kh&#xe1;c nh&#xfd;ng ph?i thanh to&#xe1;n ph&#xed; chuy?n nh&#xfd;?ng.<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;N&#xe2;ng h?ng d?ch v?: <\/span><span class='red0green0blue0'>Khi n&#xe2;ng h?ng, ngo&#xe0;i ph&#xed; n&#xe2;ng h?ng, Qu&#xfd; kh&#xe1;ch ph?i tr? ph?n ch&#xea;nh l?ch gi?a m?c gi&#xe1; cao h&#xf5;n v?i m?c gi&#xe1; kh&#xe1;ch h&#xe0;ng &#xf0;&#xe3; tr?.<\/span><span class='red0green0blue0'><br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ch?n ch? ng?i: Q&#xfa;y kh&#xe1;ch ph?i thanh to&#xe1;n ph&#xed;<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ph&#xed; v&#xe0; c&#xe1;c d?ch v? k&#xe8;m theo: <\/span><span class='red0green0blue0'>Kh&#xf4;ng ho&#xe0;n l?i ph&#xed; thay &#xf0;?i/ ph&#xed; &#xf0;?i t&#xea;n/ ph&#xed; d?ch v? xu?t v&#xe9; trong m?i tr&#xfd;?ng h?p<\/span><span class='red0green0blue0'><br /><\/span><span class='red0green0blue0'>(**) B? ch?/ Nonshow: l&#xe0; tr&#xfd;?ng h?p kh&#xe1;ch h&#xe0;ng h?y ch? trong v&#xf2;ng 01 ti?ng tr&#xfd;?c gi? kh?i h&#xe0;nh ho?c sau gi? kh?i h&#xe0;nh ghi tr&#xea;n v&#xe9;. &#xd0;? kh&#xf4;ng ph?i ch?u m?c ph&#xed; n&#xe0;y, &#xf0;? ngh? qu&#xfd; kh&#xe1;ch th&#xf4;ng b&#xe1;o h?y ch? cho Air Mekong t?i thi?u 01 ti?ng tr&#xfd;?c gi? kh?i h&#xe0;nh c?a ch?ng bay ghi tr&#xea;n v&#xe9;.<br /><\/span><span class='red0green0blue0'><br /><\/span>";
+
+				                               fareRules['w61|w|p8|6102||vi-vn'] = "<span>-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Thay &#xf0;?i &#xf0;?t ch?: &#xd0;&#xfd;?c ph&#xe9;p thay &#xf0;?i kh&#xf4;ng m?t ph&#xed;, nh&#xfd;ng Qu&#xfd; kh&#xe1;ch ph?i thanh to&#xe1;n kho?n ti?n ch&#xea;nh l?ch gi&#xe1; v&#xe9; &#xe1;p d?ng trong th?i h?n thay &#xf0;?i (n?u c&#xf3;)<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Thay &#xf0;?i h&#xe0;nh tr&#xec;nh: C<\/span><span class='red0green0blue0'>h? &#xf0;&#xfd;?c ph&#xe9;p &#xf0;?i sang h&#xe0;nh tr&#xec;nh m?i b?ng ho?c cao ti?n h&#xf5;n. &#xd0;? &#xf0;?i sang h&#xe0;nh tr&#xec;nh m?i &#xed;t ti?n h&#xf5;n h&#xe0;nh tr&#xec;nh hi?n t?i, Qu&#xfd; kh&#xe1;ch ho&#xe0;n v&#xe9; v&#xe0; xu?t v&#xe9; m?i cho h&#xe0;nh tr&#xec;nh m?i, &#xf0;&#xf3;ng ph&#xed; v&#xe0; ch&#xea;nh l?ch gi&#xe1; v&#xe9; (n?u c&#xf3;)<\/span><span class='red0green0blue0'><br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ho&#xe0;n v&#xe9;: Qu&#xfd; kh&#xe1;ch ph?i thanh to&#xe1;n ph&#xed; h?y v&#xe9;<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Chuy?n nh&#xfd;?ng: Qu&#xfd; kh&#xe1;ch &#xf0;&#xfd;?c ph&#xe9;p chuy?n nh&#xfd;?ng cho ng&#xfd;?i kh&#xe1;c nh&#xfd;ng ph?i thanh to&#xe1;n ph&#xed; chuy?n nh&#xfd;?ng.<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;N&#xe2;ng h?ng d?ch v?: Mi?n ph&#xed;<\/span><span class='red0green0blue0'> n&#xe2;ng h?ng, nh&#xfd;ng Qu&#xfd; kh&#xe1;ch ph?i tr? ph?n ch&#xea;nh l?ch gi?a m?c gi&#xe1; cao h&#xf5;n v?i m?c gi&#xe1; kh&#xe1;ch h&#xe0;ng &#xf0;&#xe3; tr?.<\/span><span class='red0green0blue0'><br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ch?n ch? ng?i: Mi?n ph&#xed;<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ph&#xed; v&#xe0; c&#xe1;c d?ch v? k&#xe8;m theo: <\/span><span class='red0green0blue0'>Kh&#xf4;ng ho&#xe0;n l?i ph&#xed; thay &#xf0;?i/ ph&#xed; &#xf0;?i t&#xea;n/ ph&#xed; d?ch v? xu?t v&#xe9; trong m?i tr&#xfd;?ng h?p<\/span><span class='red0green0blue0'><br /><\/span><span class='red0green0blue0'>(**) B? ch?/ Nonshow: l&#xe0; tr&#xfd;?ng h?p kh&#xe1;ch h&#xe0;ng h?y ch? trong v&#xf2;ng 01 ti?ng tr&#xfd;?c gi? kh?i h&#xe0;nh ho?c sau gi? kh?i h&#xe0;nh ghi tr&#xea;n v&#xe9;. &#xd0;? kh&#xf4;ng ph?i ch?u m?c ph&#xed; n&#xe0;y, &#xf0;? ngh? qu&#xfd; kh&#xe1;ch th&#xf4;ng b&#xe1;o h?y ch? cho Air Mekong t?i thi?u 01 ti?ng tr&#xfd;?c gi? kh?i h&#xe0;nh c?a ch?ng bay ghi tr&#xea;n v&#xe9;.<br /><\/span><span class='red0green0blue0'><br /><\/span>";
+
+				                               fareRules['wt62|wt|p8|6102||vi-vn'] = "<span>Universal Fare Rule<br /><\/span>";
+
+				                               fareRules['n61|n|p8|6103||vi-vn'] = "<span>-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;&#xd0;?i v?i h?ng NGV3: &#xc1;p d?ng cho nh&#xf3;m kh&#xe1;ch t? 3 ng&#xfd;?i tr? l&#xea;n<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Thay &#xf0;?i &#xf0;?t ch?: &#xd0;&#xfd;?c ph&#xe9;p thay &#xf0;?i nh&#xfd;ng Qu&#xfd; kh&#xe1;ch ph?i thanh to&#xe1;n ph&#xed; thay &#xf0;?i v&#xe0; ch&#xea;nh l?ch gi&#xe1; v&#xe9; &#xe1;p d?ng trong th?i h?n thay &#xf0;?i (n?u c&#xf3;)<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Thay &#xf0;?i h&#xe0;nh tr&#xec;nh: C<\/span><span class='red0green0blue0'>h? &#xf0;&#xfd;?c ph&#xe9;p &#xf0;?i sang h&#xe0;nh tr&#xec;nh m?i b?ng ho?c cao ti?n h&#xf5;n. &#xd0;? &#xf0;?i sang h&#xe0;nh tr&#xec;nh m?i &#xed;t ti?n h&#xf5;n h&#xe0;nh tr&#xec;nh hi?n t?i, Qu&#xfd; kh&#xe1;ch ho&#xe0;n v&#xe9; v&#xe0; xu?t v&#xe9; m?i cho h&#xe0;nh tr&#xec;nh m?i, &#xf0;&#xf3;ng ph&#xed; v&#xe0; ch&#xea;nh l?ch gi&#xe1; v&#xe9; (n?u c&#xf3;)<\/span><span class='red0green0blue0'><br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ho&#xe0;n v&#xe9;: Qu&#xfd; kh&#xe1;ch ph?i thanh to&#xe1;n ph&#xed; h?y v&#xe9;<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Chuy?n nh&#xfd;?ng: Qu&#xfd; kh&#xe1;ch &#xf0;&#xfd;?c ph&#xe9;p chuy?n nh&#xfd;?ng cho ng&#xfd;?i kh&#xe1;c nh&#xfd;ng ph?i thanh to&#xe1;n ph&#xed; chuy?n nh&#xfd;?ng.<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;N&#xe2;ng h?ng d?ch v?: <\/span><span class='red0green0blue0'>Khi n&#xe2;ng h?ng, ngo&#xe0;i ph&#xed; n&#xe2;ng h?ng, Qu&#xfd; kh&#xe1;ch ph?i tr? ph?n ch&#xea;nh l?ch gi?a m?c gi&#xe1; cao h&#xf5;n v?i m?c gi&#xe1; kh&#xe1;ch h&#xe0;ng &#xf0;&#xe3; tr?.<\/span><span class='red0green0blue0'><br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ch?n ch? ng?i: Q&#xfa;y kh&#xe1;ch ph?i thanh to&#xe1;n ph&#xed;<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ph&#xed; v&#xe0; c&#xe1;c d?ch v? k&#xe8;m theo: <\/span><span class='red0green0blue0'>Kh&#xf4;ng ho&#xe0;n l?i ph&#xed; thay &#xf0;?i/ ph&#xed; &#xf0;?i t&#xea;n/ ph&#xed; d?ch v? xu?t v&#xe9; trong m?i tr&#xfd;?ng h?p<\/span><span class='red0green0blue0'><br /><\/span><span class='red0green0blue0'>(**) B? ch?/ Nonshow: l&#xe0; tr&#xfd;?ng h?p kh&#xe1;ch h&#xe0;ng h?y ch? trong v&#xf2;ng 01 ti?ng tr&#xfd;?c gi? kh?i h&#xe0;nh ho?c sau gi? kh?i h&#xe0;nh ghi tr&#xea;n v&#xe9;. &#xd0;? kh&#xf4;ng ph?i ch?u m?c ph&#xed; n&#xe0;y, &#xf0;? ngh? qu&#xfd; kh&#xe1;ch th&#xf4;ng b&#xe1;o h?y ch? cho Air Mekong t?i thi?u 01 ti?ng tr&#xfd;?c gi? kh?i h&#xe0;nh c?a ch?ng bay ghi tr&#xea;n v&#xe9;.<br /><\/span><span class='red0green0blue0'><br /><br /><br /><\/span>";
+
+				                               fareRules['i62|i|p8|6101||vi-vn'] = "<span>-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Thay &#xf0;?i &#xf0;?t ch?: &#xd0;&#xfd;?c ph&#xe9;p thay &#xf0;?i kh&#xf4;ng m?t ph&#xed;, nh&#xfd;ng Qu&#xfd; kh&#xe1;ch ph?i thanh to&#xe1;n kho?n ti?n ch&#xea;nh l?ch gi&#xe1; v&#xe9; &#xe1;p d?ng trong th?i h?n thay &#xf0;?i (n?u c&#xf3;)<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Thay &#xf0;?i h&#xe0;nh tr&#xec;nh: C<\/span><span class='red0green0blue0'>h? &#xf0;&#xfd;?c ph&#xe9;p &#xf0;?i sang h&#xe0;nh tr&#xec;nh m?i b?ng ho?c cao ti?n h&#xf5;n. &#xd0;? &#xf0;?i sang h&#xe0;nh tr&#xec;nh m?i &#xed;t ti?n h&#xf5;n h&#xe0;nh tr&#xec;nh hi?n t?i, Qu&#xfd; kh&#xe1;ch ho&#xe0;n v&#xe9; v&#xe0; xu?t v&#xe9; m?i cho h&#xe0;nh tr&#xec;nh m?i, &#xf0;&#xf3;ng ph&#xed; v&#xe0; ch&#xea;nh l?ch gi&#xe1; v&#xe9; (n?u c&#xf3;)<\/span><span class='red0green0blue0'><br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ho&#xe0;n v&#xe9;: Qu&#xfd; kh&#xe1;ch ph?i thanh to&#xe1;n ph&#xed; h?y v&#xe9;<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Chuy?n nh&#xfd;?ng: Qu&#xfd; kh&#xe1;ch &#xf0;&#xfd;?c ph&#xe9;p chuy?n nh&#xfd;?ng cho ng&#xfd;?i kh&#xe1;c nh&#xfd;ng ph?i thanh to&#xe1;n ph&#xed; chuy?n nh&#xfd;?ng.<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;N&#xe2;ng h?ng d?ch v?: Mi?n ph&#xed;<\/span><span class='red0green0blue0'> n&#xe2;ng h?ng, nh&#xfd;ng Qu&#xfd; kh&#xe1;ch ph?i tr? ph?n ch&#xea;nh l?ch gi?a m?c gi&#xe1; cao h&#xf5;n v?i m?c gi&#xe1; kh&#xe1;ch h&#xe0;ng &#xf0;&#xe3; tr?.<\/span><span class='red0green0blue0'><br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ch?n ch? ng?i: Mi?n ph&#xed;<br />Ph&#xed; v&#xe0; c&#xe1;c d?ch v? k&#xe8;m theo: <\/span><span class='red0green0blue0'>Kh&#xf4;ng ho&#xe0;n l?i ph&#xed; thay &#xf0;?i/ ph&#xed; &#xf0;?i t&#xea;n/ ph&#xed; d?ch v? xu?t v&#xe9; trong m?i tr&#xfd;?ng h?p<\/span><span class='red0green0blue0'><br /><\/span>";
+
+				                               fareRules['m61|m|p8|6103||vi-vn'] = "<span>-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;&#xd0;?i v?i h?ng MGV3: &#xc1;p d?ng cho nh&#xf3;m kh&#xe1;ch t? 3 ng&#xfd;?i tr? l&#xea;n<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Thay &#xf0;?i &#xf0;?t ch?: &#xd0;&#xfd;?c ph&#xe9;p thay &#xf0;?i nh&#xfd;ng Qu&#xfd; kh&#xe1;ch ph?i thanh to&#xe1;n ph&#xed; thay &#xf0;?i v&#xe0; ch&#xea;nh l?ch gi&#xe1; v&#xe9; &#xe1;p d?ng trong th?i h?n thay &#xf0;?i (n?u c&#xf3;)<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Thay &#xf0;?i h&#xe0;nh tr&#xec;nh: C<\/span><span class='red0green0blue0'>h? &#xf0;&#xfd;?c ph&#xe9;p &#xf0;?i sang h&#xe0;nh tr&#xec;nh m?i b?ng ho?c cao ti?n h&#xf5;n. &#xd0;? &#xf0;?i sang h&#xe0;nh tr&#xec;nh m?i &#xed;t ti?n h&#xf5;n h&#xe0;nh tr&#xec;nh hi?n t?i, Qu&#xfd; kh&#xe1;ch ho&#xe0;n v&#xe9; v&#xe0; xu?t v&#xe9; m?i cho h&#xe0;nh tr&#xec;nh m?i, &#xf0;&#xf3;ng ph&#xed; v&#xe0; ch&#xea;nh l?ch gi&#xe1; v&#xe9; (n?u c&#xf3;)<\/span><span class='red0green0blue0'><br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ho&#xe0;n v&#xe9;: Qu&#xfd; kh&#xe1;ch ph?i thanh to&#xe1;n ph&#xed; h?y v&#xe9;<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Chuy?n nh&#xfd;?ng: Qu&#xfd; kh&#xe1;ch &#xf0;&#xfd;?c ph&#xe9;p chuy?n nh&#xfd;?ng cho ng&#xfd;?i kh&#xe1;c nh&#xfd;ng ph?i thanh to&#xe1;n ph&#xed; chuy?n nh&#xfd;?ng.<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;N&#xe2;ng h?ng d?ch v?: <\/span><span class='red0green0blue0'>Khi n&#xe2;ng h?ng, ngo&#xe0;i ph&#xed; n&#xe2;ng h?ng, Qu&#xfd; kh&#xe1;ch ph?i tr? ph?n ch&#xea;nh l?ch gi?a m?c gi&#xe1; cao h&#xf5;n v?i m?c gi&#xe1; kh&#xe1;ch h&#xe0;ng &#xf0;&#xe3; tr?.<\/span><span class='red0green0blue0'><br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ch?n ch? ng?i: Q&#xfa;y kh&#xe1;ch ph?i thanh to&#xe1;n ph&#xed;<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ph&#xed; v&#xe0; c&#xe1;c d?ch v? k&#xe8;m theo: <\/span><span class='red0green0blue0'>Kh&#xf4;ng ho&#xe0;n l?i ph&#xed; thay &#xf0;?i/ ph&#xed; &#xf0;?i t&#xea;n/ ph&#xed; d?ch v? xu?t v&#xe9; trong m?i tr&#xfd;?ng h?p<\/span><span class='red0green0blue0'><br /><\/span><span class='red0green0blue0'>(**) B? ch?/ Nonshow: l&#xe0; tr&#xfd;?ng h?p kh&#xe1;ch h&#xe0;ng h?y ch? trong v&#xf2;ng 01 ti?ng tr&#xfd;?c gi? kh?i h&#xe0;nh ho?c sau gi? kh?i h&#xe0;nh ghi tr&#xea;n v&#xe9;. &#xd0;? kh&#xf4;ng ph?i ch?u m?c ph&#xed; n&#xe0;y, &#xf0;? ngh? qu&#xfd; kh&#xe1;ch th&#xf4;ng b&#xe1;o h?y ch? cho Air Mekong t?i thi?u 01 ti?ng tr&#xfd;?c gi? kh?i h&#xe0;nh c?a ch?ng bay ghi tr&#xea;n v&#xe9;.<br /><\/span><span class='red0green0blue0'><br /><\/span>";
+
+				                               fareRules['l61|l|p8|6103||vi-vn'] = "<span>-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;&#xd0;?i v?i h?ng LGV3: &#xc1;p d?ng cho nh&#xf3;m kh&#xe1;ch t? 3 ng&#xfd;?i tr? l&#xea;n<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Thay &#xf0;?i &#xf0;?t ch?: &#xd0;&#xfd;?c ph&#xe9;p thay &#xf0;?i nh&#xfd;ng Qu&#xfd; kh&#xe1;ch ph?i thanh to&#xe1;n ph&#xed; thay &#xf0;?i v&#xe0; ch&#xea;nh l?ch gi&#xe1; v&#xe9; &#xe1;p d?ng trong th?i h?n thay &#xf0;?i (n?u c&#xf3;)<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Thay &#xf0;?i h&#xe0;nh tr&#xec;nh: C<\/span><span class='red0green0blue0'>h? &#xf0;&#xfd;?c ph&#xe9;p &#xf0;?i sang h&#xe0;nh tr&#xec;nh m?i b?ng ho?c cao ti?n h&#xf5;n. &#xd0;? &#xf0;?i sang h&#xe0;nh tr&#xec;nh m?i &#xed;t ti?n h&#xf5;n h&#xe0;nh tr&#xec;nh hi?n t?i, Qu&#xfd; kh&#xe1;ch ho&#xe0;n v&#xe9; v&#xe0; xu?t v&#xe9; m?i cho h&#xe0;nh tr&#xec;nh m?i, &#xf0;&#xf3;ng ph&#xed; v&#xe0; ch&#xea;nh l?ch gi&#xe1; v&#xe9; (n?u c&#xf3;)<\/span><span class='red0green0blue0'><br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ho&#xe0;n v&#xe9;: Qu&#xfd; kh&#xe1;ch ph?i thanh to&#xe1;n ph&#xed; h?y v&#xe9;<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Chuy?n nh&#xfd;?ng: Qu&#xfd; kh&#xe1;ch &#xf0;&#xfd;?c ph&#xe9;p chuy?n nh&#xfd;?ng cho ng&#xfd;?i kh&#xe1;c nh&#xfd;ng ph?i thanh to&#xe1;n ph&#xed; chuy?n nh&#xfd;?ng.<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;N&#xe2;ng h?ng d?ch v?: <\/span><span class='red0green0blue0'>Khi n&#xe2;ng h?ng, ngo&#xe0;i ph&#xed; n&#xe2;ng h?ng, Qu&#xfd; kh&#xe1;ch ph?i tr? ph?n ch&#xea;nh l?ch gi?a m?c gi&#xe1; cao h&#xf5;n v?i m?c gi&#xe1; kh&#xe1;ch h&#xe0;ng &#xf0;&#xe3; tr?.<\/span><span class='red0green0blue0'><br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ch?n ch? ng?i: Q&#xfa;y kh&#xe1;ch ph?i thanh to&#xe1;n ph&#xed;<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ph&#xed; v&#xe0; c&#xe1;c d?ch v? k&#xe8;m theo: <\/span><span class='red0green0blue0'>Kh&#xf4;ng ho&#xe0;n l?i ph&#xed; thay &#xf0;?i/ ph&#xed; &#xf0;?i t&#xea;n/ ph&#xed; d?ch v? xu?t v&#xe9; trong m?i tr&#xfd;?ng h?p<\/span><span class='red0green0blue0'><br /><\/span><span class='red0green0blue0'>(**) B? ch?/ Nonshow: l&#xe0; tr&#xfd;?ng h?p kh&#xe1;ch h&#xe0;ng h?y ch? trong v&#xf2;ng 01 ti?ng tr&#xfd;?c gi? kh?i h&#xe0;nh ho?c sau gi? kh?i h&#xe0;nh ghi tr&#xea;n v&#xe9;. &#xd0;? kh&#xf4;ng ph?i ch?u m?c ph&#xed; n&#xe0;y, &#xf0;? ngh? qu&#xfd; kh&#xe1;ch th&#xf4;ng b&#xe1;o h?y ch? cho Air Mekong t?i thi?u 01 ti?ng tr&#xfd;?c gi? kh?i h&#xe0;nh c?a ch?ng bay ghi tr&#xea;n v&#xe9;.<br /><\/span><span class='red0green0blue0'><br /><br /><\/span>";
+
+				                               fareRules['p62|p|p8|6101||vi-vn'] = "<span>-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Thay &#xf0;?i &#xf0;?t ch?: &#xd0;&#xfd;?c ph&#xe9;p thay &#xf0;?i kh&#xf4;ng m?t ph&#xed;, nh&#xfd;ng Qu&#xfd; kh&#xe1;ch ph?i thanh to&#xe1;n kho?n ti?n ch&#xea;nh l?ch gi&#xe1; v&#xe9; &#xe1;p d?ng trong th?i h?n thay &#xf0;?i (n?u c&#xf3;)<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Thay &#xf0;?i h&#xe0;nh tr&#xec;nh: C<\/span><span class='red0green0blue0'>h? &#xf0;&#xfd;?c ph&#xe9;p &#xf0;?i sang h&#xe0;nh tr&#xec;nh m?i b?ng ho?c cao ti?n h&#xf5;n. &#xd0;? &#xf0;?i sang h&#xe0;nh tr&#xec;nh m?i &#xed;t ti?n h&#xf5;n h&#xe0;nh tr&#xec;nh hi?n t?i, Qu&#xfd; kh&#xe1;ch ho&#xe0;n v&#xe9; v&#xe0; xu?t v&#xe9; m?i cho h&#xe0;nh tr&#xec;nh m?i, &#xf0;&#xf3;ng ph&#xed; v&#xe0; ch&#xea;nh l?ch gi&#xe1; v&#xe9; (n?u c&#xf3;)<\/span><span class='red0green0blue0'><br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ho&#xe0;n v&#xe9;: Qu&#xfd; kh&#xe1;ch ph?i thanh to&#xe1;n ph&#xed; h?y v&#xe9;<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Chuy?n nh&#xfd;?ng: Qu&#xfd; kh&#xe1;ch &#xf0;&#xfd;?c ph&#xe9;p chuy?n nh&#xfd;?ng cho ng&#xfd;?i kh&#xe1;c nh&#xfd;ng ph?i thanh to&#xe1;n ph&#xed; chuy?n nh&#xfd;?ng.<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;N&#xe2;ng h?ng d?ch v?: Mi?n ph&#xed;<\/span><span class='red0green0blue0'> n&#xe2;ng h?ng, nh&#xfd;ng Qu&#xfd; kh&#xe1;ch ph?i tr? ph?n ch&#xea;nh l?ch gi?a m?c gi&#xe1; cao h&#xf5;n v?i m?c gi&#xe1; kh&#xe1;ch h&#xe0;ng &#xf0;&#xe3; tr?.<\/span><span class='red0green0blue0'><br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ch?n ch? ng?i: Mi?n ph&#xed;<br />Ph&#xed; v&#xe0; c&#xe1;c d?ch v? k&#xe8;m theo: <\/span><span class='red0green0blue0'>Kh&#xf4;ng ho&#xe0;n l?i ph&#xed; thay &#xf0;?i/ ph&#xed; &#xf0;?i t&#xea;n/ ph&#xed; d?ch v? xu?t v&#xe9; trong m?i tr&#xfd;?ng h?p<\/span><span class='red0green0blue0'><br /><\/span>";
+
+				                               fareRules['e61pn|epn|p8|6103||vi-vn'] = "<span>Universal Fare Rule<br /><\/span>";
+
+				                               fareRules['d62|d|p8|6100||vi-vn'] = "<span>-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Thay &#xf0;?i &#xf0;?t ch?: &#xd0;&#xfd;?c ph&#xe9;p thay &#xf0;?i kh&#xf4;ng m?t ph&#xed;, nh&#xfd;ng Qu&#xfd; kh&#xe1;ch ph?i thanh to&#xe1;n kho?n ti?n ch&#xea;nh l?ch gi&#xe1; v&#xe9; &#xe1;p d?ng trong th?i h?n thay &#xf0;?i (n?u c&#xf3;)<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Thay &#xf0;?i h&#xe0;nh tr&#xec;nh: C<\/span><span class='red0green0blue0'>h? &#xf0;&#xfd;?c ph&#xe9;p &#xf0;?i sang h&#xe0;nh tr&#xec;nh m?i b?ng ho?c cao ti?n h&#xf5;n. &#xd0;? &#xf0;?i sang h&#xe0;nh tr&#xec;nh m?i &#xed;t ti?n h&#xf5;n h&#xe0;nh tr&#xec;nh hi?n t?i, Qu&#xfd; kh&#xe1;ch ho&#xe0;n v&#xe9; v&#xe0; xu?t v&#xe9; m?i cho h&#xe0;nh tr&#xec;nh m?i, &#xf0;&#xf3;ng ph&#xed; v&#xe0; ch&#xea;nh l?ch gi&#xe1; v&#xe9; (n?u c&#xf3;)<\/span><span class='red0green0blue0'><br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ho&#xe0;n v&#xe9;: Qu&#xfd; kh&#xe1;ch ph?i thanh to&#xe1;n ph&#xed; h?y v&#xe9;<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Chuy?n nh&#xfd;?ng: Qu&#xfd; kh&#xe1;ch &#xf0;&#xfd;?c ph&#xe9;p chuy?n nh&#xfd;?ng cho ng&#xfd;?i kh&#xe1;c nh&#xfd;ng ph?i thanh to&#xe1;n ph&#xed; chuy?n nh&#xfd;?ng.<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;N&#xe2;ng h?ng d?ch v?: Mi?n ph&#xed;<\/span><span class='red0green0blue0'> n&#xe2;ng h?ng, nh&#xfd;ng Qu&#xfd; kh&#xe1;ch ph?i tr? ph?n ch&#xea;nh l?ch gi?a m?c gi&#xe1; cao h&#xf5;n v?i m?c gi&#xe1; kh&#xe1;ch h&#xe0;ng &#xf0;&#xe3; tr?.<\/span><span class='red0green0blue0'><br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ch?n ch? ng?i: Mi?n ph&#xed;<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ph&#xed; v&#xe0; c&#xe1;c d?ch v? k&#xe8;m theo: <\/span><span class='red0green0blue0'>Kh&#xf4;ng ho&#xe0;n l?i ph&#xed; thay &#xf0;?i/ ph&#xed; &#xf0;?i t&#xea;n/ ph&#xed; d?ch v? xu?t v&#xe9; trong m?i tr&#xfd;?ng h?p<\/span><span class='red0green0blue0'><br /><br /><\/span><span class='red0green0blue0'>(**) B? ch?/ Nonshow: l&#xe0; tr&#xfd;?ng h?p kh&#xe1;ch h&#xe0;ng h?y ch? trong v&#xf2;ng 01 ti?ng tr&#xfd;?c gi? kh?i h&#xe0;nh ho?c sau gi? kh?i h&#xe0;nh ghi tr&#xea;n v&#xe9;. &#xd0;? kh&#xf4;ng ph?i ch?u m?c ph&#xed; n&#xe0;y, &#xf0;? ngh? qu&#xfd; kh&#xe1;ch th&#xf4;ng b&#xe1;o h?y ch? cho Air Mekong t?i thi?u 01 ti?ng tr&#xfd;?c gi? kh?i h&#xe0;nh c?a ch?ng bay ghi tr&#xea;n v&#xe9;.<br /><\/span><span class='red0green0blue0'><br /><\/span>";
+
+				                               fareRules['wt61|wt|p8|6102||vi-vn'] = "<span>Universal Fare Rule<br /><\/span>";
+
+				                               fareRules['i61|i|p8|6101||vi-vn'] = "<span>-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Thay &#xf0;?i &#xf0;?t ch?: &#xd0;&#xfd;?c ph&#xe9;p thay &#xf0;?i kh&#xf4;ng m?t ph&#xed;, nh&#xfd;ng Qu&#xfd; kh&#xe1;ch ph?i thanh to&#xe1;n kho?n ti?n ch&#xea;nh l?ch gi&#xe1; v&#xe9; &#xe1;p d?ng trong th?i h?n thay &#xf0;?i (n?u c&#xf3;)<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Thay &#xf0;?i h&#xe0;nh tr&#xec;nh: C<\/span><span class='red0green0blue0'>h? &#xf0;&#xfd;?c ph&#xe9;p &#xf0;?i sang h&#xe0;nh tr&#xec;nh m?i b?ng ho?c cao ti?n h&#xf5;n. &#xd0;? &#xf0;?i sang h&#xe0;nh tr&#xec;nh m?i &#xed;t ti?n h&#xf5;n h&#xe0;nh tr&#xec;nh hi?n t?i, Qu&#xfd; kh&#xe1;ch ho&#xe0;n v&#xe9; v&#xe0; xu?t v&#xe9; m?i cho h&#xe0;nh tr&#xec;nh m?i, &#xf0;&#xf3;ng ph&#xed; v&#xe0; ch&#xea;nh l?ch gi&#xe1; v&#xe9; (n?u c&#xf3;)<\/span><span class='red0green0blue0'><br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ho&#xe0;n v&#xe9;: Qu&#xfd; kh&#xe1;ch ph?i thanh to&#xe1;n ph&#xed; h?y v&#xe9;<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Chuy?n nh&#xfd;?ng: Qu&#xfd; kh&#xe1;ch &#xf0;&#xfd;?c ph&#xe9;p chuy?n nh&#xfd;?ng cho ng&#xfd;?i kh&#xe1;c nh&#xfd;ng ph?i thanh to&#xe1;n ph&#xed; chuy?n nh&#xfd;?ng.<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;N&#xe2;ng h?ng d?ch v?: Mi?n ph&#xed;<\/span><span class='red0green0blue0'> n&#xe2;ng h?ng, nh&#xfd;ng Qu&#xfd; kh&#xe1;ch ph?i tr? ph?n ch&#xea;nh l?ch gi?a m?c gi&#xe1; cao h&#xf5;n v?i m?c gi&#xe1; kh&#xe1;ch h&#xe0;ng &#xf0;&#xe3; tr?.<\/span><span class='red0green0blue0'><br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ch?n ch? ng?i: Mi?n ph&#xed;<br />Ph&#xed; v&#xe0; c&#xe1;c d?ch v? k&#xe8;m theo: <\/span><span class='red0green0blue0'>Kh&#xf4;ng ho&#xe0;n l?i ph&#xed; thay &#xf0;?i/ ph&#xed; &#xf0;?i t&#xea;n/ ph&#xed; d?ch v? xu?t v&#xe9; trong m?i tr&#xfd;?ng h?p<\/span><span class='red0green0blue0'><br /><\/span>";
+
+				                               fareRules['d61|d|p8|6100||vi-vn'] = "<span>-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Thay &#xf0;?i &#xf0;?t ch?: &#xd0;&#xfd;?c ph&#xe9;p thay &#xf0;?i kh&#xf4;ng m?t ph&#xed;, nh&#xfd;ng Qu&#xfd; kh&#xe1;ch ph?i thanh to&#xe1;n kho?n ti?n ch&#xea;nh l?ch gi&#xe1; v&#xe9; &#xe1;p d?ng trong th?i h?n thay &#xf0;?i (n?u c&#xf3;)<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Thay &#xf0;?i h&#xe0;nh tr&#xec;nh: C<\/span><span class='red0green0blue0'>h? &#xf0;&#xfd;?c ph&#xe9;p &#xf0;?i sang h&#xe0;nh tr&#xec;nh m?i b?ng ho?c cao ti?n h&#xf5;n. &#xd0;? &#xf0;?i sang h&#xe0;nh tr&#xec;nh m?i &#xed;t ti?n h&#xf5;n h&#xe0;nh tr&#xec;nh hi?n t?i, Qu&#xfd; kh&#xe1;ch ho&#xe0;n v&#xe9; v&#xe0; xu?t v&#xe9; m?i cho h&#xe0;nh tr&#xec;nh m?i, &#xf0;&#xf3;ng ph&#xed; v&#xe0; ch&#xea;nh l?ch gi&#xe1; v&#xe9; (n?u c&#xf3;)<\/span><span class='red0green0blue0'><br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ho&#xe0;n v&#xe9;: Qu&#xfd; kh&#xe1;ch ph?i thanh to&#xe1;n ph&#xed; h?y v&#xe9;<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Chuy?n nh&#xfd;?ng: Qu&#xfd; kh&#xe1;ch &#xf0;&#xfd;?c ph&#xe9;p chuy?n nh&#xfd;?ng cho ng&#xfd;?i kh&#xe1;c nh&#xfd;ng ph?i thanh to&#xe1;n ph&#xed; chuy?n nh&#xfd;?ng.<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;N&#xe2;ng h?ng d?ch v?: Mi?n ph&#xed;<\/span><span class='red0green0blue0'> n&#xe2;ng h?ng, nh&#xfd;ng Qu&#xfd; kh&#xe1;ch ph?i tr? ph?n ch&#xea;nh l?ch gi?a m?c gi&#xe1; cao h&#xf5;n v?i m?c gi&#xe1; kh&#xe1;ch h&#xe0;ng &#xf0;&#xe3; tr?.<\/span><span class='red0green0blue0'><br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ch?n ch? ng?i: Mi?n ph&#xed;<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ph&#xed; v&#xe0; c&#xe1;c d?ch v? k&#xe8;m theo: <\/span><span class='red0green0blue0'>Kh&#xf4;ng ho&#xe0;n l?i ph&#xed; thay &#xf0;?i/ ph&#xed; &#xf0;?i t&#xea;n/ ph&#xed; d?ch v? xu?t v&#xe9; trong m?i tr&#xfd;?ng h?p<\/span><span class='red0green0blue0'><br /><br /><\/span><span class='red0green0blue0'>(**) B? ch?/ Nonshow: l&#xe0; tr&#xfd;?ng h?p kh&#xe1;ch h&#xe0;ng h?y ch? trong v&#xf2;ng 01 ti?ng tr&#xfd;?c gi? kh?i h&#xe0;nh ho?c sau gi? kh?i h&#xe0;nh ghi tr&#xea;n v&#xe9;. &#xd0;? kh&#xf4;ng ph?i ch?u m?c ph&#xed; n&#xe0;y, &#xf0;? ngh? qu&#xfd; kh&#xe1;ch th&#xf4;ng b&#xe1;o h?y ch? cho Air Mekong t?i thi?u 01 ti?ng tr&#xfd;?c gi? kh?i h&#xe0;nh c?a ch?ng bay ghi tr&#xea;n v&#xe9;.<br /><\/span><span class='red0green0blue0'><br /><\/span>";
+
+				                               fareRules['h61|h|p8|6103||vi-vn'] = "<span>-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;&#xd0;?i v?i h?ng HGV3: &#xc1;p d?ng cho nh&#xf3;m kh&#xe1;ch t? 3 ng&#xfd;?i tr? l&#xea;n<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Thay &#xf0;?i &#xf0;?t ch?: &#xd0;&#xfd;?c ph&#xe9;p thay &#xf0;?i nh&#xfd;ng Qu&#xfd; kh&#xe1;ch ph?i thanh to&#xe1;n ph&#xed; thay &#xf0;?i v&#xe0; ch&#xea;nh l?ch gi&#xe1; v&#xe9; &#xe1;p d?ng trong th?i h?n thay &#xf0;?i (n?u c&#xf3;)<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Thay &#xf0;?i h&#xe0;nh tr&#xec;nh: C<\/span><span class='red0green0blue0'>h? &#xf0;&#xfd;?c ph&#xe9;p &#xf0;?i sang h&#xe0;nh tr&#xec;nh m?i b?ng ho?c cao ti?n h&#xf5;n. &#xd0;? &#xf0;?i sang h&#xe0;nh tr&#xec;nh m?i &#xed;t ti?n h&#xf5;n h&#xe0;nh tr&#xec;nh hi?n t?i, Qu&#xfd; kh&#xe1;ch ho&#xe0;n v&#xe9; v&#xe0; xu?t v&#xe9; m?i cho h&#xe0;nh tr&#xec;nh m?i, &#xf0;&#xf3;ng ph&#xed; v&#xe0; ch&#xea;nh l?ch gi&#xe1; v&#xe9; (n?u c&#xf3;)<\/span><span class='red0green0blue0'><br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ho&#xe0;n v&#xe9;: Qu&#xfd; kh&#xe1;ch ph?i thanh to&#xe1;n ph&#xed; h?y v&#xe9;<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Chuy?n nh&#xfd;?ng: Qu&#xfd; kh&#xe1;ch &#xf0;&#xfd;?c ph&#xe9;p chuy?n nh&#xfd;?ng cho ng&#xfd;?i kh&#xe1;c nh&#xfd;ng ph?i thanh to&#xe1;n ph&#xed; chuy?n nh&#xfd;?ng.<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;N&#xe2;ng h?ng d?ch v?: <\/span><span class='red0green0blue0'>Khi n&#xe2;ng h?ng, ngo&#xe0;i ph&#xed; n&#xe2;ng h?ng, Qu&#xfd; kh&#xe1;ch ph?i tr? ph?n ch&#xea;nh l?ch gi?a m?c gi&#xe1; cao h&#xf5;n v?i m?c gi&#xe1; kh&#xe1;ch h&#xe0;ng &#xf0;&#xe3; tr?.<\/span><span class='red0green0blue0'><br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ch?n ch? ng?i: Q&#xfa;y kh&#xe1;ch ph?i thanh to&#xe1;n ph&#xed;<br />-&#x26;#xa0; &#x26;#xa0; &#x26;#xa0;Ph&#xed; v&#xe0; c&#xe1;c d?ch v? k&#xe8;m theo: <\/span><span class='red0green0blue0'>Kh&#xf4;ng ho&#xe0;n l?i ph&#xed; thay &#xf0;?i/ ph&#xed; &#xf0;?i t&#xea;n/ ph&#xed; d?ch v? xu?t v&#xe9; trong m?i tr&#xfd;?ng h?p<\/span><span class='red0green0blue0'><br /><\/span><span class='red0green0blue0'>(**) B? ch?/ Nonshow: l&#xe0; tr&#xfd;?ng h?p kh&#xe1;ch h&#xe0;ng h?y ch? trong v&#xf2;ng 01 ti?ng tr&#xfd;?c gi? kh?i h&#xe0;nh ho?c sau gi? kh?i h&#xe0;nh ghi tr&#xea;n v&#xe9;. &#xd0;? kh&#xf4;ng ph?i ch?u m?c ph&#xed; n&#xe0;y, &#xf0;? ngh? qu&#xfd; kh&#xe1;ch th&#xf4;ng b&#xe1;o h?y ch? cho Air Mekong t?i thi?u 01 ti?ng tr&#xfd;?c gi? kh?i h&#xe0;nh c?a ch?ng bay ghi tr&#xea;n v&#xe9;.<br /><\/span><span class='red0green0blue0'><br /><\/span>";
+				
+				</script><script language="javascript" type="text/javascript"><!--
+				             function ControlGroupScheduleSelectView_AgreementInputScheduleSelectView_Validate(eventArgs) {
+				                 if (!document['SkySales']['ControlGroupScheduleSelectView_AgreementInputScheduleSelectView_CheckBoxAgreement'].checked) {
+				                     alert("\nVui lòng xác nhận rằng Quý khách đồng ý với \ncác Điều Khoản và Điều Lệ Giá bằng cách \nchọn vào ô phía bên dưới trang.\n");
+				                     return false;
+				                 }
+				                 return true;
+				             }
+
+					
+				// --></script></form><script language="javascript" type="text/javascript">
+				                          //defined in common.js
+				                          $(document).ready(function () {
+				                              WindowInitialize();
+				                          });
+
+
+
+				                          var __doPostBack = function (eventTarget, eventArgument) {
+				                              var clearAllValidity = null;
+				                              var eventTargetElement = window.document.getElementById('eventTarget');
+				                              var eventArgumentElement = window.document.getElementById('eventArgument');
+				                              var viewStateElement = window.document.getElementById('viewState');
+				                              if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+				                                  eventTargetElement.value = eventTarget || eventTargetElement.value;
+				                                  eventTargetElement.name = '__EVENTTARGET';
+				                                  if (eventArgument !== null) {
+				                                      eventArgumentElement.value = eventArgument;
+				                                  }
+				                                  eventArgumentElement.name = '__EVENTARGUMENT';
+				                                  viewStateElement.name = '__VIEWSTATE';
+				                                  if (theForm.checkValidity) {
+				                                      clearAllValidity = function () {
+				                                          $(this).removeAttr("required");
+				                                      };
+				                                      SKYSALES.common.getAllInputObjects().each(clearAllValidity);
+				                                  }
+				                                  theForm.submit();
+				                              }
+				                          };
+
+      </script><script type="text/javascript">
+                   SKYSALES.Resource = new SKYSALES.Class.Resource();
+                   SKYSALES.Resource.init(
+                                  {
+                                      "locationInfo":
+                  {}
+              ,
+                                      "stationInfo": { "StationList": [{ "macCode": "", "name": "Buôn Mê Thuột", "code": "BMV" }, { "macCode": "", "name": "Côn Đảo", "code": "VCS" }, { "macCode": "", "name": "Đà Lạt", "code": "DLI" }, { "macCode": "", "name": "Đà Nẵng", "code": "DAD" }, { "macCode": "", "name": "Hà Nội", "code": "HAN" }, { "macCode": "", "name": "TP. Hồ Chí Minh", "code": "SGN" }, { "macCode": "", "name": "Phú Quốc", "code": "PQC" }, { "macCode": "", "name": "Pleiku", "code": "PXU" }, { "macCode": "", "name": "Qui Nhon Airport", "code": "UIH" }, { "macCode": "", "name": "Vinh City Airport", "code": "VII"}] },
+                                      "countryInfo": { "CountryList": [{ "name": "Austria, Republic of", "code": "AT" }, { "name": "Australia, Commonwealth of", "code": "AU" }, { "name": "Brunei Darussalam", "code": "BN" }, { "name": "China, People's Republic of", "code": "CN" }, { "name": "Hong Kong", "code": "HK" }, { "name": "Indonesia, Republic of", "code": "ID" }, { "name": "India, Republic of", "code": "IN" }, { "name": "Kingdon of Cambodia", "code": "KH" }, { "name": "Korea, Republic of", "code": "KR" }, { "name": "Lao People's Democratic Republic", "code": "LA" }, { "name": "Myanmar (was Burma)", "code": "MM" }, { "name": "Malaysia", "code": "MY" }, { "name": "Singapore, Republic of", "code": "SG" }, { "name": "Taiwan, Province of China", "code": "TW" }, { "name": "United States of America", "code": "US" }, { "name": "Viet Nam", "code": "VN" }, { "name": "South Africa, Republic of", "code": "ZA" }, { "name": "Other", "code": "OT"}], "DefaultValue": "VN" },
+                                      "marketInfo": { "MarketList": [{ "Key": "BMV", "Value": [{ "code": "HAN" }, { "code": "PQC" }, { "code": "SGN" }, { "code": "VCS" }, { "code": "VII"}] }, { "Key": "HAN", "Value": [{ "code": "BMV" }, { "code": "DAD" }, { "code": "DLI" }, { "code": "PQC" }, { "code": "PXU" }, { "code": "SGN" }, { "code": "VCS"}] }, { "Key": "PQC", "Value": [{ "code": "BMV" }, { "code": "HAN" }, { "code": "PXU" }, { "code": "SGN" }, { "code": "UIH" }, { "code": "VII"}] }, { "Key": "SGN", "Value": [{ "code": "BMV" }, { "code": "DAD" }, { "code": "DLI" }, { "code": "HAN" }, { "code": "PQC" }, { "code": "PXU" }, { "code": "UIH" }, { "code": "VCS" }, { "code": "VII"}] }, { "Key": "VCS", "Value": [{ "code": "BMV" }, { "code": "HAN" }, { "code": "PXU" }, { "code": "SGN" }, { "code": "UIH" }, { "code": "VII"}] }, { "Key": "VII", "Value": [{ "code": "BMV" }, { "code": "PQC" }, { "code": "PXU" }, { "code": "SGN" }, { "code": "VCS"}] }, { "Key": "DAD", "Value": [{ "code": "HAN" }, { "code": "SGN"}] }, { "Key": "DLI", "Value": [{ "code": "HAN" }, { "code": "SGN"}] }, { "Key": "PXU", "Value": [{ "code": "HAN" }, { "code": "PQC" }, { "code": "SGN" }, { "code": "VCS" }, { "code": "VII"}] }, { "Key": "UIH", "Value": [{ "code": "PQC" }, { "code": "SGN" }, { "code": "VCS"}]}] },
+                                      "macInfo":
+                  {}
+              ,
+                                      "sourceInfo":
+          {}
+        ,
+                                      "dateCultureInfo": { "monthNames": ["Tháng Giêng", "Tháng Hai", "Tháng Ba", "Tháng Tư", "Tháng Năm", "Tháng Sáu", "Tháng Bảy", "Tháng Tám", "Tháng Chín", "Tháng Mười", "Tháng Mười Một", "Tháng Mười Hai", ""], "monthNamesShort": ["Thg1", "Thg2", "Thg3", "Thg4", "Thg5", "Thg6", "Thg7", "Thg8", "Thg9", "Thg10", "Thg11", "Thg12", ""], "dayNames": ["Chủ Nhật", "Thứ Hai", "Thứ Ba", "Thứ Tư", "Thứ Năm", "Thứ Sáu", "Thứ Bảy"], "dayNamesShort": ["CN", "Hai", "Ba", "Tư", "Năm", "Sáu", "Bảy"], "dayNamesMin": ["C", "H", "B", "T", "N", "S", "B"] },
+                                      "currencyCultureInfo": { "symbol": "VND", "displayCode": "", "decimalDigits": 0, "decimalSeparator": ",", "groupSeparator": ".", "groupSizes": [3], "negativeSign": "-", "negativePattern": "VNDn-", "positivePattern": "n VND", "positivePatternWithDisplayCode": " n VND", "negativePatternWithDisplayCode": "VNDn- " }
+                                  }
+								);
+
+	  </script></body>
+</html>

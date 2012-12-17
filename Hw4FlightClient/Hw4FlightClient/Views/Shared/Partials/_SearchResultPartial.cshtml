@@ -6,7 +6,7 @@
 
 <div>
     <div class="post-title">
-        <a>Tìm được tất cả <span style="color: #F38533; font-size: 120%;">@Model.Count</span> chuyến bay</a>
+        <a>Tìm được tất cả <span style="color: #F38533; font-size: 120%;">@*@Model.Count*@</span> chuyến bay</a>
     </div>
     
     <div class="controls">
@@ -24,10 +24,32 @@
         </select>
     </div>
     <div id="loadingImage2">
-            <img src="../../../Contents/Images/loading.gif" />
-        </div>
+        <img src="../../../Contents/Images/loading.gif" />
+    </div>
     <table class="flights">
         <tbody>
+            <tr class="flight" style="height: 20px;">
+                <td class="cost">
+                    <p class="title">Giá</p>
+                </td>
+
+                <td class="start">
+                    <p class="title">Giờ bay</p>
+                </td>
+            
+                <td class="end">
+                    <p class="title">Giờ đến</p>
+                </td>
+            
+                <td class="logo">
+                    <p class="title">Hãng</p>
+                </td>
+            
+                <td class="choise">
+                    <p class="title">Đặt chỗ</p>
+                </td>
+            </tr>
+
             @foreach(FlightInfo flight in Model)
             {
                 Html.RenderPartial("Partials/_FlightPartial", flight);

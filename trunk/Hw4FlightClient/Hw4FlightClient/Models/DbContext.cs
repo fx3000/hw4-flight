@@ -13,6 +13,7 @@ namespace Hw4FlightClient.Models
     {
         private static List<AirPort> airPorts = new List<AirPort>();
         private static List<FlightInfo> lstFlightInfos = new List<FlightInfo>();
+        private static List<FlightInfoNumberic> InfoNumberics = new List<FlightInfoNumberic>();
 
         public static string HttpGet(string url)
         {
@@ -51,6 +52,7 @@ namespace Hw4FlightClient.Models
             for (var i =0;i<lstFlightInfos.Count; i++)
             {
                 lstFlightInfos[i].Id = i;
+                InfoNumberics.Add(new FlightInfoNumberic(lstFlightInfos[i]));
             }
 
             return lstFlightInfos;
@@ -87,9 +89,13 @@ namespace Hw4FlightClient.Models
         static public List<FlightInfo> Sort(int type)
         {
             if(type == 1)
-                return lstFlightInfos.Where(p=>p.GiaTien != "không").OrderBy(p => p.GiaTien != null ? Convert.ToInt32(p.GiaTien.Substring(0, p.GiaTien.Length - 3)) : 0).ToList();
+            {
+                var result = InfoNumberics.OrderBy(p => p.GiaTien);
+                return result.Select(flightInfoNumberic => flightInfoNumberic.ToFlightInfo(flightInfoNumberic)).ToList();
+            }
 
-            return lstFlightInfos.OrderByDescending(p => p.GiaTien != null ? Convert.ToInt32(p.GiaTien) : 0).ToList();
+            var result1 = InfoNumberics.OrderByDescending(p => p.GiaTien);
+            return result1.Select(flightInfoNumberic => flightInfoNumberic.ToFlightInfo(flightInfoNumberic)).ToList();
         }
 
         static public List<FlightInfo> Filter(string airlines)

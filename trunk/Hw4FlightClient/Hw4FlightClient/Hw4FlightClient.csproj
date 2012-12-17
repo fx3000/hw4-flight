@@ -114,6 +114,7 @@
     <Compile Include="Models\AirPort.cs" />
     <Compile Include="Models\DbContext.cs" />
     <Compile Include="Models\FlightInfo.cs" />
+    <Compile Include="Models\FlightInfoNumberic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

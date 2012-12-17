@@ -1,0 +1,85 @@
+﻿@{
+    ViewBag.Title = "PutTicket";
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+@using Hw4FlightClient.Models
+@model Hw4FlightClient.Models.FlightInfo
+
+<div class="hentry">
+    <div class="post-title">
+        <a>Thông tin chuyến bay</a>
+    </div>
+
+    <table class="flights">
+        <tbody>
+            <tr class="flight">
+                <td class="cost">
+                    <p class="cost-value">@Model.GiaTien.Substring(0, Model.GiaTien.Length - 3)</p>
+                    <p>VNĐ</p>
+                </td>
+
+                <td class="start">
+                    <p class="time">@Model.TimeFrom</p>
+                    <p class="place">@Model.From</p>
+                </td>
+            
+                <td class="end">
+                    <p class="time">@Model.TimeTo</p>
+                    <p class="place">@Model.To</p>
+                </td>
+            
+                <td class="logo">
+                    <img src="@Model.Image" title="@Model.Hang"/>
+                </td>
+            
+                <td class="choise">
+                    <p>@Model.Hang</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="post-title">
+        <a>Thông tin đặt chỗ</a>
+    </div>
+    
+    <div class="customer-info">
+        <table>
+            <tbody>
+                <tr>
+                    <td style="width: 35%;">Họ tên*:</td>
+                    <td><input type="text"/></td>
+                </tr>
+                <tr>
+                    <td >CMND/Passport*:</td>
+                    <td><input type="text"/></td>
+                </tr>
+                <tr>
+                    <td >Ngày cấp CMND/Passport*:</td>
+                    <td><input type="text"/></td>
+                </tr>
+                <tr>
+                    <td>Ngày sinh*:</td>
+                    <td><input type="text"/></td>
+                </tr>
+                <tr>
+                    <td>Điện thoại:</td>
+                    <td><input type="text"/></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="text"/></td>
+                </tr>
+                <tr>
+                    <td>Địa chỉ</td>
+                    <td><input type="text"/></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="search-button">
+            <a href="@Url.Action("PutTicketSuccess", "Home")" class="btn">Đặt chỗ</a>
+        </div>
+</div>

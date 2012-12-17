@@ -12,6 +12,7 @@ namespace Hw4FlightClient.Models
     static public class DbContext
     {
         private static List<AirPort> airPorts = new List<AirPort>();
+        private static List<FlightInfo> lstFlightInfos = new List<FlightInfo>();
 
         public static string HttpGet(string url)
         {
@@ -40,13 +41,19 @@ namespace Hw4FlightClient.Models
         {
             string api =
                 string.Format(
-                    "http://localhost:1260/api/values/?timefrom={0}&timeto={1}&direction={2}&from={3}&to={4}&dayfrom={5}&dayto={6}&monthfrom={7}&monthto={8}",
-                    timefrom, timeto, direction, from, to, datefrom.Day,
-                    dateto.Day, datefrom.ToString("MMM", CultureInfo.InvariantCulture).ToUpper(), dateto.ToString("MMM", CultureInfo.InvariantCulture).ToUpper());
+                    "http://localhost:1260/api/values/?timefrom={0}&timeto={1}&direction={2}&from={3}&to={4}&dayfrom={5}&dayto={6}",
+                    timefrom, timeto, direction, from, to, datefrom.ToShortDateString(), dateto.ToShortDateString());
             string json = HttpGet(api);
             var js = new JavaScriptSerializer();
             var flightInfos = js.Deserialize<FlightInfo[]>(json);
-            return flightInfos.ToList();
+            lstFlightInfos = flightInfos.ToList();
+
+            for (var i =0;i<lstFlightInfos.Count; i++)
+            {
+                lstFlightInfos[i].Id = i;
+            }
+
+            return lstFlightInfos;
         }
     
         public static List<AirPort>  GetAllAirPort()
@@ -75,6 +82,24 @@ namespace Hw4FlightClient.Models
             }
 
             return airPorts.Where(airPort => airPort.Name.Contains(str)).ToList();
+        }
+    
+        static public List<FlightInfo> Sort(int type)
+        {
+            if(type == 1)
+                return lstFlightInfos.Where(p=>p.GiaTien != "không").OrderBy(p => p.GiaTien != null ? Convert.ToInt32(p.GiaTien.Substring(0, p.GiaTien.Length - 3)) : 0).ToList();
+
+            return lstFlightInfos.OrderByDescending(p => p.GiaTien != null ? Convert.ToInt32(p.GiaTien) : 0).ToList();
+        }
+
+        static public List<FlightInfo> Filter(string airlines)
+        {
+            return lstFlightInfos.Where(p => p.Hang.Contains(airlines)).ToList();
+        }
+
+        static public FlightInfo GetFlight(int id)
+        {
+            return lstFlightInfos.SingleOrDefault(p => p.Id == id);
         }
     }
 }

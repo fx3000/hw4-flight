@@ -1,6 +1,7 @@
-﻿<ul id="menu-top" class="menu">
-    <li class="current-menu-item current_page_item"><a href="">Chuyến bay</a></li>
-    <li><a href="">Khách sạn</a></li>
-    <li><a href="">Xe</a></li>
-    <li><a href="">Deals</a></li>
+﻿
+<ul id="menu-top" class="menu">
+    <li class="@(ViewBag.Menu == "Home" ? "current-menu-item current_page_item" : "")"><a href="@Url.Action("Index", "Home")">Chuyến bay</a></li>
+    <li class="@(ViewBag.Menu == "Hotel" ? "current-menu-item current_page_item" : "")"><a href="@Url.Action("Index", "Hotel")">Khách sạn</a></li>
+    <li class="@(ViewBag.Menu == "Bus" ? "current-menu-item current_page_item" : "")"><a href="@Url.Action("Index", "Bus")">Xe</a></li>
+    <li class="@(ViewBag.Menu == "Deals" ? "current-menu-item current_page_item" : "")"><a href="@Url.Action("Index", "Deals")">Deals</a></li>
 </ul>

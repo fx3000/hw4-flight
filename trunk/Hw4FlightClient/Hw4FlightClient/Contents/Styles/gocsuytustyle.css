@@ -2,7 +2,7 @@
 .clearboth{ width: 100%;height: 10px;}
 .post-title{background-color: white;font-weight: bold;color: #777; font-size: 18px; padding: 10px 20px 10px 20px;font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;width: 100%;float: left;margin-left: -20px;}
 
-input[type="text"], input[type="password"], textarea {font-size: 11px;padding-top: 6px;padding-bottom: 6px;border-radius: 2px;color: rgba(0, 0, 0, 0.75);border: 1px solid #CCC;box-shadow: 0 1px 0 #EEE inset,0 1px 0 white;background-color: rgba(255, 255, 255, 0.6);border: 1px solid #338DA8;outline-style: none;}
+input[type="text"], input[type="password"], textarea, select {font-size: 11px;padding-top: 6px;padding-bottom: 6px;border-radius: 2px;color: rgba(0, 0, 0, 0.75);border: 1px solid #CCC;box-shadow: 0 1px 0 #EEE inset,0 1px 0 white;background-color: rgba(255, 255, 255, 0.6);border: 1px solid #338DA8;outline-style: none;}
 input[type="text"], input[type="password"]{width: 100%;}
 input[type="text"]:focus, input[type="password"]:focus, textarea:focus{border:1px solid #56B4EF;box-shadow:0 1px 3px rgba(0,0,0,0.05) inset,0 0 8px rgba(82,168,236,0.6)}
 
@@ -61,4 +61,27 @@ input[type="submit"]:hover {
 .search-button{ float: right;}
 .search-result{ margin-top: 20px;float: left;width: 100%;}
 #loadingImage{ margin: 0 auto;display: none;text-align: center;}
+#loadingImage2{margin: 0 auto;display: none;text-align: center;}
 .error-msg{ color: red;font-weight: bold;}
+
+.autocomplete-w1 { position: absolute; top: 0px; left: 0px;font-size: 12px;}
+.autocomplete { border: 1px solid #999; background: #FFF; cursor: default; text-align: left; max-height: 350px; overflow: auto; /* IE6 specific: */ _height: 350px; _margin: 0; _overflow-x: hidden; }
+.autocomplete .selected { background: #F0F0F0; }
+.autocomplete div { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+.autocomplete strong { font-weight: normal; color: #3399FF; }
+
+.controls{ margin-top: 20px;float: right;}
+.controls select{font-size: 12px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;}
+
+.flights{float: left;width: 100%;font-size: 12px; text-align: center; line-height:12px; background: white;vertical-align: middle;vert-align: middle;background: white;margin-top: 20px;}
+.flights .title{font-size: 15px;font-weight: bold;color: #3A3939;line-height: 20px;}
+.flights .flight{ border-bottom: 1px solid #555;height: 80px;width: 100%;}
+.flights .flight .cost{ float: left; width: 15%; text-align: center;}
+.flights .flight .cost .cost-value{font-size: 15px;font-weight: bold;font-family: Oswald, sans-serif;color: #F38533;}
+.flights .flight  .start{float:left; width: 20%; text-align: center;}
+.flights .flight  .end{float:left;width: 20%; text-align: center;}
+.flights .flight .time{font-size: 15px;font-weight: bold;font-family: Oswald, sans-serif;}
+.flights .flight  .logo{float:left; width: 15%;text-align: center; text-align: center;}
+.flights .flight  .logo img{width: 100%; margin: 0 auto; text-align: center;}
+.flights .flight .choise { float: left;width: 10%;vertical-align: middle;text-align: center;line-height: 50px;font-size: 14px;font-weight: bold;}
+.flights .flight .choise a{ color: #F38533;}

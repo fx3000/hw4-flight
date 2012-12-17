@@ -104,7 +104,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\BusController.cs" />
+    <Compile Include="Controllers\DealsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HotelController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -117,6 +120,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="App_Data\AirPort.txt" />
     <Content Include="Contents\Images\loading.gif" />
     <Content Include="Contents\Images\logoAirMekong.jpg" />
     <Content Include="Contents\Images\logoJetStart.png" />
@@ -126,9 +130,12 @@
     <Content Include="Contents\Images\Social Icon\skype.png" />
     <Content Include="Contents\Images\Social Icon\twitter.png" />
     <Content Include="Contents\Images\Social Icon\yahoo.png" />
+    <Content Include="Contents\Scripts\autocomplete.js" />
     <Content Include="Contents\Scripts\jquery-1.5.1.js" />
+    <Content Include="Contents\Scripts\jquery-1.8.2.min.js" />
     <Content Include="Contents\Scripts\jquery-1.8.3.js" />
     <Content Include="Contents\Scripts\jquery-ui-timepicker-addon.js" />
+    <Content Include="Contents\Scripts\jquery.autocomplete.js" />
     <Content Include="Contents\Styles\jquery-ui.css" />
     <Content Include="Contents\Scripts\jquery-ui.js" />
     <Content Include="Contents\Scripts\jquery.js" />
@@ -149,7 +156,7 @@
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Content Include="Views\Shared\Partials\_FlightPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -166,6 +173,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\Partials\_SearchResultPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\PutTicket.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\PutTicketSuccess.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Hotel\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Bus\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Deals\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

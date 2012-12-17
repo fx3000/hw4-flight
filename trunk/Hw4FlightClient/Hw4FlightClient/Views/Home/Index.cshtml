@@ -2,6 +2,11 @@
     ViewBag.Title = "Index";
     Layout = "../Shared/_Layout.cshtml";
 }
+<head>
+    @*<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>*@
+    <script src="../../Contents/Scripts/jquery.autocomplete.js" type="text/javascript"></script>
+</head>
+
 
 <div class="hentry">
     <div class="post-title">
@@ -70,6 +75,7 @@
             <img src="../../Contents/Images/loading.gif" />
         </div>
         <div id="result">
+           @* @{Html.RenderPartial("Partials/_SearchResultPartial");}*@
         </div>
     </div>
 
@@ -143,4 +149,15 @@
             //timeout: 1000
         });
     }
+    
+    $('#placestart').autocomplete({
+        width: 300,
+        delimiter: /(,|;)\s*/,
+        lookup: 'Buôn Ma Thuột (BMV),Cà Mau (CAH),Côn Đảo (VCS),Cần Thơ (VCA),Huế (HUI),Hà Nội (HAN),Hải Phòng (HPH),Nha Trang (NHA),Phú Quốc (PQC),Pleiku (PXU),Quy Nhơn (UIH),Rạch Giá (VKG),Tam Kỳ (VCL),Tp Hồ Chí Minh (SGN),Tuy Hòa (TBB),Vinh (VII),Điện Biên (DIN),Đà Lạt (DLI),Đà Nẵng (DAD),Đồng Hới (VDH)'.split(',')
+    });
+    $('#placeend').autocomplete({
+        width: 300,
+        delimiter: /(,|;)\s*/,
+        lookup: 'Buôn Ma Thuột (BMV),Cà Mau (CAH),Côn Đảo (VCS),Cần Thơ (VCA),Huế (HUI),Hà Nội (HAN),Hải Phòng (HPH),Nha Trang (NHA),Phú Quốc (PQC),Pleiku (PXU),Quy Nhơn (UIH),Rạch Giá (VKG),Tam Kỳ (VCL),Tp Hồ Chí Minh (SGN),Tuy Hòa (TBB),Vinh (VII),Điện Biên (DIN),Đà Lạt (DLI),Đà Nẵng (DAD),Đồng Hới (VDH)'.split(',')
+    });
 </script>

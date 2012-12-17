@@ -82,7 +82,7 @@ namespace SearchFlight.Controllers
                     AirPortFrom = "Đà Lạt";
                     break;
                 case "DAD":
-                    AirPortFrom = "Đà nặng";
+                    AirPortFrom = "Đà nẵng";
                     break;
                 case "VDH":
                     AirPortFrom = "Đồng Hới";
@@ -143,7 +143,7 @@ namespace SearchFlight.Controllers
                     AirPortTo = "Đà Lạt";
                     break;
                 case "DAD":
-                    AirPortTo = "Đà nặng";
+                    AirPortTo = "Đà nẵng";
                     break;
                 case "VDH":
                     AirPortTo = "Đồng Hới";

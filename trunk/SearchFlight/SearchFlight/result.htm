@@ -25,7 +25,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="//static.jetstar.com/css/header.min.css?b=1.3.116.0" media="screen">
   <link rel="stylesheet" href="//static.jetstar.com/css/Versioned/testmin.v1_3_115_1.min.css"><script type="text/javascript"></script><script type="text/javascript">
-    var ServerTimeStamp = 1355721927166.39;
+    var ServerTimeStamp = 1355764422532.07;
     var MultipleTabPopupText = 'Chúng tôi nhận thấy bạn đang đặt chỗ bằng cách sử dụng nhiều thẻ (tab) hoặc mở nhiều cửa sổ cùng một lúc. Việc này có thể dẫn tới xảy ra lỗi trong quá trình đặt chỗ. Nếu bạn vẫn muốn sử dụng thẻ hoặc cửa sổ này để đặt chỗ, vui lòng kiểm tra đặt chỗ của bạn cẩn thận để đảm bảo tất cả các thông tin chi tiết đều chính xác';
     var MultipleTabDisabled = false;
     var MultipleTabRun = true;
@@ -168,7 +168,7 @@
           UserType = 'ANONYMOUS',
           WorkFlow = 'SB',
           Mode = ''
-          cityPair = 'SGN-HAN';
+          cityPair = 'HAN-SGN';
 
       $(document).ready(function() {
         jetstarGATracking.setCulture(Culture);
@@ -241,10 +241,10 @@
             lpVariable = {
                 flightsSection: 'Flights-Select',
                 conversionStage: '1',
-                flightsOrigin: 'SGN',
-                flightsAirportDestination: 'HAN',
-                flightsDepartureDate: '21/12/2012',
-                flightsReturnDate: '',
+                flightsOrigin: 'HAN',
+                flightsAirportDestination: 'SGN',
+                flightsDepartureDate: '18/12/2012',
+                flightsReturnDate: '21/12/2012',
                 flightsOutboundFlight: '',
                 flightsInboundFlight: '',
                 flightsAdult: '1',
@@ -260,7 +260,7 @@
                 flightsPointOfSaleLocation: 'vi-VN',
                 flightsFlightClass: 'Unknown',
                 flightsDestinationLocation: 'Domestic',
-                flightsDurationDays: '0',
+                flightsDurationDays: '3',
                 flightsNoProducts: '0',
                 flighsHotelAvailable: 'False',
                 flighsCarAvailable: 'False',
@@ -279,9 +279,9 @@
 
 
         </script><input type="hidden" id="total_price" name="total_price" value="" xmlns:math="urn:bcs:extensions:math" xmlns:formatterExtension="urn:navitaire:formatters:currency"><div id="mainContent" style="position: static;"></div><script language="javascript" type="text/javascript" xmlns:bookinginfo="urn:bcs:extensions:bookinginfo" xmlns:formatterExtension="urn:navitaire:formatters:currency" xmlns:math="urn:bcs:extensions:math">
-      var TRIPTYPE = 'OneWay';
-      var SEARCHDEPART = 'SGNHAN';
-      var SEARCHRETURN = '';
+      var TRIPTYPE = 'RoundTrip';
+      var SEARCHDEPART = 'HANSGN';
+      var SEARCHRETURN = 'SGNHAN';
       var SEARCHDEPARTDATE = '';
       var SEARCHRETURNDATE = '';
       var ADT = '1';
@@ -310,7 +310,7 @@
       var userType = 'ANONYMOUS';
       
       function setTabIndex(marketIndex, index){
-      var tabIndexId = [0,'ControlGroupSelectView_AvailabilityInputSelectView_HiddenFieldTabIndex1',''];
+      var tabIndexId = [0,'ControlGroupSelectView_AvailabilityInputSelectView_HiddenFieldTabIndex1','ControlGroupSelectView_AvailabilityInputSelectView_HiddenFieldTabIndex2'];
       $('#' + tabIndexId[marketIndex]).val(index);
       __doPostBack('ControlGroupSelectView$AvailabilityInputSelectView','');
       }
@@ -321,6 +321,9 @@
     <dl>
       <dt>Ngày đi:
             </dt>
+      <dd>20/12/2012</dd>
+      <dt>Ngày về:
+              </dt>
       <dd>24/12/2012</dd>
       <dt>Hành khách:
           </dt>
@@ -333,17 +336,17 @@
     </div><img src="images/map-tooltip-airport-info.jpg" width="217" height="162" alt="" class="right"><span class="footer"></span></div>
   <div class="section fare-option" style="z-index: 199" xmlns:bookinginfo="urn:bcs:extensions:bookinginfo" xmlns:formatterExtension="urn:navitaire:formatters:currency" xmlns:math="urn:bcs:extensions:math">
     <h1>1. Lựa chọn chuyến bay chặng đi </h1>
-    <h2>Thành phố Hồ Chí Minh<em>   đến   </em>Hà Nội</h2>
+    <h2>Hà Nội<em>   đến   </em>Thành phố Hồ Chí Minh</h2>
     <div class="day-picker clearfix">
-      <div class="dates clearfix"><a href="javascript:__doPostBack('ControlGroupSelectView$AvailabilityInputSelectView$LinkButtonPreviousWeek1','')" class="nav prev png-bg"><img src="images/clearpixel.gif" width="9" height="12" alt=""></a><ul><input id="ControlGroupSelectView_AvailabilityInputSelectView_HiddenFieldTabIndex1" type="hidden" name="ControlGroupSelectView$AvailabilityInputSelectView$HiddenFieldTabIndex1" value="4"><li class="first "><a href="javascript:setTabIndex('1', '1')">Fri 21 Dec<strong>VND1.150.000</strong></a></li>
-          <li class=""><a href="javascript:setTabIndex('1', '2')">Sat 22 Dec<strong>VND1.150.000</strong></a></li>
-          <li class=""><a href="javascript:setTabIndex('1', '3')">Sun 23 Dec<strong>VND1.000.000</strong></a></li>
-          <li class="active "><a href="javascript:setTabIndex('1', '4')">Mon 24 Dec<strong>VND1.000.000</strong></a></li>
-          <li class=""><a href="javascript:setTabIndex('1', '5')">Tue 25 Dec<strong>VND1.150.000</strong></a></li>
-          <li class=""><a href="javascript:setTabIndex('1', '6')">Wed 26 Dec<strong>VND1.150.000</strong></a></li>
-          <li class=""><a href="javascript:setTabIndex('1', '7')">Thur 27 Dec<strong>VND1.000.000</strong></a></li>
+      <div class="dates clearfix"><a href="javascript:__doPostBack('ControlGroupSelectView$AvailabilityInputSelectView$LinkButtonPreviousWeek1','')" class="nav prev png-bg"><img src="images/clearpixel.gif" width="9" height="12" alt=""></a><ul><input id="ControlGroupSelectView_AvailabilityInputSelectView_HiddenFieldTabIndex1" type="hidden" name="ControlGroupSelectView$AvailabilityInputSelectView$HiddenFieldTabIndex1" value="3"><li class="first "><a href="javascript:setTabIndex('1', '1')">Tue 18 Dec<strong>VND1.280.000</strong></a></li>
+          <li class=""><a href="javascript:setTabIndex('1', '2')">Wed 19 Dec<strong>VND1.000.000</strong></a></li>
+          <li class="active "><a href="javascript:setTabIndex('1', '3')">Thur 20 Dec<strong>VND1.000.000</strong></a></li>
+          <li class=""><a href="javascript:setTabIndex('1', '4')">Fri 21 Dec<strong>VND1.000.000</strong></a></li>
+          <li class=""><a href="javascript:setTabIndex('1', '5')">Sat 22 Dec<strong>VND1.150.000</strong></a></li>
+          <li class=""><a href="javascript:setTabIndex('1', '6')">Sun 23 Dec<strong>VND1.150.000</strong></a></li>
+          <li class=""><a href="javascript:setTabIndex('1', '7')">Mon 24 Dec<strong>VND1.000.000</strong></a></li>
         </ul><a href="javascript:__doPostBack('ControlGroupSelectView$AvailabilityInputSelectView$LinkButtonNextWeek1','')" class="nav next png-bg"><img src="images/clearpixel.gif" width="9" height="12" alt=""></a></div>
-      <div class="flexible"><a href="LowFareFinder.aspx?culture=vi-VN&amp;RadioButtonMarketStructure=OneWay&amp;Origin1=SGN&amp;Destination1=HAN&amp;Day1=24&amp;MonthYear1=2012-12&amp;ADT=1&amp;CHD=0&amp;INF=0&amp;AutoSubmit=Y&amp;ControlGroupCalendarSearchView%24AvailabilitySearchInputCalendarSearchView%24DropDownListCurrency=VND"><span>More Dates</span>Xem cả tháng</a><p>Tìm giá rẻ nhất trong vòng 4 tuần</p>
+      <div class="flexible"><a href="LowFareFinder.aspx?culture=vi-VN&amp;RadioButtonMarketStructure=RoundTrip&amp;Origin1=HAN&amp;Destination1=SGN&amp;Day1=20&amp;MonthYear1=2012-12&amp;Origin2=SGN&amp;Destination2=HAN&amp;Day2=24&amp;MonthYear2=2012-12&amp;ADT=1&amp;CHD=0&amp;INF=0&amp;AutoSubmit=Y&amp;ControlGroupCalendarSearchView%24AvailabilitySearchInputCalendarSearchView%24DropDownListCurrency=VND"><span>More Dates</span>Xem cả tháng</a><p>Tìm giá rẻ nhất trong vòng 4 tuần</p>
       </div>
     </div>
     <div class="fare-picker depart clearfix">
@@ -352,7 +355,7 @@
           <thead>
             <tr>
               <th colspan="3">
-                <h3>24/12/2012</h3>
+                <h3>20/12/2012</h3>
               </th>
               <th class="starter">
                 <dl>
@@ -370,20 +373,20 @@
           </thead>
           <tbody>
             <tr>
-              <td><strong>6:00</strong><a class="airport">Thành phố Hồ Chí Minh</a></td>
-              <td><strong>8:10</strong><a class="airport">Hà Nội</a></td>
-              <td><span class="stops">Bay thẳng<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span><a class="duration tooltip-info trigger-flight-detail">2giờ10phút</a><div class="tooltip-flight-detail-info tooltip-fares">
+              <td><strong>8:45</strong><a class="airport">Hà Nội</a></td>
+              <td><strong>10:50</strong><a class="airport">Thành phố Hồ Chí Minh</a></td>
+              <td><span class="stops">Bay thẳng<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span><a class="duration tooltip-info trigger-flight-detail">2giờ5phút</a><div class="tooltip-flight-detail-info tooltip-fares">
                   <h4>Thông tin chuyến bay</h4>
                   <div class="flights">
                     <dl>
-                      <dt>Lượt đi 1 <span class="flight-no">BL  790<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span></dt>
+                      <dt>Lượt đi 1 <span class="flight-no">BL  791<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span></dt>
                       <dd class="flight"><strong>Khởi hành:
-                      </strong>6:00, 24/12/2012 - Thành phố Hồ Chí Minh<em>
+                      </strong>8:45, 20/12/2012 - Hà Nội<em>
                         -
                         </em></dd>
                       <dd class="flight"><strong>Đến:
-                      </strong>8:10, 24/12/2012 - Hà Nội</dd>
-                      <dd class="flight"><strong>Thời gian chuyến bay: </strong>2 giờ 10 phút</dd>
+                      </strong>10:50, 20/12/2012 - Thành phố Hồ Chí Minh</dd>
+                      <dd class="flight"><strong>Thời gian chuyến bay: </strong>2 giờ 5 phút</dd>
                       <dd class="note">(Economy Cabin only available)</dd>
                       <dd class="flight"><strong>Loại máy bay: </strong></dd>
                       <dd><strong>Không có khoang hạng thương gia</strong>: Chỉ có khoang hạng phổ thông</dd>
@@ -398,9 +401,9 @@
                   </div><span class="footer"></span></div>
                 <dd class="details flight-summary-details"><span class="price" data-price="0" data-inf-available="true">VND<span>0,00</span></span><ul>
                     <li>
-                      <p class="date-time" data-date-arrv="2012-12-24T08:10:00" data-date-dept="2012-12-24T06:00:00">6:00, 24/12/2012</p>
-                      <p class="origin-destination"><span class="airport">Thành phố Hồ Chí Minh</span><br>to <span class="airport">Hà Nội</span></p>
-                      <p class="flight-no-carrier"><span class="flight-no">BL  790</span><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</p>
+                      <p class="date-time" data-date-arrv="2012-12-20T10:50:00" data-date-dept="2012-12-20T08:45:00">8:45, 20/12/2012</p>
+                      <p class="origin-destination"><span class="airport">Hà Nội</span><br>to <span class="airport">Thành phố Hồ Chí Minh</span></p>
+                      <p class="flight-no-carrier"><span class="flight-no">BL  791</span><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</p>
                       <p class="fare-cabin starter">Khoang hạng phổ thông</p>
                       <p class="fare-cabin business">Khoang hạng phổ thông</p>
                     </li>
@@ -408,33 +411,135 @@
                 </dd>
               </td>
               <td class="starter">
-                <div class="field"><input type="radio" id="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare4" name="ControlGroupSelectView$AvailabilityInputSelectView$market1" preselected-fare="False" preselected-bundle="" class="radio" value="0~K~KLECOK~5000~~Both~X|BL~ 790~ ~~SGN~12/24/2012 06:00~HAN~12/24/2012 08:10" data-price="1150000,0000" data-price-chd="0" data-price-inf="" data-fees-adt="159000,000" data-fees-chd="0" data-discfees-adt="159000,000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" kff-child-pax-ammount="0" domestic-international-terminal="" price-lock-available="" journey-price-lock-amount="" fee-code-adt1="AX" fee-amount-adt1="44000,000" fee-desc-adt1="Thuế sân bay"><label for="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare4">VND1.150.000</label></div>
+                <div class="field"><input type="radio" id="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare3" name="ControlGroupSelectView$AvailabilityInputSelectView$market1" preselected-fare="False" preselected-bundle="" class="radio" value="0~M~MLECOM~5000~~Both~X|BL~ 791~ ~~HAN~12/20/2012 08:45~SGN~12/20/2012 10:50" data-price="1420000,0000" data-price-chd="0" data-price-inf="" data-fees-adt="186000,000" data-fees-chd="0" data-discfees-adt="186000,000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" kff-child-pax-ammount="0" domestic-international-terminal="" price-lock-available="" journey-price-lock-amount="" fee-code-adt1="AX" fee-amount-adt1="44000,000" fee-desc-adt1="Thuế sân bay"><label for="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare3">VND1.420.000</label></div>
                 <div class="hidden"><select id="" name="" preselected="" value="" class="bundle-option starter-baggage-yes"></select></div>
-                <div class="hidden"><span class="bundle-price starter-plus-yes">200.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1P" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1P" class="checkbox bundle-option starter-plus-yes" value="0~KP~KLECOKP~5001~~Both~X|BL~ 790~ ~~SGN~12/24/2012 06:00~HAN~12/24/2012 08:10" data-price="200000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="359000,00000" data-fees-chd="0" data-discfees-adt="359000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" plusMerchandizingIncludedValue="" basicPlusMerchandizingIncludedValue="" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                <div class="hidden"><span class="bundle-price starter-plus-yes">200.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1P" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1P" class="checkbox bundle-option starter-plus-yes" value="0~MP~MLECOMP~5001~~Both~X|BL~ 791~ ~~HAN~12/20/2012 08:45~SGN~12/20/2012 10:50" data-price="200000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="386000,00000" data-fees-chd="0" data-discfees-adt="386000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" plusMerchandizingIncludedValue="" basicPlusMerchandizingIncludedValue="" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
                     <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
                   </div>
                 </div>
-                <div class="hidden"><span class="bundle-price starter-max-yes">1.252.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1Y" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1Y" class="checkbox bundle-option starter-max-yes" value="0~RY~RLECORY~5002~~Both~X|BL~ 790~ ~~SGN~12/24/2012 06:00~HAN~12/24/2012 08:10" data-price="1252000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="591000,00000" data-fees-chd="0" data-discfees-adt="591000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                <div class="hidden"><span class="bundle-price starter-max-yes">955.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1Y" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1Y" class="checkbox bundle-option starter-max-yes" value="0~RY~RLECORY~5002~~Both~X|BL~ 791~ ~~HAN~12/20/2012 08:45~SGN~12/20/2012 10:50" data-price="955000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="591000,00000" data-fees-chd="0" data-discfees-adt="591000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
                     <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
                   </div>
                 </div>
               </td>
             </tr>
             <tr>
-              <td><strong>7:30</strong><a class="airport">Thành phố Hồ Chí Minh</a></td>
-              <td><strong>9:40</strong><a class="airport">Hà Nội</a></td>
-              <td><span class="stops">Bay thẳng<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span><a class="duration tooltip-info trigger-flight-detail">2giờ10phút</a><div class="tooltip-flight-detail-info tooltip-fares">
+              <td><strong>10:40</strong><a class="airport">Hà Nội</a></td>
+              <td><strong>12:45</strong><a class="airport">Thành phố Hồ Chí Minh</a></td>
+              <td><span class="stops">Bay thẳng<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span><a class="duration tooltip-info trigger-flight-detail">2giờ5phút</a><div class="tooltip-flight-detail-info tooltip-fares">
                   <h4>Thông tin chuyến bay</h4>
                   <div class="flights">
                     <dl>
-                      <dt>Lượt đi 1 <span class="flight-no">BL  794<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span></dt>
+                      <dt>Lượt đi 1 <span class="flight-no">BL  809<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span></dt>
                       <dd class="flight"><strong>Khởi hành:
-                      </strong>7:30, 24/12/2012 - Thành phố Hồ Chí Minh<em>
+                      </strong>10:40, 20/12/2012 - Hà Nội<em>
                         -
                         </em></dd>
                       <dd class="flight"><strong>Đến:
-                      </strong>9:40, 24/12/2012 - Hà Nội</dd>
-                      <dd class="flight"><strong>Thời gian chuyến bay: </strong>2 giờ 10 phút</dd>
+                      </strong>12:45, 20/12/2012 - Thành phố Hồ Chí Minh</dd>
+                      <dd class="flight"><strong>Thời gian chuyến bay: </strong>2 giờ 5 phút</dd>
+                      <dd class="note">(Economy Cabin only available)</dd>
+                      <dd class="flight"><strong>Loại máy bay: </strong></dd>
+                      <dd><strong>Không có khoang hạng thương gia</strong>: Chỉ có khoang hạng phổ thông</dd>
+                      <dd><a href="http://www.jetstar.com/VN/vi/planning-and-booking/baggage/bulky-items" target="_blank">Thông tin về Hành lý quá khổ</a></dd>
+                    </dl>
+                  </div>
+                  <div class="legend">
+                    <dl>
+                      <dt></dt>
+                      <dd><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</dd>
+                    </dl>
+                  </div><span class="footer"></span></div>
+                <dd class="details flight-summary-details"><span class="price" data-price="0" data-inf-available="true">VND<span>0,00</span></span><ul>
+                    <li>
+                      <p class="date-time" data-date-arrv="2012-12-20T12:45:00" data-date-dept="2012-12-20T10:40:00">10:40, 20/12/2012</p>
+                      <p class="origin-destination"><span class="airport">Hà Nội</span><br>to <span class="airport">Thành phố Hồ Chí Minh</span></p>
+                      <p class="flight-no-carrier"><span class="flight-no">BL  809</span><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</p>
+                      <p class="fare-cabin starter">Khoang hạng phổ thông</p>
+                      <p class="fare-cabin business">Khoang hạng phổ thông</p>
+                    </li>
+                  </ul>
+                </dd>
+              </td>
+              <td class="starter">
+                <div class="field"><input type="radio" id="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare6" name="ControlGroupSelectView$AvailabilityInputSelectView$market1" preselected-fare="False" preselected-bundle="" class="radio" value="0~K~KLECOK~5000~~Both~X|BL~ 809~ ~~HAN~12/20/2012 10:40~SGN~12/20/2012 12:45" data-price="1150000,0000" data-price-chd="0" data-price-inf="" data-fees-adt="159000,000" data-fees-chd="0" data-discfees-adt="159000,000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" kff-child-pax-ammount="0" domestic-international-terminal="" price-lock-available="" journey-price-lock-amount="" fee-code-adt1="AX" fee-amount-adt1="44000,000" fee-desc-adt1="Thuế sân bay"><label for="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare6">VND1.150.000</label></div>
+                <div class="hidden"><select id="" name="" preselected="" value="" class="bundle-option starter-baggage-yes"></select></div>
+                <div class="hidden"><span class="bundle-price starter-plus-yes">200.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1P" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1P" class="checkbox bundle-option starter-plus-yes" value="0~KP~KLECOKP~5001~~Both~X|BL~ 809~ ~~HAN~12/20/2012 10:40~SGN~12/20/2012 12:45" data-price="200000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="359000,00000" data-fees-chd="0" data-discfees-adt="359000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" plusMerchandizingIncludedValue="" basicPlusMerchandizingIncludedValue="" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                    <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
+                  </div>
+                </div>
+                <div class="hidden"><span class="bundle-price starter-max-yes">1.945.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1Y" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1Y" class="checkbox bundle-option starter-max-yes" value="0~YY~YLECOYY~5002~~Both~X|BL~ 809~ ~~HAN~12/20/2012 10:40~SGN~12/20/2012 12:45" data-price="1945000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="654000,00000" data-fees-chd="0" data-discfees-adt="654000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                    <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>12:25</strong><a class="airport">Hà Nội</a></td>
+              <td><strong>14:30</strong><a class="airport">Thành phố Hồ Chí Minh</a></td>
+              <td><span class="stops">Bay thẳng<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span><a class="duration tooltip-info trigger-flight-detail">2giờ5phút</a><div class="tooltip-flight-detail-info tooltip-fares">
+                  <h4>Thông tin chuyến bay</h4>
+                  <div class="flights">
+                    <dl>
+                      <dt>Lượt đi 1 <span class="flight-no">BL  793<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span></dt>
+                      <dd class="flight"><strong>Khởi hành:
+                      </strong>12:25, 20/12/2012 - Hà Nội<em>
+                        -
+                        </em></dd>
+                      <dd class="flight"><strong>Đến:
+                      </strong>14:30, 20/12/2012 - Thành phố Hồ Chí Minh</dd>
+                      <dd class="flight"><strong>Thời gian chuyến bay: </strong>2 giờ 5 phút</dd>
+                      <dd class="note">(Economy Cabin only available)</dd>
+                      <dd class="flight"><strong>Loại máy bay: </strong></dd>
+                      <dd><strong>Không có khoang hạng thương gia</strong>: Chỉ có khoang hạng phổ thông</dd>
+                      <dd><a href="http://www.jetstar.com/VN/vi/planning-and-booking/baggage/bulky-items" target="_blank">Thông tin về Hành lý quá khổ</a></dd>
+                    </dl>
+                  </div>
+                  <div class="legend">
+                    <dl>
+                      <dt></dt>
+                      <dd><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</dd>
+                    </dl>
+                  </div><span class="footer"></span></div>
+                <dd class="details flight-summary-details"><span class="price" data-price="0" data-inf-available="true">VND<span>0,00</span></span><ul>
+                    <li>
+                      <p class="date-time" data-date-arrv="2012-12-20T14:30:00" data-date-dept="2012-12-20T12:25:00">12:25, 20/12/2012</p>
+                      <p class="origin-destination"><span class="airport">Hà Nội</span><br>to <span class="airport">Thành phố Hồ Chí Minh</span></p>
+                      <p class="flight-no-carrier"><span class="flight-no">BL  793</span><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</p>
+                      <p class="fare-cabin starter">Khoang hạng phổ thông</p>
+                      <p class="fare-cabin business">Khoang hạng phổ thông</p>
+                    </li>
+                  </ul>
+                </dd>
+              </td>
+              <td class="starter">
+                <div class="field"><input type="radio" id="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare9" name="ControlGroupSelectView$AvailabilityInputSelectView$market1" preselected-fare="False" preselected-bundle="" class="radio" value="0~L~LLECOL~5000~~Both~X|BL~ 793~ ~~HAN~12/20/2012 12:25~SGN~12/20/2012 14:30" data-price="1280000,0000" data-price-chd="0" data-price-inf="" data-fees-adt="172000,000" data-fees-chd="0" data-discfees-adt="172000,000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" kff-child-pax-ammount="0" domestic-international-terminal="" price-lock-available="" journey-price-lock-amount="" fee-code-adt1="AX" fee-amount-adt1="44000,000" fee-desc-adt1="Thuế sân bay"><label for="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare9">VND1.280.000</label></div>
+                <div class="hidden"><select id="" name="" preselected="" value="" class="bundle-option starter-baggage-yes"></select></div>
+                <div class="hidden"><span class="bundle-price starter-plus-yes">200.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1P" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1P" class="checkbox bundle-option starter-plus-yes" value="0~LP~LLECOLP~5001~~Both~X|BL~ 793~ ~~HAN~12/20/2012 12:25~SGN~12/20/2012 14:30" data-price="200000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="372000,00000" data-fees-chd="0" data-discfees-adt="372000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" plusMerchandizingIncludedValue="" basicPlusMerchandizingIncludedValue="" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                    <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
+                  </div>
+                </div>
+                <div class="hidden"><span class="bundle-price starter-max-yes">1.109.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1Y" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1Y" class="checkbox bundle-option starter-max-yes" value="0~RY~RLECORY~5002~~Both~X|BL~ 793~ ~~HAN~12/20/2012 12:25~SGN~12/20/2012 14:30" data-price="1109000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="591000,00000" data-fees-chd="0" data-discfees-adt="591000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                    <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>13:40</strong><a class="airport">Hà Nội</a></td>
+              <td><strong>15:45</strong><a class="airport">Thành phố Hồ Chí Minh</a></td>
+              <td><span class="stops">Bay thẳng<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span><a class="duration tooltip-info trigger-flight-detail">2giờ5phút</a><div class="tooltip-flight-detail-info tooltip-fares">
+                  <h4>Thông tin chuyến bay</h4>
+                  <div class="flights">
+                    <dl>
+                      <dt>Lượt đi 1 <span class="flight-no">BL  795<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span></dt>
+                      <dd class="flight"><strong>Khởi hành:
+                      </strong>13:40, 20/12/2012 - Hà Nội<em>
+                        -
+                        </em></dd>
+                      <dd class="flight"><strong>Đến:
+                      </strong>15:45, 20/12/2012 - Thành phố Hồ Chí Minh</dd>
+                      <dd class="flight"><strong>Thời gian chuyến bay: </strong>2 giờ 5 phút</dd>
                       <dd class="note">(Economy Cabin only available)</dd>
                       <dd class="flight"><strong>Loại máy bay: </strong>Airbus A320</dd>
                       <dd><strong>Không có khoang hạng thương gia</strong>: Chỉ có khoang hạng phổ thông</dd>
@@ -449,9 +554,9 @@
                   </div><span class="footer"></span></div>
                 <dd class="details flight-summary-details"><span class="price" data-price="0" data-inf-available="true">VND<span>0,00</span></span><ul>
                     <li>
-                      <p class="date-time" data-date-arrv="2012-12-24T09:40:00" data-date-dept="2012-12-24T07:30:00">7:30, 24/12/2012</p>
-                      <p class="origin-destination"><span class="airport">Thành phố Hồ Chí Minh</span><br>to <span class="airport">Hà Nội</span></p>
-                      <p class="flight-no-carrier"><span class="flight-no">BL  794</span><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</p>
+                      <p class="date-time" data-date-arrv="2012-12-20T15:45:00" data-date-dept="2012-12-20T13:40:00">13:40, 20/12/2012</p>
+                      <p class="origin-destination"><span class="airport">Hà Nội</span><br>to <span class="airport">Thành phố Hồ Chí Minh</span></p>
+                      <p class="flight-no-carrier"><span class="flight-no">BL  795</span><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</p>
                       <p class="fare-cabin starter">Khoang hạng phổ thông</p>
                       <p class="fare-cabin business">Khoang hạng phổ thông</p>
                     </li>
@@ -459,135 +564,33 @@
                 </dd>
               </td>
               <td class="starter">
-                <div class="field"><input type="radio" id="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare7" name="ControlGroupSelectView$AvailabilityInputSelectView$market1" preselected-fare="False" preselected-bundle="" class="radio" value="0~K~KLECOK~5000~~Both~X|BL~ 794~ ~~SGN~12/24/2012 07:30~HAN~12/24/2012 09:40" data-price="1150000,0000" data-price-chd="0" data-price-inf="" data-fees-adt="159000,000" data-fees-chd="0" data-discfees-adt="159000,000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" kff-child-pax-ammount="0" domestic-international-terminal="" price-lock-available="" journey-price-lock-amount="" fee-code-adt1="AX" fee-amount-adt1="44000,000" fee-desc-adt1="Thuế sân bay"><label for="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare7">VND1.150.000</label></div>
+                <div class="field"><input type="radio" id="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare12" name="ControlGroupSelectView$AvailabilityInputSelectView$market1" preselected-fare="False" preselected-bundle="" class="radio" value="0~L~LLECOL~5000~~Both~X|BL~ 795~ ~~HAN~12/20/2012 13:40~SGN~12/20/2012 15:45" data-price="1280000,0000" data-price-chd="0" data-price-inf="" data-fees-adt="172000,000" data-fees-chd="0" data-discfees-adt="172000,000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" kff-child-pax-ammount="0" domestic-international-terminal="" price-lock-available="" journey-price-lock-amount="" fee-code-adt1="AX" fee-amount-adt1="44000,000" fee-desc-adt1="Thuế sân bay"><label for="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare12">VND1.280.000</label></div>
                 <div class="hidden"><select id="" name="" preselected="" value="" class="bundle-option starter-baggage-yes"></select></div>
-                <div class="hidden"><span class="bundle-price starter-plus-yes">200.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1P" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1P" class="checkbox bundle-option starter-plus-yes" value="0~KP~KLECOKP~5001~~Both~X|BL~ 794~ ~~SGN~12/24/2012 07:30~HAN~12/24/2012 09:40" data-price="200000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="359000,00000" data-fees-chd="0" data-discfees-adt="359000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" plusMerchandizingIncludedValue="" basicPlusMerchandizingIncludedValue="" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                <div class="hidden"><span class="bundle-price starter-plus-yes">200.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1P" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1P" class="checkbox bundle-option starter-plus-yes" value="0~LP~LLECOLP~5001~~Both~X|BL~ 795~ ~~HAN~12/20/2012 13:40~SGN~12/20/2012 15:45" data-price="200000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="372000,00000" data-fees-chd="0" data-discfees-adt="372000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" plusMerchandizingIncludedValue="" basicPlusMerchandizingIncludedValue="" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
                     <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
                   </div>
                 </div>
-                <div class="hidden"><span class="bundle-price starter-max-yes">1.252.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1Y" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1Y" class="checkbox bundle-option starter-max-yes" value="0~RY~RLECORY~5002~~Both~X|BL~ 794~ ~~SGN~12/24/2012 07:30~HAN~12/24/2012 09:40" data-price="1252000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="591000,00000" data-fees-chd="0" data-discfees-adt="591000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                <div class="hidden"><span class="bundle-price starter-max-yes">1.109.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1Y" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1Y" class="checkbox bundle-option starter-max-yes" value="0~RY~RLECORY~5002~~Both~X|BL~ 795~ ~~HAN~12/20/2012 13:40~SGN~12/20/2012 15:45" data-price="1109000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="591000,00000" data-fees-chd="0" data-discfees-adt="591000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
                     <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
                   </div>
                 </div>
               </td>
             </tr>
             <tr>
-              <td><strong>8:00</strong><a class="airport">Thành phố Hồ Chí Minh</a></td>
-              <td><strong>10:10</strong><a class="airport">Hà Nội</a></td>
-              <td><span class="stops">Bay thẳng<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span><a class="duration tooltip-info trigger-flight-detail">2giờ10phút</a><div class="tooltip-flight-detail-info tooltip-fares">
+              <td><strong>15:20</strong><a class="airport">Hà Nội</a></td>
+              <td><strong>17:25</strong><a class="airport">Thành phố Hồ Chí Minh</a></td>
+              <td><span class="stops">Bay thẳng<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span><a class="duration tooltip-info trigger-flight-detail">2giờ5phút</a><div class="tooltip-flight-detail-info tooltip-fares">
                   <h4>Thông tin chuyến bay</h4>
                   <div class="flights">
                     <dl>
-                      <dt>Lượt đi 1 <span class="flight-no">BL  808<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span></dt>
+                      <dt>Lượt đi 1 <span class="flight-no">BL  799<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span></dt>
                       <dd class="flight"><strong>Khởi hành:
-                      </strong>8:00, 24/12/2012 - Thành phố Hồ Chí Minh<em>
+                      </strong>15:20, 20/12/2012 - Hà Nội<em>
                         -
                         </em></dd>
                       <dd class="flight"><strong>Đến:
-                      </strong>10:10, 24/12/2012 - Hà Nội</dd>
-                      <dd class="flight"><strong>Thời gian chuyến bay: </strong>2 giờ 10 phút</dd>
-                      <dd class="note">(Economy Cabin only available)</dd>
-                      <dd class="flight"><strong>Loại máy bay: </strong></dd>
-                      <dd><strong>Không có khoang hạng thương gia</strong>: Chỉ có khoang hạng phổ thông</dd>
-                      <dd><a href="http://www.jetstar.com/VN/vi/planning-and-booking/baggage/bulky-items" target="_blank">Thông tin về Hành lý quá khổ</a></dd>
-                    </dl>
-                  </div>
-                  <div class="legend">
-                    <dl>
-                      <dt></dt>
-                      <dd><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</dd>
-                    </dl>
-                  </div><span class="footer"></span></div>
-                <dd class="details flight-summary-details"><span class="price" data-price="0" data-inf-available="true">VND<span>0,00</span></span><ul>
-                    <li>
-                      <p class="date-time" data-date-arrv="2012-12-24T10:10:00" data-date-dept="2012-12-24T08:00:00">8:00, 24/12/2012</p>
-                      <p class="origin-destination"><span class="airport">Thành phố Hồ Chí Minh</span><br>to <span class="airport">Hà Nội</span></p>
-                      <p class="flight-no-carrier"><span class="flight-no">BL  808</span><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</p>
-                      <p class="fare-cabin starter">Khoang hạng phổ thông</p>
-                      <p class="fare-cabin business">Khoang hạng phổ thông</p>
-                    </li>
-                  </ul>
-                </dd>
-              </td>
-              <td class="starter">
-                <div class="field"><input type="radio" id="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare10" name="ControlGroupSelectView$AvailabilityInputSelectView$market1" preselected-fare="False" preselected-bundle="" class="radio" value="0~K~KLECOK~5000~~Both~X|BL~ 808~ ~~SGN~12/24/2012 08:00~HAN~12/24/2012 10:10" data-price="1150000,0000" data-price-chd="0" data-price-inf="" data-fees-adt="159000,000" data-fees-chd="0" data-discfees-adt="159000,000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" kff-child-pax-ammount="0" domestic-international-terminal="" price-lock-available="" journey-price-lock-amount="" fee-code-adt1="AX" fee-amount-adt1="44000,000" fee-desc-adt1="Thuế sân bay"><label for="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare10">VND1.150.000</label></div>
-                <div class="hidden"><select id="" name="" preselected="" value="" class="bundle-option starter-baggage-yes"></select></div>
-                <div class="hidden"><span class="bundle-price starter-plus-yes">200.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1P" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1P" class="checkbox bundle-option starter-plus-yes" value="0~KP~KLECOKP~5001~~Both~X|BL~ 808~ ~~SGN~12/24/2012 08:00~HAN~12/24/2012 10:10" data-price="200000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="359000,00000" data-fees-chd="0" data-discfees-adt="359000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" plusMerchandizingIncludedValue="" basicPlusMerchandizingIncludedValue="" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
-                    <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
-                  </div>
-                </div>
-                <div class="hidden"><span class="bundle-price starter-max-yes">1.945.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1Y" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1Y" class="checkbox bundle-option starter-max-yes" value="0~YY~YLECOYY~5002~~Both~X|BL~ 808~ ~~SGN~12/24/2012 08:00~HAN~12/24/2012 10:10" data-price="1945000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="654000,00000" data-fees-chd="0" data-discfees-adt="654000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
-                    <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td><strong>9:45</strong><a class="airport">Thành phố Hồ Chí Minh</a></td>
-              <td><strong>11:55</strong><a class="airport">Hà Nội</a></td>
-              <td><span class="stops">Bay thẳng<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span><a class="duration tooltip-info trigger-flight-detail">2giờ10phút</a><div class="tooltip-flight-detail-info tooltip-fares">
-                  <h4>Thông tin chuyến bay</h4>
-                  <div class="flights">
-                    <dl>
-                      <dt>Lượt đi 1 <span class="flight-no">BL  796<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span></dt>
-                      <dd class="flight"><strong>Khởi hành:
-                      </strong>9:45, 24/12/2012 - Thành phố Hồ Chí Minh<em>
-                        -
-                        </em></dd>
-                      <dd class="flight"><strong>Đến:
-                      </strong>11:55, 24/12/2012 - Hà Nội</dd>
-                      <dd class="flight"><strong>Thời gian chuyến bay: </strong>2 giờ 10 phút</dd>
-                      <dd class="note">(Economy Cabin only available)</dd>
-                      <dd class="flight"><strong>Loại máy bay: </strong></dd>
-                      <dd><strong>Không có khoang hạng thương gia</strong>: Chỉ có khoang hạng phổ thông</dd>
-                      <dd><a href="http://www.jetstar.com/VN/vi/planning-and-booking/baggage/bulky-items" target="_blank">Thông tin về Hành lý quá khổ</a></dd>
-                    </dl>
-                  </div>
-                  <div class="legend">
-                    <dl>
-                      <dt></dt>
-                      <dd><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</dd>
-                    </dl>
-                  </div><span class="footer"></span></div>
-                <dd class="details flight-summary-details"><span class="price" data-price="0" data-inf-available="true">VND<span>0,00</span></span><ul>
-                    <li>
-                      <p class="date-time" data-date-arrv="2012-12-24T11:55:00" data-date-dept="2012-12-24T09:45:00">9:45, 24/12/2012</p>
-                      <p class="origin-destination"><span class="airport">Thành phố Hồ Chí Minh</span><br>to <span class="airport">Hà Nội</span></p>
-                      <p class="flight-no-carrier"><span class="flight-no">BL  796</span><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</p>
-                      <p class="fare-cabin starter">Khoang hạng phổ thông</p>
-                      <p class="fare-cabin business">Khoang hạng phổ thông</p>
-                    </li>
-                  </ul>
-                </dd>
-              </td>
-              <td class="starter">
-                <div class="field"><input type="radio" id="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare13" name="ControlGroupSelectView$AvailabilityInputSelectView$market1" preselected-fare="False" preselected-bundle="" class="radio" value="0~L~LLECOL~5000~~Both~X|BL~ 796~ ~~SGN~12/24/2012 09:45~HAN~12/24/2012 11:55" data-price="1280000,0000" data-price-chd="0" data-price-inf="" data-fees-adt="172000,000" data-fees-chd="0" data-discfees-adt="172000,000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" kff-child-pax-ammount="0" domestic-international-terminal="" price-lock-available="" journey-price-lock-amount="" fee-code-adt1="AX" fee-amount-adt1="44000,000" fee-desc-adt1="Thuế sân bay"><label for="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare13">VND1.280.000</label></div>
-                <div class="hidden"><select id="" name="" preselected="" value="" class="bundle-option starter-baggage-yes"></select></div>
-                <div class="hidden"><span class="bundle-price starter-plus-yes">200.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1P" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1P" class="checkbox bundle-option starter-plus-yes" value="0~LP~LLECOLP~5001~~Both~X|BL~ 796~ ~~SGN~12/24/2012 09:45~HAN~12/24/2012 11:55" data-price="200000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="372000,00000" data-fees-chd="0" data-discfees-adt="372000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" plusMerchandizingIncludedValue="" basicPlusMerchandizingIncludedValue="" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
-                    <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
-                  </div>
-                </div>
-                <div class="hidden"><span class="bundle-price starter-max-yes">1.109.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1Y" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1Y" class="checkbox bundle-option starter-max-yes" value="0~RY~RLECORY~5002~~Both~X|BL~ 796~ ~~SGN~12/24/2012 09:45~HAN~12/24/2012 11:55" data-price="1109000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="591000,00000" data-fees-chd="0" data-discfees-adt="591000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
-                    <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td><strong>12:40</strong><a class="airport">Thành phố Hồ Chí Minh</a></td>
-              <td><strong>14:50</strong><a class="airport">Hà Nội</a></td>
-              <td><span class="stops">Bay thẳng<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span><a class="duration tooltip-info trigger-flight-detail">2giờ10phút</a><div class="tooltip-flight-detail-info tooltip-fares">
-                  <h4>Thông tin chuyến bay</h4>
-                  <div class="flights">
-                    <dl>
-                      <dt>Lượt đi 1 <span class="flight-no">BL  798<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span></dt>
-                      <dd class="flight"><strong>Khởi hành:
-                      </strong>12:40, 24/12/2012 - Thành phố Hồ Chí Minh<em>
-                        -
-                        </em></dd>
-                      <dd class="flight"><strong>Đến:
-                      </strong>14:50, 24/12/2012 - Hà Nội</dd>
-                      <dd class="flight"><strong>Thời gian chuyến bay: </strong>2 giờ 10 phút</dd>
+                      </strong>17:25, 20/12/2012 - Thành phố Hồ Chí Minh</dd>
+                      <dd class="flight"><strong>Thời gian chuyến bay: </strong>2 giờ 5 phút</dd>
                       <dd class="note">(Economy Cabin only available)</dd>
                       <dd class="flight"><strong>Loại máy bay: </strong>Boeing 737</dd>
                       <dd><strong>Không có khoang hạng thương gia</strong>: Chỉ có khoang hạng phổ thông</dd>
@@ -602,9 +605,9 @@
                   </div><span class="footer"></span></div>
                 <dd class="details flight-summary-details"><span class="price" data-price="0" data-inf-available="true">VND<span>0,00</span></span><ul>
                     <li>
-                      <p class="date-time" data-date-arrv="2012-12-24T14:50:00" data-date-dept="2012-12-24T12:40:00">12:40, 24/12/2012</p>
-                      <p class="origin-destination"><span class="airport">Thành phố Hồ Chí Minh</span><br>to <span class="airport">Hà Nội</span></p>
-                      <p class="flight-no-carrier"><span class="flight-no">BL  798</span><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</p>
+                      <p class="date-time" data-date-arrv="2012-12-20T17:25:00" data-date-dept="2012-12-20T15:20:00">15:20, 20/12/2012</p>
+                      <p class="origin-destination"><span class="airport">Hà Nội</span><br>to <span class="airport">Thành phố Hồ Chí Minh</span></p>
+                      <p class="flight-no-carrier"><span class="flight-no">BL  799</span><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</p>
                       <p class="fare-cabin starter">Khoang hạng phổ thông</p>
                       <p class="fare-cabin business">Khoang hạng phổ thông</p>
                     </li>
@@ -612,33 +615,33 @@
                 </dd>
               </td>
               <td class="starter">
-                <div class="field"><input type="radio" id="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare16" name="ControlGroupSelectView$AvailabilityInputSelectView$market1" preselected-fare="False" preselected-bundle="" class="radio" value="0~L~LLECOL~5000~~Both~X|BL~ 798~ ~~SGN~12/24/2012 12:40~HAN~12/24/2012 14:50" data-price="1280000,0000" data-price-chd="0" data-price-inf="" data-fees-adt="172000,000" data-fees-chd="0" data-discfees-adt="172000,000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" kff-child-pax-ammount="0" domestic-international-terminal="" price-lock-available="" journey-price-lock-amount="" fee-code-adt1="AX" fee-amount-adt1="44000,000" fee-desc-adt1="Thuế sân bay"><label for="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare16">VND1.280.000</label></div>
+                <div class="field"><input type="radio" id="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare15" name="ControlGroupSelectView$AvailabilityInputSelectView$market1" preselected-fare="False" preselected-bundle="" class="radio" value="0~L~LLECOL~5000~~Both~X|BL~ 799~ ~~HAN~12/20/2012 15:20~SGN~12/20/2012 17:25" data-price="1280000,0000" data-price-chd="0" data-price-inf="" data-fees-adt="172000,000" data-fees-chd="0" data-discfees-adt="172000,000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" kff-child-pax-ammount="0" domestic-international-terminal="" price-lock-available="" journey-price-lock-amount="" fee-code-adt1="AX" fee-amount-adt1="44000,000" fee-desc-adt1="Thuế sân bay"><label for="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare15">VND1.280.000</label></div>
                 <div class="hidden"><select id="" name="" preselected="" value="" class="bundle-option starter-baggage-yes"></select></div>
-                <div class="hidden"><span class="bundle-price starter-plus-yes">200.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1P" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1P" class="checkbox bundle-option starter-plus-yes" value="0~LP~LLECOLP~5001~~Both~X|BL~ 798~ ~~SGN~12/24/2012 12:40~HAN~12/24/2012 14:50" data-price="200000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="372000,00000" data-fees-chd="0" data-discfees-adt="372000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" plusMerchandizingIncludedValue="" basicPlusMerchandizingIncludedValue="" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                <div class="hidden"><span class="bundle-price starter-plus-yes">200.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1P" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1P" class="checkbox bundle-option starter-plus-yes" value="0~LP~LLECOLP~5001~~Both~X|BL~ 799~ ~~HAN~12/20/2012 15:20~SGN~12/20/2012 17:25" data-price="200000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="372000,00000" data-fees-chd="0" data-discfees-adt="372000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" plusMerchandizingIncludedValue="" basicPlusMerchandizingIncludedValue="" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
                     <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
                   </div>
                 </div>
-                <div class="hidden"><span class="bundle-price starter-max-yes">1.109.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1Y" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1Y" class="checkbox bundle-option starter-max-yes" value="0~RY~RLECORY~5002~~Both~X|BL~ 798~ ~~SGN~12/24/2012 12:40~HAN~12/24/2012 14:50" data-price="1109000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="591000,00000" data-fees-chd="0" data-discfees-adt="591000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                <div class="hidden"><span class="bundle-price starter-max-yes">1.109.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1Y" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1Y" class="checkbox bundle-option starter-max-yes" value="0~RY~RLECORY~5002~~Both~X|BL~ 799~ ~~HAN~12/20/2012 15:20~SGN~12/20/2012 17:25" data-price="1109000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="591000,00000" data-fees-chd="0" data-discfees-adt="591000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
                     <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
                   </div>
                 </div>
               </td>
             </tr>
             <tr>
-              <td><strong>15:30</strong><a class="airport">Thành phố Hồ Chí Minh</a></td>
-              <td><strong>17:40</strong><a class="airport">Hà Nội</a></td>
-              <td><span class="stops">Bay thẳng<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span><a class="duration tooltip-info trigger-flight-detail">2giờ10phút</a><div class="tooltip-flight-detail-info tooltip-fares">
+              <td><strong>18:10</strong><a class="airport">Hà Nội</a></td>
+              <td><strong>20:15</strong><a class="airport">Thành phố Hồ Chí Minh</a></td>
+              <td><span class="stops">Bay thẳng<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span><a class="duration tooltip-info trigger-flight-detail">2giờ5phút</a><div class="tooltip-flight-detail-info tooltip-fares">
                   <h4>Thông tin chuyến bay</h4>
                   <div class="flights">
                     <dl>
-                      <dt>Lượt đi 1 <span class="flight-no">BL  800<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span></dt>
+                      <dt>Lượt đi 1 <span class="flight-no">BL  801<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span></dt>
                       <dd class="flight"><strong>Khởi hành:
-                      </strong>15:30, 24/12/2012 - Thành phố Hồ Chí Minh<em>
+                      </strong>18:10, 20/12/2012 - Hà Nội<em>
                         -
                         </em></dd>
                       <dd class="flight"><strong>Đến:
-                      </strong>17:40, 24/12/2012 - Hà Nội</dd>
-                      <dd class="flight"><strong>Thời gian chuyến bay: </strong>2 giờ 10 phút</dd>
+                      </strong>20:15, 20/12/2012 - Thành phố Hồ Chí Minh</dd>
+                      <dd class="flight"><strong>Thời gian chuyến bay: </strong>2 giờ 5 phút</dd>
                       <dd class="note">(Economy Cabin only available)</dd>
                       <dd class="flight"><strong>Loại máy bay: </strong></dd>
                       <dd><strong>Không có khoang hạng thương gia</strong>: Chỉ có khoang hạng phổ thông</dd>
@@ -653,9 +656,9 @@
                   </div><span class="footer"></span></div>
                 <dd class="details flight-summary-details"><span class="price" data-price="0" data-inf-available="true">VND<span>0,00</span></span><ul>
                     <li>
-                      <p class="date-time" data-date-arrv="2012-12-24T17:40:00" data-date-dept="2012-12-24T15:30:00">15:30, 24/12/2012</p>
-                      <p class="origin-destination"><span class="airport">Thành phố Hồ Chí Minh</span><br>to <span class="airport">Hà Nội</span></p>
-                      <p class="flight-no-carrier"><span class="flight-no">BL  800</span><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</p>
+                      <p class="date-time" data-date-arrv="2012-12-20T20:15:00" data-date-dept="2012-12-20T18:10:00">18:10, 20/12/2012</p>
+                      <p class="origin-destination"><span class="airport">Hà Nội</span><br>to <span class="airport">Thành phố Hồ Chí Minh</span></p>
+                      <p class="flight-no-carrier"><span class="flight-no">BL  801</span><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</p>
                       <p class="fare-cabin starter">Khoang hạng phổ thông</p>
                       <p class="fare-cabin business">Khoang hạng phổ thông</p>
                     </li>
@@ -663,33 +666,33 @@
                 </dd>
               </td>
               <td class="starter">
-                <div class="field"><input type="radio" id="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare19" name="ControlGroupSelectView$AvailabilityInputSelectView$market1" preselected-fare="False" preselected-bundle="" class="radio" value="0~K~KLECOK~5000~~Both~X|BL~ 800~ ~~SGN~12/24/2012 15:30~HAN~12/24/2012 17:40" data-price="1150000,0000" data-price-chd="0" data-price-inf="" data-fees-adt="159000,000" data-fees-chd="0" data-discfees-adt="159000,000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" kff-child-pax-ammount="0" domestic-international-terminal="" price-lock-available="" journey-price-lock-amount="" fee-code-adt1="AX" fee-amount-adt1="44000,000" fee-desc-adt1="Thuế sân bay"><label for="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare19">VND1.150.000</label></div>
+                <div class="field"><input type="radio" id="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare18" name="ControlGroupSelectView$AvailabilityInputSelectView$market1" preselected-fare="False" preselected-bundle="" class="radio" value="0~K~KLECOK~5000~~Both~X|BL~ 801~ ~~HAN~12/20/2012 18:10~SGN~12/20/2012 20:15" data-price="1150000,0000" data-price-chd="0" data-price-inf="" data-fees-adt="159000,000" data-fees-chd="0" data-discfees-adt="159000,000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" kff-child-pax-ammount="0" domestic-international-terminal="" price-lock-available="" journey-price-lock-amount="" fee-code-adt1="AX" fee-amount-adt1="44000,000" fee-desc-adt1="Thuế sân bay"><label for="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare18">VND1.150.000</label></div>
                 <div class="hidden"><select id="" name="" preselected="" value="" class="bundle-option starter-baggage-yes"></select></div>
-                <div class="hidden"><span class="bundle-price starter-plus-yes">200.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1P" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1P" class="checkbox bundle-option starter-plus-yes" value="0~KP~KLECOKP~5001~~Both~X|BL~ 800~ ~~SGN~12/24/2012 15:30~HAN~12/24/2012 17:40" data-price="200000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="359000,00000" data-fees-chd="0" data-discfees-adt="359000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" plusMerchandizingIncludedValue="" basicPlusMerchandizingIncludedValue="" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                <div class="hidden"><span class="bundle-price starter-plus-yes">200.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1P" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1P" class="checkbox bundle-option starter-plus-yes" value="0~KP~KLECOKP~5001~~Both~X|BL~ 801~ ~~HAN~12/20/2012 18:10~SGN~12/20/2012 20:15" data-price="200000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="359000,00000" data-fees-chd="0" data-discfees-adt="359000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" plusMerchandizingIncludedValue="" basicPlusMerchandizingIncludedValue="" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
                     <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
                   </div>
                 </div>
-                <div class="hidden"><span class="bundle-price starter-max-yes">1.252.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1Y" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1Y" class="checkbox bundle-option starter-max-yes" value="0~RY~RLECORY~5002~~Both~X|BL~ 800~ ~~SGN~12/24/2012 15:30~HAN~12/24/2012 17:40" data-price="1252000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="591000,00000" data-fees-chd="0" data-discfees-adt="591000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                <div class="hidden"><span class="bundle-price starter-max-yes">1.252.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1Y" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1Y" class="checkbox bundle-option starter-max-yes" value="0~RY~RLECORY~5002~~Both~X|BL~ 801~ ~~HAN~12/20/2012 18:10~SGN~12/20/2012 20:15" data-price="1252000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="591000,00000" data-fees-chd="0" data-discfees-adt="591000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
                     <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
                   </div>
                 </div>
               </td>
             </tr>
             <tr>
-              <td><strong>16:25</strong><a class="airport">Thành phố Hồ Chí Minh</a></td>
-              <td><strong>18:35</strong><a class="airport">Hà Nội</a></td>
-              <td><span class="stops">Bay thẳng<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span><a class="duration tooltip-info trigger-flight-detail">2giờ10phút</a><div class="tooltip-flight-detail-info tooltip-fares">
+              <td><strong>19:05</strong><a class="airport">Hà Nội</a></td>
+              <td><strong>21:10</strong><a class="airport">Thành phố Hồ Chí Minh</a></td>
+              <td><span class="stops">Bay thẳng<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span><a class="duration tooltip-info trigger-flight-detail">2giờ5phút</a><div class="tooltip-flight-detail-info tooltip-fares">
                   <h4>Thông tin chuyến bay</h4>
                   <div class="flights">
                     <dl>
-                      <dt>Lượt đi 1 <span class="flight-no">BL  802<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span></dt>
+                      <dt>Lượt đi 1 <span class="flight-no">BL  803<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span></dt>
                       <dd class="flight"><strong>Khởi hành:
-                      </strong>16:25, 24/12/2012 - Thành phố Hồ Chí Minh<em>
+                      </strong>19:05, 20/12/2012 - Hà Nội<em>
                         -
                         </em></dd>
                       <dd class="flight"><strong>Đến:
-                      </strong>18:35, 24/12/2012 - Hà Nội</dd>
-                      <dd class="flight"><strong>Thời gian chuyến bay: </strong>2 giờ 10 phút</dd>
+                      </strong>21:10, 20/12/2012 - Thành phố Hồ Chí Minh</dd>
+                      <dd class="flight"><strong>Thời gian chuyến bay: </strong>2 giờ 5 phút</dd>
                       <dd class="note">(Economy Cabin only available)</dd>
                       <dd class="flight"><strong>Loại máy bay: </strong>Airbus A320</dd>
                       <dd><strong>Không có khoang hạng thương gia</strong>: Chỉ có khoang hạng phổ thông</dd>
@@ -704,9 +707,9 @@
                   </div><span class="footer"></span></div>
                 <dd class="details flight-summary-details"><span class="price" data-price="0" data-inf-available="true">VND<span>0,00</span></span><ul>
                     <li>
-                      <p class="date-time" data-date-arrv="2012-12-24T18:35:00" data-date-dept="2012-12-24T16:25:00">16:25, 24/12/2012</p>
-                      <p class="origin-destination"><span class="airport">Thành phố Hồ Chí Minh</span><br>to <span class="airport">Hà Nội</span></p>
-                      <p class="flight-no-carrier"><span class="flight-no">BL  802</span><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</p>
+                      <p class="date-time" data-date-arrv="2012-12-20T21:10:00" data-date-dept="2012-12-20T19:05:00">19:05, 20/12/2012</p>
+                      <p class="origin-destination"><span class="airport">Hà Nội</span><br>to <span class="airport">Thành phố Hồ Chí Minh</span></p>
+                      <p class="flight-no-carrier"><span class="flight-no">BL  803</span><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</p>
                       <p class="fare-cabin starter">Khoang hạng phổ thông</p>
                       <p class="fare-cabin business">Khoang hạng phổ thông</p>
                     </li>
@@ -714,33 +717,33 @@
                 </dd>
               </td>
               <td class="starter">
-                <div class="field"><input type="radio" id="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare22" name="ControlGroupSelectView$AvailabilityInputSelectView$market1" preselected-fare="False" preselected-bundle="" class="radio" value="0~K~KLECOK~5000~~Both~X|BL~ 802~ ~~SGN~12/24/2012 16:25~HAN~12/24/2012 18:35" data-price="1150000,0000" data-price-chd="0" data-price-inf="" data-fees-adt="159000,000" data-fees-chd="0" data-discfees-adt="159000,000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" kff-child-pax-ammount="0" domestic-international-terminal="" price-lock-available="" journey-price-lock-amount="" fee-code-adt1="AX" fee-amount-adt1="44000,000" fee-desc-adt1="Thuế sân bay"><label for="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare22">VND1.150.000</label></div>
+                <div class="field"><input type="radio" id="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare21" name="ControlGroupSelectView$AvailabilityInputSelectView$market1" preselected-fare="False" preselected-bundle="" class="radio" value="0~K~KLECOK~5000~~Both~X|BL~ 803~ ~~HAN~12/20/2012 19:05~SGN~12/20/2012 21:10" data-price="1150000,0000" data-price-chd="0" data-price-inf="" data-fees-adt="159000,000" data-fees-chd="0" data-discfees-adt="159000,000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" kff-child-pax-ammount="0" domestic-international-terminal="" price-lock-available="" journey-price-lock-amount="" fee-code-adt1="AX" fee-amount-adt1="44000,000" fee-desc-adt1="Thuế sân bay"><label for="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare21">VND1.150.000</label></div>
                 <div class="hidden"><select id="" name="" preselected="" value="" class="bundle-option starter-baggage-yes"></select></div>
-                <div class="hidden"><span class="bundle-price starter-plus-yes">200.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1P" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1P" class="checkbox bundle-option starter-plus-yes" value="0~KP~KLECOKP~5001~~Both~X|BL~ 802~ ~~SGN~12/24/2012 16:25~HAN~12/24/2012 18:35" data-price="200000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="359000,00000" data-fees-chd="0" data-discfees-adt="359000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" plusMerchandizingIncludedValue="" basicPlusMerchandizingIncludedValue="" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                <div class="hidden"><span class="bundle-price starter-plus-yes">200.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1P" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1P" class="checkbox bundle-option starter-plus-yes" value="0~KP~KLECOKP~5001~~Both~X|BL~ 803~ ~~HAN~12/20/2012 19:05~SGN~12/20/2012 21:10" data-price="200000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="359000,00000" data-fees-chd="0" data-discfees-adt="359000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" plusMerchandizingIncludedValue="" basicPlusMerchandizingIncludedValue="" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
                     <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
                   </div>
                 </div>
-                <div class="hidden"><span class="bundle-price starter-max-yes">1.252.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1Y" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1Y" class="checkbox bundle-option starter-max-yes" value="0~RY~RLECORY~5002~~Both~X|BL~ 802~ ~~SGN~12/24/2012 16:25~HAN~12/24/2012 18:35" data-price="1252000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="591000,00000" data-fees-chd="0" data-discfees-adt="591000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                <div class="hidden"><span class="bundle-price starter-max-yes">1.252.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1Y" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1Y" class="checkbox bundle-option starter-max-yes" value="0~RY~RLECORY~5002~~Both~X|BL~ 803~ ~~HAN~12/20/2012 19:05~SGN~12/20/2012 21:10" data-price="1252000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="591000,00000" data-fees-chd="0" data-discfees-adt="591000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
                     <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
                   </div>
                 </div>
               </td>
             </tr>
             <tr>
-              <td><strong>18:05</strong><a class="airport">Thành phố Hồ Chí Minh</a></td>
-              <td><strong>20:15</strong><a class="airport">Hà Nội</a></td>
-              <td><span class="stops">Bay thẳng<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span><a class="duration tooltip-info trigger-flight-detail">2giờ10phút</a><div class="tooltip-flight-detail-info tooltip-fares">
+              <td><strong>20:45</strong><a class="airport">Hà Nội</a></td>
+              <td><strong>22:50</strong><a class="airport">Thành phố Hồ Chí Minh</a></td>
+              <td><span class="stops">Bay thẳng<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span><a class="duration tooltip-info trigger-flight-detail">2giờ5phút</a><div class="tooltip-flight-detail-info tooltip-fares">
                   <h4>Thông tin chuyến bay</h4>
                   <div class="flights">
                     <dl>
-                      <dt>Lượt đi 1 <span class="flight-no">BL  804<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span></dt>
+                      <dt>Lượt đi 1 <span class="flight-no">BL  805<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span></dt>
                       <dd class="flight"><strong>Khởi hành:
-                      </strong>18:05, 24/12/2012 - Thành phố Hồ Chí Minh<em>
+                      </strong>20:45, 20/12/2012 - Hà Nội<em>
                         -
                         </em></dd>
                       <dd class="flight"><strong>Đến:
-                      </strong>20:15, 24/12/2012 - Hà Nội</dd>
-                      <dd class="flight"><strong>Thời gian chuyến bay: </strong>2 giờ 10 phút</dd>
+                      </strong>22:50, 20/12/2012 - Thành phố Hồ Chí Minh</dd>
+                      <dd class="flight"><strong>Thời gian chuyến bay: </strong>2 giờ 5 phút</dd>
                       <dd class="note">(Economy Cabin only available)</dd>
                       <dd class="flight"><strong>Loại máy bay: </strong>Boeing 737</dd>
                       <dd><strong>Không có khoang hạng thương gia</strong>: Chỉ có khoang hạng phổ thông</dd>
@@ -755,9 +758,9 @@
                   </div><span class="footer"></span></div>
                 <dd class="details flight-summary-details"><span class="price" data-price="0" data-inf-available="true">VND<span>0,00</span></span><ul>
                     <li>
-                      <p class="date-time" data-date-arrv="2012-12-24T20:15:00" data-date-dept="2012-12-24T18:05:00">18:05, 24/12/2012</p>
-                      <p class="origin-destination"><span class="airport">Thành phố Hồ Chí Minh</span><br>to <span class="airport">Hà Nội</span></p>
-                      <p class="flight-no-carrier"><span class="flight-no">BL  804</span><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</p>
+                      <p class="date-time" data-date-arrv="2012-12-20T22:50:00" data-date-dept="2012-12-20T20:45:00">20:45, 20/12/2012</p>
+                      <p class="origin-destination"><span class="airport">Hà Nội</span><br>to <span class="airport">Thành phố Hồ Chí Minh</span></p>
+                      <p class="flight-no-carrier"><span class="flight-no">BL  805</span><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</p>
                       <p class="fare-cabin starter">Khoang hạng phổ thông</p>
                       <p class="fare-cabin business">Khoang hạng phổ thông</p>
                     </li>
@@ -765,33 +768,35 @@
                 </dd>
               </td>
               <td class="starter">
-                <div class="field"><input type="radio" id="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare25" name="ControlGroupSelectView$AvailabilityInputSelectView$market1" preselected-fare="False" preselected-bundle="" class="radio" value="0~H~HLECOH~5000~~Both~X|BL~ 804~ ~~SGN~12/24/2012 18:05~HAN~12/24/2012 20:15" data-price="1000000,0000" data-price-chd="0" data-price-inf="" data-fees-adt="144000,000" data-fees-chd="0" data-discfees-adt="144000,000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" kff-child-pax-ammount="0" domestic-international-terminal="" price-lock-available="" journey-price-lock-amount="" fee-code-adt1="AX" fee-amount-adt1="44000,000" fee-desc-adt1="Thuế sân bay"><label for="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare25">VND1.000.000</label></div>
+                <div class="field"><input type="radio" id="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare24" name="ControlGroupSelectView$AvailabilityInputSelectView$market1" preselected-fare="False" preselected-bundle="" class="radio" value="0~K~KLECOK~5000~~Both~X|BL~ 805~ ~~HAN~12/20/2012 20:45~SGN~12/20/2012 22:50" data-price="1150000,0000" data-price-chd="0" data-price-inf="" data-fees-adt="159000,000" data-fees-chd="0" data-discfees-adt="159000,000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" kff-child-pax-ammount="0" domestic-international-terminal="" price-lock-available="" journey-price-lock-amount="" fee-code-adt1="AX" fee-amount-adt1="44000,000" fee-desc-adt1="Thuế sân bay"><label for="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare24">VND1.150.000</label></div>
                 <div class="hidden"><select id="" name="" preselected="" value="" class="bundle-option starter-baggage-yes"></select></div>
-                <div class="hidden"><span class="bundle-price starter-plus-yes">200.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1P" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1P" class="checkbox bundle-option starter-plus-yes" value="0~HP~HLECOHP~5001~~Both~X|BL~ 804~ ~~SGN~12/24/2012 18:05~HAN~12/24/2012 20:15" data-price="200000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="344000,00000" data-fees-chd="0" data-discfees-adt="344000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" plusMerchandizingIncludedValue="" basicPlusMerchandizingIncludedValue="" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                <div class="hidden"><span class="bundle-price starter-plus-yes">200.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1P" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1P" class="checkbox bundle-option starter-plus-yes" value="0~KP~KLECOKP~5001~~Both~X|BL~ 805~ ~~HAN~12/20/2012 20:45~SGN~12/20/2012 22:50" data-price="200000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="359000,00000" data-fees-chd="0" data-discfees-adt="359000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" plusMerchandizingIncludedValue="" basicPlusMerchandizingIncludedValue="" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
                     <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
                   </div>
                 </div>
-                <div class="hidden"><span class="bundle-price starter-max-yes">1.417.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1Y" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1Y" class="checkbox bundle-option starter-max-yes" value="0~RY~RLECORY~5002~~Both~X|BL~ 804~ ~~SGN~12/24/2012 18:05~HAN~12/24/2012 20:15" data-price="1417000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="591000,00000" data-fees-chd="0" data-discfees-adt="591000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                <div class="hidden"><span class="bundle-price starter-max-yes">1.252.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1Y" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1Y" class="checkbox bundle-option starter-max-yes" value="0~RY~RLECORY~5002~~Both~X|BL~ 805~ ~~HAN~12/20/2012 20:45~SGN~12/20/2012 22:50" data-price="1252000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="591000,00000" data-fees-chd="0" data-discfees-adt="591000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
                     <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
                   </div>
                 </div>
               </td>
             </tr>
             <tr>
-              <td><strong>19:35</strong><a class="airport">Thành phố Hồ Chí Minh</a></td>
-              <td><strong>21:45</strong><a class="airport">Hà Nội</a></td>
-              <td><span class="stops">Bay thẳng<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span><a class="duration tooltip-info trigger-flight-detail">2giờ10phút</a><div class="tooltip-flight-detail-info tooltip-fares">
+              <td><strong>22:15</strong><a class="airport">Hà Nội</a></td>
+              <td><strong>0:20
+                (+1)
+              </strong><a class="airport">Thành phố Hồ Chí Minh</a></td>
+              <td><span class="stops">Bay thẳng<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span><a class="duration tooltip-info trigger-flight-detail">2giờ5phút</a><div class="tooltip-flight-detail-info tooltip-fares">
                   <h4>Thông tin chuyến bay</h4>
                   <div class="flights">
                     <dl>
-                      <dt>Lượt đi 1 <span class="flight-no">BL  806<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span></dt>
+                      <dt>Lượt đi 1 <span class="flight-no">BL  807<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span></dt>
                       <dd class="flight"><strong>Khởi hành:
-                      </strong>19:35, 24/12/2012 - Thành phố Hồ Chí Minh<em>
+                      </strong>22:15, 20/12/2012 - Hà Nội<em>
                         -
                         </em></dd>
                       <dd class="flight"><strong>Đến:
-                      </strong>21:45, 24/12/2012 - Hà Nội</dd>
-                      <dd class="flight"><strong>Thời gian chuyến bay: </strong>2 giờ 10 phút</dd>
+                      </strong>0:20, 21/12/2012 - Thành phố Hồ Chí Minh</dd>
+                      <dd class="flight"><strong>Thời gian chuyến bay: </strong>2 giờ 5 phút</dd>
                       <dd class="note">(Economy Cabin only available)</dd>
                       <dd class="flight"><strong>Loại máy bay: </strong></dd>
                       <dd><strong>Không có khoang hạng thương gia</strong>: Chỉ có khoang hạng phổ thông</dd>
@@ -806,9 +811,9 @@
                   </div><span class="footer"></span></div>
                 <dd class="details flight-summary-details"><span class="price" data-price="0" data-inf-available="true">VND<span>0,00</span></span><ul>
                     <li>
-                      <p class="date-time" data-date-arrv="2012-12-24T21:45:00" data-date-dept="2012-12-24T19:35:00">19:35, 24/12/2012</p>
-                      <p class="origin-destination"><span class="airport">Thành phố Hồ Chí Minh</span><br>to <span class="airport">Hà Nội</span></p>
-                      <p class="flight-no-carrier"><span class="flight-no">BL  806</span><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</p>
+                      <p class="date-time" data-date-arrv="2012-12-21T00:20:00" data-date-dept="2012-12-20T22:15:00">22:15, 20/12/2012</p>
+                      <p class="origin-destination"><span class="airport">Hà Nội</span><br>to <span class="airport">Thành phố Hồ Chí Minh</span></p>
+                      <p class="flight-no-carrier"><span class="flight-no">BL  807</span><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</p>
                       <p class="fare-cabin starter">Khoang hạng phổ thông</p>
                       <p class="fare-cabin business">Khoang hạng phổ thông</p>
                     </li>
@@ -816,13 +821,13 @@
                 </dd>
               </td>
               <td class="starter">
-                <div class="field"><input type="radio" id="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare28" name="ControlGroupSelectView$AvailabilityInputSelectView$market1" preselected-fare="False" preselected-bundle="" class="radio" value="0~H~HLECOH~5000~~Both~X|BL~ 806~ ~~SGN~12/24/2012 19:35~HAN~12/24/2012 21:45" data-price="1000000,0000" data-price-chd="0" data-price-inf="" data-fees-adt="144000,000" data-fees-chd="0" data-discfees-adt="144000,000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" kff-child-pax-ammount="0" domestic-international-terminal="" price-lock-available="" journey-price-lock-amount="" fee-code-adt1="AX" fee-amount-adt1="44000,000" fee-desc-adt1="Thuế sân bay"><label for="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare28">VND1.000.000</label></div>
+                <div class="field"><input type="radio" id="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare27" name="ControlGroupSelectView$AvailabilityInputSelectView$market1" preselected-fare="False" preselected-bundle="" class="radio" value="0~H~HLECOH~5000~~Both~X|BL~ 807~ ~~HAN~12/20/2012 22:15~SGN~12/21/2012 00:20" data-price="1000000,0000" data-price-chd="0" data-price-inf="" data-fees-adt="144000,000" data-fees-chd="0" data-discfees-adt="144000,000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" kff-child-pax-ammount="0" domestic-international-terminal="" price-lock-available="" journey-price-lock-amount="" fee-code-adt1="AX" fee-amount-adt1="44000,000" fee-desc-adt1="Thuế sân bay"><label for="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare27">VND1.000.000</label></div>
                 <div class="hidden"><select id="" name="" preselected="" value="" class="bundle-option starter-baggage-yes"></select></div>
-                <div class="hidden"><span class="bundle-price starter-plus-yes">200.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1P" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1P" class="checkbox bundle-option starter-plus-yes" value="0~HP~HLECOHP~5001~~Both~X|BL~ 806~ ~~SGN~12/24/2012 19:35~HAN~12/24/2012 21:45" data-price="200000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="344000,00000" data-fees-chd="0" data-discfees-adt="344000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" plusMerchandizingIncludedValue="" basicPlusMerchandizingIncludedValue="" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                <div class="hidden"><span class="bundle-price starter-plus-yes">200.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1P" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1P" class="checkbox bundle-option starter-plus-yes" value="0~HP~HLECOHP~5001~~Both~X|BL~ 807~ ~~HAN~12/20/2012 22:15~SGN~12/21/2012 00:20" data-price="200000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="344000,00000" data-fees-chd="0" data-discfees-adt="344000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" plusMerchandizingIncludedValue="" basicPlusMerchandizingIncludedValue="" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
                     <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
                   </div>
                 </div>
-                <div class="hidden"><span class="bundle-price starter-max-yes">1.417.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1Y" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1Y" class="checkbox bundle-option starter-max-yes" value="0~RY~RLECORY~5002~~Both~X|BL~ 806~ ~~SGN~12/24/2012 19:35~HAN~12/24/2012 21:45" data-price="1417000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="591000,00000" data-fees-chd="0" data-discfees-adt="591000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                <div class="hidden"><span class="bundle-price starter-max-yes">1.417.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt1Y" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt1Y" class="checkbox bundle-option starter-max-yes" value="0~RY~RLECORY~5002~~Both~X|BL~ 807~ ~~HAN~12/20/2012 22:15~SGN~12/21/2012 00:20" data-price="1417000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="591000,00000" data-fees-chd="0" data-discfees-adt="591000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
                     <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
                   </div>
                 </div>
@@ -1019,6 +1024,66 @@
               </tbody>
             </table>
           </div>
+          <div class="section returning">
+            <table>
+              <thead>
+                <tr>
+                  <th colspan="2">Lượt về<a href="#" class="png-bg"><img src="images/clearpixel.gif" width="8" height="5" alt=""></a></th>
+                </tr>
+              </thead>
+              <tfoot class="">
+                <tr>
+                  <th colspan="2">Tổng giá tiền lượt về</th>
+                </tr>
+                <tr>
+                  <td colspan="2">VND<span>0,00</span></td>
+                </tr>
+              </tfoot>
+              <tbody>
+                <tr>
+                  <th colspan="2" class="title hidden ">Lượt về flight</th>
+                </tr>
+                <tr>
+                  <th colspan="2" class="date-time hidden "></th>
+                </tr>
+                <tr class="">
+                  <th colspan="2" class="title">Giá vé</th>
+                </tr>
+                <tr class="fares-adult ">
+                  <th>Người lớn</th>
+                  <td><span paxes="0">0</span> x VND<span data-pax="0">0,00</span></td>
+                </tr>
+                <tr class="fares-adult-free ">
+                  <th>Adult FREE</th>
+                  <td><span paxes="0">0</span> x VND<span data-pax="0">0,00</span></td>
+                </tr>
+                <tr>
+                  <th colspan="2" class="section narrow"></th>
+                </tr>
+                <tr>
+                  <th colspan="2" class="title fee-and-tax">Thuế và phí<a href="#" class="png-bg"><img src="images/clearpixel.gif" width="8" height="5" alt=""></a></th>
+                </tr>
+                <tr class="fees-adult">
+                  <th>Người lớn</th>
+                  <td><span paxes="0">0</span> x VND<span data-pax="0">0,00</span></td>
+                </tr>
+                <tr class="fees-adult-free">
+                  <th>Adult FREE</th>
+                  <td><span paxes="0">0</span> x VND<span data-pax="0">0,00</span></td>
+                </tr>
+                <tr>
+                  <th colspan="2" class="section"><span>Các tùy chọn thêm</span></th>
+                </tr>
+                <tr>
+                  <th colspan="2" class="title">Gói dịch vụ</th>
+                </tr>
+                <tr class="bundles-adult">
+                  <th>Người lớn</th>
+                  <td>1 x VND<span data-pax="1">0,00</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
           <div class="section total">
             <ul>
               <li class="currency">Tổng giá tiền VND</li>
@@ -1027,6 +1092,632 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  <div id="tooltip-airport-info-melbourne" class="tooltip-airport-info clearfix" xmlns:bookinginfo="urn:bcs:extensions:bookinginfo" xmlns:formatterExtension="urn:navitaire:formatters:currency" xmlns:math="urn:bcs:extensions:math">
+    <h4>Airport Information</h4>
+    <div class="copy">
+      <p><strong>Melbourne - Tullamarine airport</strong> is located 27 km West from the centre of Melbourne's CBD. <a target="_blank" href="http://www.jetstar.com/au/en/planning-and-booking/where-we-go/destination-information/airport-information?location=Melbourne">Click here for more information</a></p>
+      <p><strong>Melbourne - Avalon airport</strong> is located 55km South West from the centre of Melbourne’s CBD and 19km North East from Geelong’s CBD. <a target="_blank" href="http://www.jetstar.com/au/en/planning-and-booking/where-we-go/destination-information/airport-information?location=Avalon">Click here for more information</a></p>
+    </div><img src="images/map-tooltip-airport-info.jpg" width="217" height="162" alt="" class="right"><span class="footer"></span></div>
+  <div class="section fare-option" style="z-index: 198" xmlns:bookinginfo="urn:bcs:extensions:bookinginfo" xmlns:formatterExtension="urn:navitaire:formatters:currency" xmlns:math="urn:bcs:extensions:math">
+    <h1>2. Lựa chọn chuyến bay chặng về</h1>
+    <h2>Thành phố Hồ Chí Minh<em>   đến   </em>Hà Nội</h2>
+    <div class="day-picker clearfix">
+      <div class="dates clearfix"><a href="javascript:__doPostBack('ControlGroupSelectView$AvailabilityInputSelectView$LinkButtonPreviousWeek2','')" class="nav prev png-bg"><img src="images/clearpixel.gif" width="9" height="12" alt=""></a><ul><input id="ControlGroupSelectView_AvailabilityInputSelectView_HiddenFieldTabIndex2" type="hidden" name="ControlGroupSelectView$AvailabilityInputSelectView$HiddenFieldTabIndex2" value="4"><li class="first "><a href="javascript:setTabIndex('2', '1')">Fri 21 Dec<strong>VND1.280.000</strong></a></li>
+          <li class=""><a href="javascript:setTabIndex('2', '2')">Sat 22 Dec<strong>VND1.150.000</strong></a></li>
+          <li class=""><a href="javascript:setTabIndex('2', '3')">Sun 23 Dec<strong>VND1.150.000</strong></a></li>
+          <li class="active "><a href="javascript:setTabIndex('2', '4')">Mon 24 Dec<strong>VND1.150.000</strong></a></li>
+          <li class=""><a href="javascript:setTabIndex('2', '5')">Tue 25 Dec<strong>VND1.150.000</strong></a></li>
+          <li class=""><a href="javascript:setTabIndex('2', '6')">Wed 26 Dec<strong>VND1.150.000</strong></a></li>
+          <li class=""><a href="javascript:setTabIndex('2', '7')">Thur 27 Dec<strong>VND1.150.000</strong></a></li>
+        </ul><a href="javascript:__doPostBack('ControlGroupSelectView$AvailabilityInputSelectView$LinkButtonNextWeek2','')" class="nav next png-bg"><img src="images/clearpixel.gif" width="9" height="12" alt=""></a></div>
+      <div class="flexible"><a href="LowFareFinder.aspx?culture=vi-VN&amp;RadioButtonMarketStructure=RoundTrip&amp;Origin1=HAN&amp;Destination1=SGN&amp;Day1=20&amp;MonthYear1=2012-12&amp;Origin2=SGN&amp;Destination2=HAN&amp;Day2=24&amp;MonthYear2=2012-12&amp;ADT=1&amp;CHD=0&amp;INF=0&amp;AutoSubmit=Y&amp;ControlGroupCalendarSearchView%24AvailabilitySearchInputCalendarSearchView%24DropDownListCurrency=VND"><span>More Dates</span>Xem cả tháng</a><p>Tìm giá rẻ nhất trong vòng 4 tuần</p>
+      </div>
+    </div>
+    <div class="fare-picker return clearfix">
+      <div class="fares">
+        <table class="domestic">
+          <thead>
+            <tr>
+              <th colspan="3">
+                <h3>24/12/2012</h3>
+              </th>
+              <th class="starter">
+                <dl>
+                  <dt>Starter</dt>
+                  <dd>Khoang hạng phổ thông</dd>
+                </dl>
+              </th>
+            </tr>
+            <tr>
+              <td>Khởi hành</td>
+              <td>Đến</td>
+              <td class="flight-detail">Chi tiết chuyến bay</td>
+              <td class="starter"><a class="trigger-fare-inclusions">Bao gồm những gì?</a><a class="title">Starter Inclusions</a></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>6:00</strong><a class="airport">Thành phố Hồ Chí Minh</a></td>
+              <td><strong>8:10</strong><a class="airport">Hà Nội</a></td>
+              <td><span class="stops">Bay thẳng<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span><a class="duration tooltip-info trigger-flight-detail">2giờ10phút</a><div class="tooltip-flight-detail-info tooltip-fares">
+                  <h4>Thông tin chuyến bay</h4>
+                  <div class="flights">
+                    <dl>
+                      <dt>Lượt về 1 <span class="flight-no">BL  790<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span></dt>
+                      <dd class="flight"><strong>Khởi hành:
+                      </strong>6:00, 24/12/2012 - Thành phố Hồ Chí Minh<em>
+                        -
+                        </em></dd>
+                      <dd class="flight"><strong>Đến:
+                      </strong>8:10, 24/12/2012 - Hà Nội</dd>
+                      <dd class="flight"><strong>Thời gian chuyến bay: </strong>2 giờ 10 phút</dd>
+                      <dd class="note">(Economy Cabin only available)</dd>
+                      <dd class="flight"><strong>Loại máy bay: </strong></dd>
+                      <dd><strong>Không có khoang hạng thương gia</strong>: Chỉ có khoang hạng phổ thông</dd>
+                      <dd><a href="http://www.jetstar.com/VN/vi/planning-and-booking/baggage/bulky-items" target="_blank">Thông tin về Hành lý quá khổ</a></dd>
+                    </dl>
+                  </div>
+                  <div class="legend">
+                    <dl>
+                      <dt></dt>
+                      <dd><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</dd>
+                    </dl>
+                  </div><span class="footer"></span></div>
+                <dd class="details flight-summary-details"><span class="price" data-price="0" data-inf-available="true">VND<span>0,00</span></span><ul>
+                    <li>
+                      <p class="date-time" data-date-arrv="2012-12-24T08:10:00" data-date-dept="2012-12-24T06:00:00">6:00, 24/12/2012</p>
+                      <p class="origin-destination"><span class="airport">Thành phố Hồ Chí Minh</span><br>to <span class="airport">Hà Nội</span></p>
+                      <p class="flight-no-carrier"><span class="flight-no">BL  790</span><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</p>
+                      <p class="fare-cabin starter">Khoang hạng phổ thông</p>
+                      <p class="fare-cabin business">Khoang hạng phổ thông</p>
+                    </li>
+                  </ul>
+                </dd>
+              </td>
+              <td class="starter">
+                <div class="field"><input type="radio" id="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt2Fare4" name="ControlGroupSelectView$AvailabilityInputSelectView$market2" preselected-fare="False" preselected-bundle="" class="radio" value="0~K~KLECOK~5000~~Both~X|BL~ 790~ ~~SGN~12/24/2012 06:00~HAN~12/24/2012 08:10" data-price="1150000,0000" data-price-chd="0" data-price-inf="" data-fees-adt="159000,000" data-fees-chd="0" data-discfees-adt="159000,000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" kff-child-pax-ammount="0" domestic-international-terminal="" price-lock-available="" journey-price-lock-amount="" fee-code-adt1="AX" fee-amount-adt1="44000,000" fee-desc-adt1="Thuế sân bay"><label for="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt2Fare4">VND1.150.000</label></div>
+                <div class="hidden"><select id="" name="" preselected="" value="" class="bundle-option starter-baggage-yes"></select></div>
+                <div class="hidden"><span class="bundle-price starter-plus-yes">200.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt2P" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt2P" class="checkbox bundle-option starter-plus-yes" value="0~KP~KLECOKP~5001~~Both~X|BL~ 790~ ~~SGN~12/24/2012 06:00~HAN~12/24/2012 08:10" data-price="200000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="359000,00000" data-fees-chd="0" data-discfees-adt="359000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" plusMerchandizingIncludedValue="" basicPlusMerchandizingIncludedValue="" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                    <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
+                  </div>
+                </div>
+                <div class="hidden"><span class="bundle-price starter-max-yes">1.252.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt2Y" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt2Y" class="checkbox bundle-option starter-max-yes" value="0~RY~RLECORY~5002~~Both~X|BL~ 790~ ~~SGN~12/24/2012 06:00~HAN~12/24/2012 08:10" data-price="1252000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="591000,00000" data-fees-chd="0" data-discfees-adt="591000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                    <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>7:30</strong><a class="airport">Thành phố Hồ Chí Minh</a></td>
+              <td><strong>9:40</strong><a class="airport">Hà Nội</a></td>
+              <td><span class="stops">Bay thẳng<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span><a class="duration tooltip-info trigger-flight-detail">2giờ10phút</a><div class="tooltip-flight-detail-info tooltip-fares">
+                  <h4>Thông tin chuyến bay</h4>
+                  <div class="flights">
+                    <dl>
+                      <dt>Lượt về 1 <span class="flight-no">BL  794<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span></dt>
+                      <dd class="flight"><strong>Khởi hành:
+                      </strong>7:30, 24/12/2012 - Thành phố Hồ Chí Minh<em>
+                        -
+                        </em></dd>
+                      <dd class="flight"><strong>Đến:
+                      </strong>9:40, 24/12/2012 - Hà Nội</dd>
+                      <dd class="flight"><strong>Thời gian chuyến bay: </strong>2 giờ 10 phút</dd>
+                      <dd class="note">(Economy Cabin only available)</dd>
+                      <dd class="flight"><strong>Loại máy bay: </strong>Airbus A320</dd>
+                      <dd><strong>Không có khoang hạng thương gia</strong>: Chỉ có khoang hạng phổ thông</dd>
+                      <dd><a href="http://www.jetstar.com/VN/vi/planning-and-booking/baggage/bulky-items" target="_blank">Thông tin về Hành lý quá khổ</a></dd>
+                    </dl>
+                  </div>
+                  <div class="legend">
+                    <dl>
+                      <dt></dt>
+                      <dd><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</dd>
+                    </dl>
+                  </div><span class="footer"></span></div>
+                <dd class="details flight-summary-details"><span class="price" data-price="0" data-inf-available="true">VND<span>0,00</span></span><ul>
+                    <li>
+                      <p class="date-time" data-date-arrv="2012-12-24T09:40:00" data-date-dept="2012-12-24T07:30:00">7:30, 24/12/2012</p>
+                      <p class="origin-destination"><span class="airport">Thành phố Hồ Chí Minh</span><br>to <span class="airport">Hà Nội</span></p>
+                      <p class="flight-no-carrier"><span class="flight-no">BL  794</span><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</p>
+                      <p class="fare-cabin starter">Khoang hạng phổ thông</p>
+                      <p class="fare-cabin business">Khoang hạng phổ thông</p>
+                    </li>
+                  </ul>
+                </dd>
+              </td>
+              <td class="starter">
+                <div class="field"><input type="radio" id="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt2Fare7" name="ControlGroupSelectView$AvailabilityInputSelectView$market2" preselected-fare="False" preselected-bundle="" class="radio" value="0~K~KLECOK~5000~~Both~X|BL~ 794~ ~~SGN~12/24/2012 07:30~HAN~12/24/2012 09:40" data-price="1150000,0000" data-price-chd="0" data-price-inf="" data-fees-adt="159000,000" data-fees-chd="0" data-discfees-adt="159000,000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" kff-child-pax-ammount="0" domestic-international-terminal="" price-lock-available="" journey-price-lock-amount="" fee-code-adt1="AX" fee-amount-adt1="44000,000" fee-desc-adt1="Thuế sân bay"><label for="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt2Fare7">VND1.150.000</label></div>
+                <div class="hidden"><select id="" name="" preselected="" value="" class="bundle-option starter-baggage-yes"></select></div>
+                <div class="hidden"><span class="bundle-price starter-plus-yes">200.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt2P" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt2P" class="checkbox bundle-option starter-plus-yes" value="0~KP~KLECOKP~5001~~Both~X|BL~ 794~ ~~SGN~12/24/2012 07:30~HAN~12/24/2012 09:40" data-price="200000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="359000,00000" data-fees-chd="0" data-discfees-adt="359000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" plusMerchandizingIncludedValue="" basicPlusMerchandizingIncludedValue="" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                    <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
+                  </div>
+                </div>
+                <div class="hidden"><span class="bundle-price starter-max-yes">1.252.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt2Y" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt2Y" class="checkbox bundle-option starter-max-yes" value="0~RY~RLECORY~5002~~Both~X|BL~ 794~ ~~SGN~12/24/2012 07:30~HAN~12/24/2012 09:40" data-price="1252000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="591000,00000" data-fees-chd="0" data-discfees-adt="591000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                    <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>8:00</strong><a class="airport">Thành phố Hồ Chí Minh</a></td>
+              <td><strong>10:10</strong><a class="airport">Hà Nội</a></td>
+              <td><span class="stops">Bay thẳng<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span><a class="duration tooltip-info trigger-flight-detail">2giờ10phút</a><div class="tooltip-flight-detail-info tooltip-fares">
+                  <h4>Thông tin chuyến bay</h4>
+                  <div class="flights">
+                    <dl>
+                      <dt>Lượt về 1 <span class="flight-no">BL  808<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span></dt>
+                      <dd class="flight"><strong>Khởi hành:
+                      </strong>8:00, 24/12/2012 - Thành phố Hồ Chí Minh<em>
+                        -
+                        </em></dd>
+                      <dd class="flight"><strong>Đến:
+                      </strong>10:10, 24/12/2012 - Hà Nội</dd>
+                      <dd class="flight"><strong>Thời gian chuyến bay: </strong>2 giờ 10 phút</dd>
+                      <dd class="note">(Economy Cabin only available)</dd>
+                      <dd class="flight"><strong>Loại máy bay: </strong></dd>
+                      <dd><strong>Không có khoang hạng thương gia</strong>: Chỉ có khoang hạng phổ thông</dd>
+                      <dd><a href="http://www.jetstar.com/VN/vi/planning-and-booking/baggage/bulky-items" target="_blank">Thông tin về Hành lý quá khổ</a></dd>
+                    </dl>
+                  </div>
+                  <div class="legend">
+                    <dl>
+                      <dt></dt>
+                      <dd><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</dd>
+                    </dl>
+                  </div><span class="footer"></span></div>
+                <dd class="details flight-summary-details"><span class="price" data-price="0" data-inf-available="true">VND<span>0,00</span></span><ul>
+                    <li>
+                      <p class="date-time" data-date-arrv="2012-12-24T10:10:00" data-date-dept="2012-12-24T08:00:00">8:00, 24/12/2012</p>
+                      <p class="origin-destination"><span class="airport">Thành phố Hồ Chí Minh</span><br>to <span class="airport">Hà Nội</span></p>
+                      <p class="flight-no-carrier"><span class="flight-no">BL  808</span><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</p>
+                      <p class="fare-cabin starter">Khoang hạng phổ thông</p>
+                      <p class="fare-cabin business">Khoang hạng phổ thông</p>
+                    </li>
+                  </ul>
+                </dd>
+              </td>
+              <td class="starter">
+                <div class="field"><input type="radio" id="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt2Fare10" name="ControlGroupSelectView$AvailabilityInputSelectView$market2" preselected-fare="False" preselected-bundle="" class="radio" value="0~K~KLECOK~5000~~Both~X|BL~ 808~ ~~SGN~12/24/2012 08:00~HAN~12/24/2012 10:10" data-price="1150000,0000" data-price-chd="0" data-price-inf="" data-fees-adt="159000,000" data-fees-chd="0" data-discfees-adt="159000,000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" kff-child-pax-ammount="0" domestic-international-terminal="" price-lock-available="" journey-price-lock-amount="" fee-code-adt1="AX" fee-amount-adt1="44000,000" fee-desc-adt1="Thuế sân bay"><label for="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt2Fare10">VND1.150.000</label></div>
+                <div class="hidden"><select id="" name="" preselected="" value="" class="bundle-option starter-baggage-yes"></select></div>
+                <div class="hidden"><span class="bundle-price starter-plus-yes">200.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt2P" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt2P" class="checkbox bundle-option starter-plus-yes" value="0~KP~KLECOKP~5001~~Both~X|BL~ 808~ ~~SGN~12/24/2012 08:00~HAN~12/24/2012 10:10" data-price="200000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="359000,00000" data-fees-chd="0" data-discfees-adt="359000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" plusMerchandizingIncludedValue="" basicPlusMerchandizingIncludedValue="" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                    <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
+                  </div>
+                </div>
+                <div class="hidden"><span class="bundle-price starter-max-yes">1.945.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt2Y" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt2Y" class="checkbox bundle-option starter-max-yes" value="0~YY~YLECOYY~5002~~Both~X|BL~ 808~ ~~SGN~12/24/2012 08:00~HAN~12/24/2012 10:10" data-price="1945000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="654000,00000" data-fees-chd="0" data-discfees-adt="654000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                    <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>9:45</strong><a class="airport">Thành phố Hồ Chí Minh</a></td>
+              <td><strong>11:55</strong><a class="airport">Hà Nội</a></td>
+              <td><span class="stops">Bay thẳng<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span><a class="duration tooltip-info trigger-flight-detail">2giờ10phút</a><div class="tooltip-flight-detail-info tooltip-fares">
+                  <h4>Thông tin chuyến bay</h4>
+                  <div class="flights">
+                    <dl>
+                      <dt>Lượt về 1 <span class="flight-no">BL  796<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span></dt>
+                      <dd class="flight"><strong>Khởi hành:
+                      </strong>9:45, 24/12/2012 - Thành phố Hồ Chí Minh<em>
+                        -
+                        </em></dd>
+                      <dd class="flight"><strong>Đến:
+                      </strong>11:55, 24/12/2012 - Hà Nội</dd>
+                      <dd class="flight"><strong>Thời gian chuyến bay: </strong>2 giờ 10 phút</dd>
+                      <dd class="note">(Economy Cabin only available)</dd>
+                      <dd class="flight"><strong>Loại máy bay: </strong></dd>
+                      <dd><strong>Không có khoang hạng thương gia</strong>: Chỉ có khoang hạng phổ thông</dd>
+                      <dd><a href="http://www.jetstar.com/VN/vi/planning-and-booking/baggage/bulky-items" target="_blank">Thông tin về Hành lý quá khổ</a></dd>
+                    </dl>
+                  </div>
+                  <div class="legend">
+                    <dl>
+                      <dt></dt>
+                      <dd><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</dd>
+                    </dl>
+                  </div><span class="footer"></span></div>
+                <dd class="details flight-summary-details"><span class="price" data-price="0" data-inf-available="true">VND<span>0,00</span></span><ul>
+                    <li>
+                      <p class="date-time" data-date-arrv="2012-12-24T11:55:00" data-date-dept="2012-12-24T09:45:00">9:45, 24/12/2012</p>
+                      <p class="origin-destination"><span class="airport">Thành phố Hồ Chí Minh</span><br>to <span class="airport">Hà Nội</span></p>
+                      <p class="flight-no-carrier"><span class="flight-no">BL  796</span><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</p>
+                      <p class="fare-cabin starter">Khoang hạng phổ thông</p>
+                      <p class="fare-cabin business">Khoang hạng phổ thông</p>
+                    </li>
+                  </ul>
+                </dd>
+              </td>
+              <td class="starter">
+                <div class="field"><input type="radio" id="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt2Fare13" name="ControlGroupSelectView$AvailabilityInputSelectView$market2" preselected-fare="False" preselected-bundle="" class="radio" value="0~L~LLECOL~5000~~Both~X|BL~ 796~ ~~SGN~12/24/2012 09:45~HAN~12/24/2012 11:55" data-price="1280000,0000" data-price-chd="0" data-price-inf="" data-fees-adt="172000,000" data-fees-chd="0" data-discfees-adt="172000,000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" kff-child-pax-ammount="0" domestic-international-terminal="" price-lock-available="" journey-price-lock-amount="" fee-code-adt1="AX" fee-amount-adt1="44000,000" fee-desc-adt1="Thuế sân bay"><label for="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt2Fare13">VND1.280.000</label></div>
+                <div class="hidden"><select id="" name="" preselected="" value="" class="bundle-option starter-baggage-yes"></select></div>
+                <div class="hidden"><span class="bundle-price starter-plus-yes">200.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt2P" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt2P" class="checkbox bundle-option starter-plus-yes" value="0~LP~LLECOLP~5001~~Both~X|BL~ 796~ ~~SGN~12/24/2012 09:45~HAN~12/24/2012 11:55" data-price="200000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="372000,00000" data-fees-chd="0" data-discfees-adt="372000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" plusMerchandizingIncludedValue="" basicPlusMerchandizingIncludedValue="" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                    <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
+                  </div>
+                </div>
+                <div class="hidden"><span class="bundle-price starter-max-yes">1.109.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt2Y" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt2Y" class="checkbox bundle-option starter-max-yes" value="0~RY~RLECORY~5002~~Both~X|BL~ 796~ ~~SGN~12/24/2012 09:45~HAN~12/24/2012 11:55" data-price="1109000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="591000,00000" data-fees-chd="0" data-discfees-adt="591000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                    <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>12:40</strong><a class="airport">Thành phố Hồ Chí Minh</a></td>
+              <td><strong>14:50</strong><a class="airport">Hà Nội</a></td>
+              <td><span class="stops">Bay thẳng<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span><a class="duration tooltip-info trigger-flight-detail">2giờ10phút</a><div class="tooltip-flight-detail-info tooltip-fares">
+                  <h4>Thông tin chuyến bay</h4>
+                  <div class="flights">
+                    <dl>
+                      <dt>Lượt về 1 <span class="flight-no">BL  798<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span></dt>
+                      <dd class="flight"><strong>Khởi hành:
+                      </strong>12:40, 24/12/2012 - Thành phố Hồ Chí Minh<em>
+                        -
+                        </em></dd>
+                      <dd class="flight"><strong>Đến:
+                      </strong>14:50, 24/12/2012 - Hà Nội</dd>
+                      <dd class="flight"><strong>Thời gian chuyến bay: </strong>2 giờ 10 phút</dd>
+                      <dd class="note">(Economy Cabin only available)</dd>
+                      <dd class="flight"><strong>Loại máy bay: </strong>Boeing 737</dd>
+                      <dd><strong>Không có khoang hạng thương gia</strong>: Chỉ có khoang hạng phổ thông</dd>
+                      <dd><a href="http://www.jetstar.com/VN/vi/planning-and-booking/baggage/bulky-items" target="_blank">Thông tin về Hành lý quá khổ</a></dd>
+                    </dl>
+                  </div>
+                  <div class="legend">
+                    <dl>
+                      <dt></dt>
+                      <dd><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</dd>
+                    </dl>
+                  </div><span class="footer"></span></div>
+                <dd class="details flight-summary-details"><span class="price" data-price="0" data-inf-available="true">VND<span>0,00</span></span><ul>
+                    <li>
+                      <p class="date-time" data-date-arrv="2012-12-24T14:50:00" data-date-dept="2012-12-24T12:40:00">12:40, 24/12/2012</p>
+                      <p class="origin-destination"><span class="airport">Thành phố Hồ Chí Minh</span><br>to <span class="airport">Hà Nội</span></p>
+                      <p class="flight-no-carrier"><span class="flight-no">BL  798</span><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</p>
+                      <p class="fare-cabin starter">Khoang hạng phổ thông</p>
+                      <p class="fare-cabin business">Khoang hạng phổ thông</p>
+                    </li>
+                  </ul>
+                </dd>
+              </td>
+              <td class="starter">
+                <div class="field"><input type="radio" id="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt2Fare16" name="ControlGroupSelectView$AvailabilityInputSelectView$market2" preselected-fare="False" preselected-bundle="" class="radio" value="0~L~LLECOL~5000~~Both~X|BL~ 798~ ~~SGN~12/24/2012 12:40~HAN~12/24/2012 14:50" data-price="1280000,0000" data-price-chd="0" data-price-inf="" data-fees-adt="172000,000" data-fees-chd="0" data-discfees-adt="172000,000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" kff-child-pax-ammount="0" domestic-international-terminal="" price-lock-available="" journey-price-lock-amount="" fee-code-adt1="AX" fee-amount-adt1="44000,000" fee-desc-adt1="Thuế sân bay"><label for="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt2Fare16">VND1.280.000</label></div>
+                <div class="hidden"><select id="" name="" preselected="" value="" class="bundle-option starter-baggage-yes"></select></div>
+                <div class="hidden"><span class="bundle-price starter-plus-yes">200.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt2P" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt2P" class="checkbox bundle-option starter-plus-yes" value="0~LP~LLECOLP~5001~~Both~X|BL~ 798~ ~~SGN~12/24/2012 12:40~HAN~12/24/2012 14:50" data-price="200000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="372000,00000" data-fees-chd="0" data-discfees-adt="372000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" plusMerchandizingIncludedValue="" basicPlusMerchandizingIncludedValue="" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                    <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
+                  </div>
+                </div>
+                <div class="hidden"><span class="bundle-price starter-max-yes">1.109.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt2Y" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt2Y" class="checkbox bundle-option starter-max-yes" value="0~RY~RLECORY~5002~~Both~X|BL~ 798~ ~~SGN~12/24/2012 12:40~HAN~12/24/2012 14:50" data-price="1109000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="591000,00000" data-fees-chd="0" data-discfees-adt="591000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                    <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>15:30</strong><a class="airport">Thành phố Hồ Chí Minh</a></td>
+              <td><strong>17:40</strong><a class="airport">Hà Nội</a></td>
+              <td><span class="stops">Bay thẳng<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span><a class="duration tooltip-info trigger-flight-detail">2giờ10phút</a><div class="tooltip-flight-detail-info tooltip-fares">
+                  <h4>Thông tin chuyến bay</h4>
+                  <div class="flights">
+                    <dl>
+                      <dt>Lượt về 1 <span class="flight-no">BL  800<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span></dt>
+                      <dd class="flight"><strong>Khởi hành:
+                      </strong>15:30, 24/12/2012 - Thành phố Hồ Chí Minh<em>
+                        -
+                        </em></dd>
+                      <dd class="flight"><strong>Đến:
+                      </strong>17:40, 24/12/2012 - Hà Nội</dd>
+                      <dd class="flight"><strong>Thời gian chuyến bay: </strong>2 giờ 10 phút</dd>
+                      <dd class="note">(Economy Cabin only available)</dd>
+                      <dd class="flight"><strong>Loại máy bay: </strong></dd>
+                      <dd><strong>Không có khoang hạng thương gia</strong>: Chỉ có khoang hạng phổ thông</dd>
+                      <dd><a href="http://www.jetstar.com/VN/vi/planning-and-booking/baggage/bulky-items" target="_blank">Thông tin về Hành lý quá khổ</a></dd>
+                    </dl>
+                  </div>
+                  <div class="legend">
+                    <dl>
+                      <dt></dt>
+                      <dd><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</dd>
+                    </dl>
+                  </div><span class="footer"></span></div>
+                <dd class="details flight-summary-details"><span class="price" data-price="0" data-inf-available="true">VND<span>0,00</span></span><ul>
+                    <li>
+                      <p class="date-time" data-date-arrv="2012-12-24T17:40:00" data-date-dept="2012-12-24T15:30:00">15:30, 24/12/2012</p>
+                      <p class="origin-destination"><span class="airport">Thành phố Hồ Chí Minh</span><br>to <span class="airport">Hà Nội</span></p>
+                      <p class="flight-no-carrier"><span class="flight-no">BL  800</span><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</p>
+                      <p class="fare-cabin starter">Khoang hạng phổ thông</p>
+                      <p class="fare-cabin business">Khoang hạng phổ thông</p>
+                    </li>
+                  </ul>
+                </dd>
+              </td>
+              <td class="starter">
+                <div class="field"><input type="radio" id="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt2Fare19" name="ControlGroupSelectView$AvailabilityInputSelectView$market2" preselected-fare="False" preselected-bundle="" class="radio" value="0~K~KLECOK~5000~~Both~X|BL~ 800~ ~~SGN~12/24/2012 15:30~HAN~12/24/2012 17:40" data-price="1150000,0000" data-price-chd="0" data-price-inf="" data-fees-adt="159000,000" data-fees-chd="0" data-discfees-adt="159000,000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" kff-child-pax-ammount="0" domestic-international-terminal="" price-lock-available="" journey-price-lock-amount="" fee-code-adt1="AX" fee-amount-adt1="44000,000" fee-desc-adt1="Thuế sân bay"><label for="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt2Fare19">VND1.150.000</label></div>
+                <div class="hidden"><select id="" name="" preselected="" value="" class="bundle-option starter-baggage-yes"></select></div>
+                <div class="hidden"><span class="bundle-price starter-plus-yes">200.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt2P" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt2P" class="checkbox bundle-option starter-plus-yes" value="0~KP~KLECOKP~5001~~Both~X|BL~ 800~ ~~SGN~12/24/2012 15:30~HAN~12/24/2012 17:40" data-price="200000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="359000,00000" data-fees-chd="0" data-discfees-adt="359000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" plusMerchandizingIncludedValue="" basicPlusMerchandizingIncludedValue="" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                    <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
+                  </div>
+                </div>
+                <div class="hidden"><span class="bundle-price starter-max-yes">1.252.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt2Y" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt2Y" class="checkbox bundle-option starter-max-yes" value="0~RY~RLECORY~5002~~Both~X|BL~ 800~ ~~SGN~12/24/2012 15:30~HAN~12/24/2012 17:40" data-price="1252000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="591000,00000" data-fees-chd="0" data-discfees-adt="591000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                    <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>16:25</strong><a class="airport">Thành phố Hồ Chí Minh</a></td>
+              <td><strong>18:35</strong><a class="airport">Hà Nội</a></td>
+              <td><span class="stops">Bay thẳng<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span><a class="duration tooltip-info trigger-flight-detail">2giờ10phút</a><div class="tooltip-flight-detail-info tooltip-fares">
+                  <h4>Thông tin chuyến bay</h4>
+                  <div class="flights">
+                    <dl>
+                      <dt>Lượt về 1 <span class="flight-no">BL  802<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span></dt>
+                      <dd class="flight"><strong>Khởi hành:
+                      </strong>16:25, 24/12/2012 - Thành phố Hồ Chí Minh<em>
+                        -
+                        </em></dd>
+                      <dd class="flight"><strong>Đến:
+                      </strong>18:35, 24/12/2012 - Hà Nội</dd>
+                      <dd class="flight"><strong>Thời gian chuyến bay: </strong>2 giờ 10 phút</dd>
+                      <dd class="note">(Economy Cabin only available)</dd>
+                      <dd class="flight"><strong>Loại máy bay: </strong>Airbus A320</dd>
+                      <dd><strong>Không có khoang hạng thương gia</strong>: Chỉ có khoang hạng phổ thông</dd>
+                      <dd><a href="http://www.jetstar.com/VN/vi/planning-and-booking/baggage/bulky-items" target="_blank">Thông tin về Hành lý quá khổ</a></dd>
+                    </dl>
+                  </div>
+                  <div class="legend">
+                    <dl>
+                      <dt></dt>
+                      <dd><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</dd>
+                    </dl>
+                  </div><span class="footer"></span></div>
+                <dd class="details flight-summary-details"><span class="price" data-price="0" data-inf-available="true">VND<span>0,00</span></span><ul>
+                    <li>
+                      <p class="date-time" data-date-arrv="2012-12-24T18:35:00" data-date-dept="2012-12-24T16:25:00">16:25, 24/12/2012</p>
+                      <p class="origin-destination"><span class="airport">Thành phố Hồ Chí Minh</span><br>to <span class="airport">Hà Nội</span></p>
+                      <p class="flight-no-carrier"><span class="flight-no">BL  802</span><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</p>
+                      <p class="fare-cabin starter">Khoang hạng phổ thông</p>
+                      <p class="fare-cabin business">Khoang hạng phổ thông</p>
+                    </li>
+                  </ul>
+                </dd>
+              </td>
+              <td class="starter">
+                <div class="field"><input type="radio" id="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt2Fare22" name="ControlGroupSelectView$AvailabilityInputSelectView$market2" preselected-fare="False" preselected-bundle="" class="radio" value="0~K~KLECOK~5000~~Both~X|BL~ 802~ ~~SGN~12/24/2012 16:25~HAN~12/24/2012 18:35" data-price="1150000,0000" data-price-chd="0" data-price-inf="" data-fees-adt="159000,000" data-fees-chd="0" data-discfees-adt="159000,000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" kff-child-pax-ammount="0" domestic-international-terminal="" price-lock-available="" journey-price-lock-amount="" fee-code-adt1="AX" fee-amount-adt1="44000,000" fee-desc-adt1="Thuế sân bay"><label for="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt2Fare22">VND1.150.000</label></div>
+                <div class="hidden"><select id="" name="" preselected="" value="" class="bundle-option starter-baggage-yes"></select></div>
+                <div class="hidden"><span class="bundle-price starter-plus-yes">200.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt2P" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt2P" class="checkbox bundle-option starter-plus-yes" value="0~KP~KLECOKP~5001~~Both~X|BL~ 802~ ~~SGN~12/24/2012 16:25~HAN~12/24/2012 18:35" data-price="200000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="359000,00000" data-fees-chd="0" data-discfees-adt="359000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" plusMerchandizingIncludedValue="" basicPlusMerchandizingIncludedValue="" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                    <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
+                  </div>
+                </div>
+                <div class="hidden"><span class="bundle-price starter-max-yes">1.252.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt2Y" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt2Y" class="checkbox bundle-option starter-max-yes" value="0~RY~RLECORY~5002~~Both~X|BL~ 802~ ~~SGN~12/24/2012 16:25~HAN~12/24/2012 18:35" data-price="1252000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="591000,00000" data-fees-chd="0" data-discfees-adt="591000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                    <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>18:05</strong><a class="airport">Thành phố Hồ Chí Minh</a></td>
+              <td><strong>20:15</strong><a class="airport">Hà Nội</a></td>
+              <td><span class="stops">Bay thẳng<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span><a class="duration tooltip-info trigger-flight-detail">2giờ10phút</a><div class="tooltip-flight-detail-info tooltip-fares">
+                  <h4>Thông tin chuyến bay</h4>
+                  <div class="flights">
+                    <dl>
+                      <dt>Lượt về 1 <span class="flight-no">BL  804<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span></dt>
+                      <dd class="flight"><strong>Khởi hành:
+                      </strong>18:05, 24/12/2012 - Thành phố Hồ Chí Minh<em>
+                        -
+                        </em></dd>
+                      <dd class="flight"><strong>Đến:
+                      </strong>20:15, 24/12/2012 - Hà Nội</dd>
+                      <dd class="flight"><strong>Thời gian chuyến bay: </strong>2 giờ 10 phút</dd>
+                      <dd class="note">(Economy Cabin only available)</dd>
+                      <dd class="flight"><strong>Loại máy bay: </strong>Boeing 737</dd>
+                      <dd><strong>Không có khoang hạng thương gia</strong>: Chỉ có khoang hạng phổ thông</dd>
+                      <dd><a href="http://www.jetstar.com/VN/vi/planning-and-booking/baggage/bulky-items" target="_blank">Thông tin về Hành lý quá khổ</a></dd>
+                    </dl>
+                  </div>
+                  <div class="legend">
+                    <dl>
+                      <dt></dt>
+                      <dd><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</dd>
+                    </dl>
+                  </div><span class="footer"></span></div>
+                <dd class="details flight-summary-details"><span class="price" data-price="0" data-inf-available="true">VND<span>0,00</span></span><ul>
+                    <li>
+                      <p class="date-time" data-date-arrv="2012-12-24T20:15:00" data-date-dept="2012-12-24T18:05:00">18:05, 24/12/2012</p>
+                      <p class="origin-destination"><span class="airport">Thành phố Hồ Chí Minh</span><br>to <span class="airport">Hà Nội</span></p>
+                      <p class="flight-no-carrier"><span class="flight-no">BL  804</span><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</p>
+                      <p class="fare-cabin starter">Khoang hạng phổ thông</p>
+                      <p class="fare-cabin business">Khoang hạng phổ thông</p>
+                    </li>
+                  </ul>
+                </dd>
+              </td>
+              <td class="starter">
+                <div class="field"><input type="radio" id="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt2Fare25" name="ControlGroupSelectView$AvailabilityInputSelectView$market2" preselected-fare="False" preselected-bundle="" class="radio" value="0~K~KLECOK~5000~~Both~X|BL~ 804~ ~~SGN~12/24/2012 18:05~HAN~12/24/2012 20:15" data-price="1150000,0000" data-price-chd="0" data-price-inf="" data-fees-adt="159000,000" data-fees-chd="0" data-discfees-adt="159000,000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" kff-child-pax-ammount="0" domestic-international-terminal="" price-lock-available="" journey-price-lock-amount="" fee-code-adt1="AX" fee-amount-adt1="44000,000" fee-desc-adt1="Thuế sân bay"><label for="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt2Fare25">VND1.150.000</label></div>
+                <div class="hidden"><select id="" name="" preselected="" value="" class="bundle-option starter-baggage-yes"></select></div>
+                <div class="hidden"><span class="bundle-price starter-plus-yes">200.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt2P" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt2P" class="checkbox bundle-option starter-plus-yes" value="0~KP~KLECOKP~5001~~Both~X|BL~ 804~ ~~SGN~12/24/2012 18:05~HAN~12/24/2012 20:15" data-price="200000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="359000,00000" data-fees-chd="0" data-discfees-adt="359000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" plusMerchandizingIncludedValue="" basicPlusMerchandizingIncludedValue="" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                    <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
+                  </div>
+                </div>
+                <div class="hidden"><span class="bundle-price starter-max-yes">1.252.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt2Y" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt2Y" class="checkbox bundle-option starter-max-yes" value="0~RY~RLECORY~5002~~Both~X|BL~ 804~ ~~SGN~12/24/2012 18:05~HAN~12/24/2012 20:15" data-price="1252000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="591000,00000" data-fees-chd="0" data-discfees-adt="591000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                    <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>19:35</strong><a class="airport">Thành phố Hồ Chí Minh</a></td>
+              <td><strong>21:45</strong><a class="airport">Hà Nội</a></td>
+              <td><span class="stops">Bay thẳng<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span><a class="duration tooltip-info trigger-flight-detail">2giờ10phút</a><div class="tooltip-flight-detail-info tooltip-fares">
+                  <h4>Thông tin chuyến bay</h4>
+                  <div class="flights">
+                    <dl>
+                      <dt>Lượt về 1 <span class="flight-no">BL  806<img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific"></span></dt>
+                      <dd class="flight"><strong>Khởi hành:
+                      </strong>19:35, 24/12/2012 - Thành phố Hồ Chí Minh<em>
+                        -
+                        </em></dd>
+                      <dd class="flight"><strong>Đến:
+                      </strong>21:45, 24/12/2012 - Hà Nội</dd>
+                      <dd class="flight"><strong>Thời gian chuyến bay: </strong>2 giờ 10 phút</dd>
+                      <dd class="note">(Economy Cabin only available)</dd>
+                      <dd class="flight"><strong>Loại máy bay: </strong></dd>
+                      <dd><strong>Không có khoang hạng thương gia</strong>: Chỉ có khoang hạng phổ thông</dd>
+                      <dd><a href="http://www.jetstar.com/VN/vi/planning-and-booking/baggage/bulky-items" target="_blank">Thông tin về Hành lý quá khổ</a></dd>
+                    </dl>
+                  </div>
+                  <div class="legend">
+                    <dl>
+                      <dt></dt>
+                      <dd><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</dd>
+                    </dl>
+                  </div><span class="footer"></span></div>
+                <dd class="details flight-summary-details"><span class="price" data-price="0" data-inf-available="true">VND<span>0,00</span></span><ul>
+                    <li>
+                      <p class="date-time" data-date-arrv="2012-12-24T21:45:00" data-date-dept="2012-12-24T19:35:00">19:35, 24/12/2012</p>
+                      <p class="origin-destination"><span class="airport">Thành phố Hồ Chí Minh</span><br>to <span class="airport">Hà Nội</span></p>
+                      <p class="flight-no-carrier"><span class="flight-no">BL  806</span><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</p>
+                      <p class="fare-cabin starter">Khoang hạng phổ thông</p>
+                      <p class="fare-cabin business">Khoang hạng phổ thông</p>
+                    </li>
+                  </ul>
+                </dd>
+              </td>
+              <td class="starter">
+                <div class="field"><input type="radio" id="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt2Fare28" name="ControlGroupSelectView$AvailabilityInputSelectView$market2" preselected-fare="False" preselected-bundle="" class="radio" value="0~K~KLECOK~5000~~Both~X|BL~ 806~ ~~SGN~12/24/2012 19:35~HAN~12/24/2012 21:45" data-price="1150000,0000" data-price-chd="0" data-price-inf="" data-fees-adt="159000,000" data-fees-chd="0" data-discfees-adt="159000,000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" kff-child-pax-ammount="0" domestic-international-terminal="" price-lock-available="" journey-price-lock-amount="" fee-code-adt1="AX" fee-amount-adt1="44000,000" fee-desc-adt1="Thuế sân bay"><label for="ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt2Fare28">VND1.150.000</label></div>
+                <div class="hidden"><select id="" name="" preselected="" value="" class="bundle-option starter-baggage-yes"></select></div>
+                <div class="hidden"><span class="bundle-price starter-plus-yes">200.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt2P" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt2P" class="checkbox bundle-option starter-plus-yes" value="0~KP~KLECOKP~5001~~Both~X|BL~ 806~ ~~SGN~12/24/2012 19:35~HAN~12/24/2012 21:45" data-price="200000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="359000,00000" data-fees-chd="0" data-discfees-adt="359000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" plusMerchandizingIncludedValue="" basicPlusMerchandizingIncludedValue="" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                    <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
+                  </div>
+                </div>
+                <div class="hidden"><span class="bundle-price starter-max-yes">1.252.000</span><input type="checkbox" id="ControlGroupSelectView_AvailabilityInputSelectView_CheckBoxMkt2Y" name="ControlGroupSelectView$AvailabilityInputSelectView$CheckBoxMkt2Y" class="checkbox bundle-option starter-max-yes" value="0~RY~RLECORY~5002~~Both~X|BL~ 806~ ~~SGN~12/24/2012 19:35~HAN~12/24/2012 21:45" data-price="1252000,00000" data-price-chd="0" data-price-inf="0" data-fees-adt="591000,00000" data-fees-chd="0" data-discfees-adt="591000,00000" data-discfees-chd="0" data-payable-adult="1" data-unpayable-adult="0" data-payable-child="0" data-unpayable-child="0" base-payable-adult="1" base-unpayable-adult="0" base-payable-child="0" base-unpayable-child="0" reassigned="" kff-child-pax-ammount="0" price-lock-available="" journey-price-lock-amount=""><div style="display:none;" class="qff-voucher">
+                    <li class="qff-voucher-hidden">Phiếu thanh toán trị giá VND100.000VND của Jetstar*</li>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="starter-options ">
+              <td colspan="4" class="starter-expand">
+                <div class="clearfix">
+                  <div class="col1">
+                    <h4>Loại giá Starter bao gồm:</h4>
+                    <ul>
+                      <li>Ghế ngồi bọc da thoải mái</li>
+                      <li>7kg hành lý xách tay (có các hạn chế về kích thước và trọng lượng của <a href="http://www.jetstar.com/vn/vi/planning-and-booking/baggage/cabin-baggage" class="inline" target="_blank">Hành lý xách tay</a>)</li>
+                    </ul><a href="http://www.jetstar.com/VN/vi/planning-and-booking/fares/fare-rules#item01" class="overlay launch-modal" target="_blank">Xem điều kiện giá Starter</a><p class="cta-bundle cta-bundle-vi-VN png-bg"><em>Mua gói dịch vụ Plus trị giá <span class="cta-bundle-starter-plus-price"></span>.
+                              </em><br>Nhận được giá trị tới <span class="cta-bundle-starter-plus-included-value"></span>.
+                              <span class="cta-bundle-starter-plus-included-value-additional-info">(căn cứ vào việc đổi ngày giờ bay hay đổi tên)</span></p>
+                  </div>
+                  <div class="col2">
+                    <div>
+                      <h4>Thêm gói dịch vụ tùy chọn</h4>
+                      <div class="clearfix">
+                        <div class="option left">
+                          <div class="bundle-top"><strong>Plus </strong><span></span><span class="bundle-price starter-plus-yes"></span><span></span><div class="descript">Miễn các loại phí thay đổi </div>
+                          </div>
+                          <div class="bundle-detail">
+                            <ul>
+                              <li class="important qff-voucher-def"></li>
+                              <li class="important">Miễn phí đổi tên, ngày bay, giờ bay (có thu tiền chênh lệch giá vé)</li>
+                              <li class="regular-start">Miễn phí lựa chọn chỗ ngồi</li>
+                            </ul><a href="http://www.jetstar.com/VN/vi/planning-and-booking/fares/fare-rules#item02" class="overlay launch-modal" target="_blank">Xem điều kiện Plus Bundle</a><div class="field starter-plus"><label for="">Thêm</label><input type="checkbox" id="" name="" class="checkbox bundle-option starter-plus-yes" data-price=""></div>
+                          </div>
+                        </div>
+                        <div class="option right">
+                          <div class="bundle-top"><strong>Max </strong><span></span><span class="bundle-price starter-max-yes"></span><span></span><div class="descript">Loại giá linh hoạt nhất</div>
+                          </div>
+                          <div class="bundle-detail">
+                            <div class="twoforone-warning clearfix two-for-one-message"><span></span><p>If you purchase a Max bundle online with this sale you will forfeit your Two For One.</p>
+                            </div>
+                            <div class="twoforone-warning clearfix friend-for-free-message"><span></span><p>Khuyến mại Miễn phí cho người cùng bay không áp dụng cho loại giá Max.</p>
+                            </div>
+                            <div class="twoforone-warning clearfix kids-fly-free-message"><span></span><p>If you purchase a Starter Max fare with this sale you will forfeit your Kids Fly Free. If you would like to retain your Kids Fly Free please select a Starter or Starter Plus fare.</p>
+                            </div>
+                            <div class="twoforone-warning clearfix sale-message"><span></span><p>The total price payable for fares with a Max bundle is not discounted as part of this sale.</p>
+                            </div>
+                            <ul>
+                              <li class="important">Được phép hoàn vé <em>(có áp dụng phí hoàn vé)</em></li>
+                              <li class="important">Miễn phí lựa chọn các loại chỗ ngồi <em>bao gồm cả chỗ ngồi phía trước và chỗ ngồi có chỗ để chân rộng</em></li>
+                              <li class="regular-start">Loại vé linh hoạt nhất <em>- Đổi ngày giờ bay, đổi tên và đổi hành trình miễn phí (có thể phải đóng tiền chênh lệch giá vé)</em></li>
+                              <li class="regular-start qff-voucher-def"><em>Tích lũy điểm thưởng</em> khách hàng thường xuyên <em>và</em> nâng hạng thẻ của Qantas^</li>
+                            </ul><a href="http://www.jetstar.com/VN/vi/planning-and-booking/fares/fare-rules#item03" class="overlay launch-modal" target="_blank">Xem điều kiện Max Bundle</a><div class="field max-yes"><label for="">Thêm</label><input type="checkbox" id="" name="" class="checkbox bundle-option starter-max-yes" data-price="0.00"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="business-options ">
+              <td colspan="5" class="business-expand">
+                <div class="clearfix">
+                  <div class="col1">
+                    <h4>Trong khoang Business</h4>
+                    <div class="seat-notification">
+                      <div class="icon-alert">Please Note:</div><a class="trigger-business-cabin ">Không phải tất cả các       <img src="images/clearpixel.gif" width="12" height="11" alt="" class="business-seats-tooltip">chuyến bay đều có khoang Business</a><div class="tooltip-business-cabin-info tooltip">
+                        <h4>Không phải tất cả các chuyến bay đều có khoang Business</h4>
+                        <p><strong>Khoang hạng thương gia chỉ có trên các chuyến bay quốc tế chặng dài khai thác bằng máy bay A330. Đối với các chuyến bay nối chuyến, bạn sẽ được xếp chỗ tại khoang phổ thông</strong> nơi mà các dịch vụ giải trí trên chuyến bay, đồ ăn và thức uống không bao gồm trong dịch vụ. Tuy nhiên bạn vẫn được hưởng tiêu chuẩn Hành lý của hạng thương gia bao gồm 2 kiện hành lý xách tay mỗi kiện tối đa 10kg và 30kg Hành lý ký gửi và được miễn phí lựa chọn chỗ ngồi. Vui lòng xem phần Tóm tắt đặt chỗ tại cuối trang để biết được chuyến bay nào có áp dụng khoang hạng thương gia
+</p><span class="footer"></span></div>
+                    </div>
+                    <ul>
+                      <li>Ghế rộng, bọc da</li>
+                      <li>2 X 10kg hành lý xách tay</li>
+                      <li>30kg hành lý ký gửi miễn cước</li>
+                      <li>Miễn phí đổi hành trình, tên, ngày bay, giờ bay (có thu tiền chênh lệch giá vé)</li>
+                      <li>Hệ thống dịch vụ giải trí cá nhân</li>
+                      <li>Đồ ăn, thức uống, quầy bar</li>
+                      <li>Miễn phí lựa chọn chỗ ngồi</li>
+                      <li>Bộ đồ thư giãn (trên các chuyến bay quốc tế)</li>
+                    </ul><a href="http://www.jetstar.com/VN/vi/planning-and-booking/fares/fare-rules#item04" class="overlay launch-modal" target="_blank">Xem điều kiện giá Business</a></div>
+                  <div class="col2">
+                    <div>
+                      <h4>Thêm gói dịch vụ nếu cần</h4>
+                      <div class="clearfix">
+                        <div class="option">
+                          <div class="bundle-top"><strong>Max </strong><span class="bundle-price business-max-yes"></span><div>Giá hạng sang<br></div>
+                          </div>
+                          <div class="bundle-detail">
+                            <h4>Max bundle bao gồm</h4>
+                            <ul>
+                              <li class="important">Refundable<em> (fee applies)</em></li>
+                              <li class="important qff-voucher-def">Điểm thưởng khách hàng thường xuyên và nâng hạng thẻ của Qantas</li>
+                              <li class="regular-start">Phòng chờ</li>
+                            </ul><a href="http://www.jetstar.com/VN/vi/planning-and-booking/fares/fare-rules#item05" class="overlay launch-modal" target="_blank">Xem điều kiện Max Bundle</a><div class="field max-yes"><label for="" class="business-label">Đã thêm</label><input type="checkbox" id="" name="" checked class="checkbox bundle-option business-max-yes" value="" data-price="0.00"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="legend">
+          <p>Prices quoted are per adult passenger, in VND and include airfare related surcharges, fees and taxes. Unless otherwise stated, fares are non refundable, limited changes are permitted charges apply. Starter fares include 10kg carry-on baggage. Additional fees apply for checked in baggage, which will be available for purchase on the next page. Adding checked baggage after booking costs more at the airport, over the phone and on our web site. 7kg per item cabin baggage limit applies on Qantas flights.</p>
+          <dl>
+            <dt>Khai thác bởi:</dt>
+            <dd><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-aust-nz">Jetstar Airways</dd>
+            <dd><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-asia">Jetstar Asia</dd>
+            <dd><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-pacific">Jetstar Pacific</dd>
+            <dd><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-qantas">Qantas</dd>
+            <dd><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-valuair">Valuair</dd>
+            <dd><img src="images/clearpixel.gif" width="13" height="10" alt="" class="legend legend-js-japan">Jetstar Japan</dd>
+          </dl><br><p>
+    *<a class="inline" target="_blank" href="http://www.jetstar.com/vn/vi/planning-and-booking/terms-and-conditions-jetstar-flight-vouchers">Các điều kiện và điều khoản</a> Phiếu mua hàng Jetstar được áp dụng. Một Phiếu mua hàng một khách sẽ được gửi đến địa chỉ thư điện tử mà bạn đã đăng ký khi đặt chỗ trong vòng 7 ngày kể từ ngày bạn hoàn thành chuyến bay. Nếu bạn không bay trên chuyến bay bạn sẽ không được nhận Phiếu mua hàng.
+    </p><br><p>^Hành khách thường xuyên Qantas Frequent Flyer đi trên các chuyến bay của Jetstar (JQ), Jetstar Asia (3K) và Valuair (VF) đủ điều kiện để tích điểm hành khách thường xuyên Qantas Frequent Flyer và điểm hạng thành viên (Status Credit). Tham khảo các Điều khoản và Điều kiện của Qantas Frequent Flyer tại qantas.com/frequentflyer. Vé Jetstar Pacific (BL) và Jetstar Japan (GK) không được tính điểm Qantas Frequent Flyer hoặc điểm hạng thành viên.</p>
+        </div>
+        <div id="tooltip-fare-inclusions-return" class="tooltip-fare-inclusions tooltip-fares  single clearfix">
+          <div class="starter-inclusions">
+            <ul>
+              <li>Chỗ ngồi</li>
+              <li>7kg hành lý xách tay</li>
+            </ul><a href="http://www.jetstar.com/VN/vi/planning-and-booking/fares/fare-rules#item01" class="overlay launch-modal" target="_blank">Xem điều kiện giá vé</a><p><br>Một khi bạn đã lựa chọn chuyến bay, bạn sẽ có thể thêm một loạt các tùy chọn dịch vụ cộng thêm</p>
+          </div><span class="footer"></span></div>
+      </div>
+      <div class="summary"></div>
     </div>
   </div>
   <div id="important-info" class="fares section clearfix important-info-box hide" style="display:none;" xmlns:bookinginfo="urn:bcs:extensions:bookinginfo" xmlns:formatterExtension="urn:navitaire:formatters:currency" xmlns:math="urn:bcs:extensions:math">
@@ -1100,13 +1791,18 @@
             }
           });
         </script><div id="booking-summary" class="fares section clearfix" xmlns:bookinginfo="urn:bcs:extensions:bookinginfo" xmlns:formatterExtension="urn:navitaire:formatters:currency" xmlns:math="urn:bcs:extensions:math">
-    <h1>2.Tóm tắt đặt chỗ</h1><input type="hidden" name="marketstructure" id="marketstructure" value="OneWay"><input type="hidden" id="retainedDepartureMarket" value="false"><input type="hidden" id="retainedReturnMarket" value="false"><dl class="departing oneway">
+    <h1>3.Tóm tắt đặt chỗ</h1><input type="hidden" name="marketstructure" id="marketstructure" value="RoundTrip"><input type="hidden" id="retainedDepartureMarket" value="false"><input type="hidden" id="retainedReturnMarket" value="false"><dl class="departing">
       <dt>Lượt đi</dt>
       <dd class="details">
         <p><br>Vui lòng lựa chọn lượt đi</p>
       </dd>
     </dl>
-    <dl class="returning oneway"></dl>
+    <dl class="returning">
+      <dt>Lượt về</dt>
+      <dd class="details">
+        <p><br>Vui lòng lựa chọn lượt về</p>
+      </dd>
+    </dl>
     <dl class="total-price">
       <dt>Tổng giá tiền<span> VND</span></dt>
       <dd class="details"><span class="price" data-price="0" data-currency-prefix="VND" data-currency="VND" data-point-balance="" data-point-minimum="">VND<span>0,00</span></span><p class="passengers">1 Người lớn</p><a id="ControlGroupSelectView_LinkButtonSubmit" href="#" class="btn-continue disabled"><span>Tiếp tục</span></a><p class="fine-print">Không đảm bảo giá vé này đến khi Jetstar xác nhận đặt chỗ của bạn và thanh toán đã được thực hiện đầy đủ</p>
@@ -1179,7 +1875,7 @@
             <a href="http://qantas.com.au">Qantas Group Airline</a></span><br>
           (vi-VN)
           v.1.3.116.0 d.3.3.0.266 
-          id.198  </p><img src="//static.jetstar.com/images/navitaire-logo.gif" class="navitair"></div>
+          id.194  </p><img src="//static.jetstar.com/images/navitaire-logo.gif" class="navitair"></div>
 </div></div><div id="overlay" xmlns:bookinginfo="urn:bcs:extensions:bookinginfo">
   <h1 id="modal-header" class="top"></h1><a href="#" class="top close">chận đường</a><div class="content-wrap"></div>
 </div><script src="//static.jetstar.com/js/footer.min.js?b=1.3.116.0" xmlns:bookinginfo="urn:bcs:extensions:bookinginfo"></script><script src="js/global-ajax.min.js?b=1.3.116.0" xmlns:bookinginfo="urn:bcs:extensions:bookinginfo"></script><script src="js/Jetstar/mtagconfig.min.js?b=1.3.116.0" type="text/Javascript" xmlns:bookinginfo="urn:bcs:extensions:bookinginfo"></script><script src="js/live-person-chat.min.js?b=1.3.116.0" type="text/Javascript" xmlns:bookinginfo="urn:bcs:extensions:bookinginfo"></script><script src="js/plugins/ITC_Avant_Garde_Gothic_Std_Medium_500-700_viet.font.js" xmlns:bookinginfo="urn:bcs:extensions:bookinginfo"></script><script src="js/cufon-map-viet.min.js?b=1.3.116.0" xmlns:bookinginfo="urn:bcs:extensions:bookinginfo"></script><script src="js/resources-vi.js" xmlns:bookinginfo="urn:bcs:extensions:bookinginfo"></script><script src="//static.jetstar.com/js/fares.min.js?b=1.3.116.0" xmlns:bookinginfo="urn:bcs:extensions:bookinginfo"></script><!--[if lt IE 7 ]>

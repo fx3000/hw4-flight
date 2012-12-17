@@ -155,14 +155,233 @@ namespace SearchFlight.Controllers
             {
                 FlightInfo info = new FlightInfo();
                 List<string> fee = new List<string>();
-
                 // direction=1 - 1chieu, direction=2 - 2chieu
+                #region Mekong
+               
+                try
+                {
+
+                    string dic1 = "";
+                    if (direction == 1)
+                        dic1 = "OneWay";
+                    else
+                        dic1 = "RoundTrip";
+                    string[] mktemp = dayfrom.Split('/');
+                    string mkdayfrom = mktemp[0];
+                    string mkmonthfrom = mktemp[2]+"-"+mktemp[1];
+                    string mkdayto = "";
+                    string mkmonthto = "";
+                    if (dayto != null)
+                    {
+                        mktemp = dayto.Split('/');
+                        mkdayto = mktemp[0];
+                        mkmonthto = mktemp[2] + "-" + mktemp[1];
+                    }
+                 
+                        string MKurl =
+                    
+                   "__EVENTTARGET=" +
+                    "&__EVENTARGUMENT=" +
+                    "&__VIEWSTATE=/wEPDwUBMGRk77h9CNekodLMZhdJu3riPx9ebN8=" +
+                    "&pageToken=" +
+                    "&ControlGroupSearchInfoView$AvailabilitySearchInputSearchInfoView$RadioButtonMarketStructure="+dic1 +
+                    "&originStation1=HAN" +
+                    "&ControlGroupSearchInfoView$AvailabilitySearchInputSearchInfoView$TextBoxMarketOrigin1="+from +
+                    "&destinationStation1=SGN" +
+                    "&ControlGroupSearchInfoView$AvailabilitySearchInputSearchInfoView$TextBoxMarketDestination1="+to +
+                    "&ControlGroupSearchInfoView$AvailabilitySearchInputSearchInfoView$DropDownListMarketDay1=2" + mkdayfrom +
+                    "&ControlGroupSearchInfoView$AvailabilitySearchInputSearchInfoView$DropDownListMarketMonth1=" + mkmonthfrom +
+                    "&ControlGroupSearchInfoView$AvailabilitySearchInputSearchInfoView$DropDownListMarketDateRange1=0|4" +
+                    "&originStation2=" +
+                    "&ControlGroupSearchInfoView$AvailabilitySearchInputSearchInfoView$TextBoxMarketOrigin2=Điểm đi..." +
+                    "&destinationStation2=" +
+                    "&ControlGroupSearchInfoView$AvailabilitySearchInputSearchInfoView$TextBoxMarketDestination2=Điểm đến..." +
+                    "&ControlGroupSearchInfoView$AvailabilitySearchInputSearchInfoView$DropDownListMarketDay2="+mkdayto +
+                    "&ControlGroupSearchInfoView$AvailabilitySearchInputSearchInfoView$DropDownListMarketMonth2="+mkmonthto +
+                    "&ControlGroupSearchInfoView$AvailabilitySearchInputSearchInfoView$DropDownListMarketDateRange2=0|4" +
+                    "&ControlGroupSearchInfoView$AvailabilitySearchInputSearchInfoView$DropDownListPassengerType_ADT=1" +
+                    "&ControlGroupSearchInfoView$AvailabilitySearchInputSearchInfoView$DropDownListPassengerType_CHD=0" +
+                    "&ControlGroupSearchInfoView$AvailabilitySearchInputSearchInfoView$DropDownListPassengerType_INFANT=0" +
+                    "&ControlGroupSearchInfoView$AvailabilitySearchInputSearchInfoView$DropDownListSearchBy=columnView" +
+                    "&ControlGroupSearchInfoView$AvailabilitySearchInputSearchInfoView$ButtonSubmit=Tìm chuyến bay";
+
+                    byte[] postBytes = Encoding.UTF8.GetBytes(MKurl);
+
+                    HttpWebRequest MKwebRequest = (HttpWebRequest)WebRequest.Create(" https://booking.airmekong.com.vn/SearchInfo.aspx");
+                    MKwebRequest.Method = "POST";
+                    CookieContainer a = new CookieContainer();
+
+                    MKwebRequest.CookieContainer = a;
+                    MKwebRequest.ContentType = "application/x-www-form-urlencoded";
+                    MKwebRequest.ContentLength = postBytes.Length;
+
+                    Stream MKpostStream = MKwebRequest.GetRequestStream();
+                    MKpostStream.Write(postBytes, 0, postBytes.Length);
+                    MKpostStream.Close();
+
+                    HttpWebResponse MKwebResponse = (HttpWebResponse)MKwebRequest.GetResponse();
+
+                    Console.WriteLine(MKwebResponse.StatusCode);
+                    Console.WriteLine(MKwebResponse.Server);
+
+                    Stream MKresponseStream = MKwebResponse.GetResponseStream();
+                    StreamReader MKresponseStreamReader = new StreamReader(MKresponseStream, Encoding.UTF8);
+                    string MKresult = MKresponseStreamReader.ReadToEnd();
+
+                    String MKsDiskFile = HttpContext.Current.Server.MapPath("~/result.htm");
+                    //string root = HttpContext.Current.Server.MapPath;
+                    StreamWriter MKoWriter = new StreamWriter(MKsDiskFile);
+                    MKoWriter.Write(MKresult);
+
+                    MKoWriter.Close();
+                    MKresponseStreamReader.Close();
+                    MKwebResponse.Close();
+
+                    HtmlAgilityPack.HtmlWeb webMK = new HtmlWeb();
+                    HtmlAgilityPack.HtmlDocument docMK = webMK.Load(HttpContext.Current.Server.MapPath("~/result.htm"));
+                    string MKpath = "//table[@id='availabilityTable0']";
+                    foreach(HtmlNode link in docMK.DocumentNode.SelectNodes(MKpath))
+                    {
+                        
+                        foreach (HtmlNode link1 in link.SelectNodes(link.XPath + "/tr[td[@class='left footnote']]"))
+                        {
+                            FlightInfo MKinfo = new FlightInfo();
+                            MKinfo.From = AirPortFrom + "  ("+from+")";
+                            MKinfo.To = AirPortTo + "  (" + to + ")";
+                            MKinfo.Hang = "Mekong Air";
+                            MKinfo.Image = "http://nammekong.vn/UserFiles/Image/logo_airmekong.png.jpeg";
+                            string[] temp;
+                            HtmlNode MKTimeFrom = link1.SelectSingleNode(link1.XPath+"/td[2]");
+                            temp = MKTimeFrom.InnerText.Split(' ');
+                            MKinfo.TimeFrom = temp[0];
+                            HtmlNode MKTimeTo= link1.SelectSingleNode(link1.XPath + "/td[3]");
+                            temp = MKTimeTo.InnerText.Split(' ');
+                            
+                            MKinfo.TimeTo = temp[0];
+                            HtmlNode MKfee1 = link1.SelectSingleNode(link1.XPath + "/td[8]/p[1]");
+                            if (MKfee1 == null)
+                            {
+                                HtmlNode MKfee2 = link1.SelectSingleNode(link1.XPath + "/td[7]/p[1]");
+                                if (MKfee2 == null)
+                                {
+                                    HtmlNode MKfee3 = link1.SelectSingleNode(link1.XPath + "/td[6]/p[1]");
+                                    if (MKfee3 == null)
+                                    {
+                                        HtmlNode MKfee4 = link1.SelectSingleNode(link1.XPath + "/td[5]/p[1]");
+                                        if (MKfee4 == null)
+                                        {
+                                            HtmlNode MKfee5 = link1.SelectSingleNode(link1.XPath + "/td[4]/p[1]");
+                                            if (MKfee5 != null)
+                                            {
+                                                MKinfo.GiaTien = MKfee5.InnerText + "VND";
+                                                list.Add(MKinfo);
+                                            }
+                                        }
+                                        else
+                                        {
+                                            MKinfo.GiaTien = MKfee4.InnerText + "VND";
+                                            list.Add(MKinfo);
+                                        }
+                                    }
+                                    else
+                                    {
+                                        MKinfo.GiaTien = MKfee3.InnerText + "VND";
+                                        list.Add(MKinfo);
+                                    }
+                                }
+                                else
+                                {
+                                    MKinfo.GiaTien = MKfee2.InnerText + "VND";
+                                    list.Add(MKinfo);
+                                }
+                            }
+                            else
+                            {
+                                MKinfo.GiaTien = MKfee1.InnerText+"VND";
+                                list.Add(MKinfo);
+                            }
+                        }
+
+                    }
+                    MKpath = "//table[@id='availabilityTable1']";
+                    foreach (HtmlNode link in docMK.DocumentNode.SelectNodes(MKpath))
+                    {
+
+                        foreach (HtmlNode link1 in link.SelectNodes(link.XPath + "/tr[td[@class='left footnote']]"))
+                        {
+                            FlightInfo MKinfo = new FlightInfo();
+                            MKinfo.From = AirPortTo + "  (" + to + ")";
+                            MKinfo.To = AirPortFrom + "  (" + from + ")";
+                            MKinfo.Hang = "Mekong Air";
+                            MKinfo.Image = "http://nammekong.vn/UserFiles/Image/logo_airmekong.png.jpeg";
+                            string[] temp;
+                            HtmlNode MKTimeFrom = link1.SelectSingleNode(link1.XPath + "/td[2]");
+                            temp = MKTimeFrom.InnerText.Split(' ');
+                            MKinfo.TimeFrom = temp[0];
+                            HtmlNode MKTimeTo = link1.SelectSingleNode(link1.XPath + "/td[3]");
+                            temp = MKTimeTo.InnerText.Split(' ');
+                            MKinfo.TimeTo = temp[0];
+                            HtmlNode MKfee1 = link1.SelectSingleNode(link1.XPath + "/td[8]/p[1]");
+                            if (MKfee1 == null)
+                            {
+                                HtmlNode MKfee2 = link1.SelectSingleNode(link1.XPath + "/td[7]/p[1]");
+                                if (MKfee2 == null)
+                                {
+                                    HtmlNode MKfee3 = link1.SelectSingleNode(link1.XPath + "/td[6]/p[1]");
+                                    if (MKfee3 == null)
+                                    {
+                                        HtmlNode MKfee4 = link1.SelectSingleNode(link1.XPath + "/td[5]/p[1]");
+                                        if (MKfee4 == null)
+                                        {
+                                            HtmlNode MKfee5 = link1.SelectSingleNode(link1.XPath + "/td[4]/p[1]");
+                                            if (MKfee5 != null)
+                                            {
+                                                MKinfo.GiaTien = MKfee5.InnerText + "VND";
+                                                list.Add(MKinfo);
+                                            }
+                                        }
+                                        else
+                                        {
+                                            MKinfo.GiaTien = MKfee4.InnerText + "VND";
+                                            list.Add(MKinfo);
+                                        }
+                                    }
+                                    else
+                                    {
+                                        MKinfo.GiaTien = MKfee3.InnerText + "VND";
+                                        list.Add(MKinfo);
+                                    }
+                                }
+                                else
+                                {
+                                    MKinfo.GiaTien = MKfee2.InnerText + "VND";
+                                    list.Add(MKinfo);
+                                }
+                            }
+                            else
+                            {
+                                MKinfo.GiaTien = MKfee1.InnerText + "VND";
+                                list.Add(MKinfo);
+                            }
+                        }
+
+                    }
+                    if (true)
+                    {
+                        int aaa = 2;
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                }
+                #endregion             
+                #region Jet
                 string dic = "";
                 if (direction == 1)
                     dic = "OneWay";
                 else
                     dic = "RoundTrip";
-                #region Jet
                 string Url1 =
         "&__EVENTARGUMENT=" +
         "&__VIEWSTATE=/wEPDwUBMGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgEFJ01lbWJlckxvZ2luU2VhcmNoVmlldyRtZW1iZXJfUmVtZW1iZXJtZTxtWS/I2BXFBfalk96y3LBuGXXD" +
@@ -281,13 +500,13 @@ namespace SearchFlight.Controllers
                                 t = JetFee.InnerText;
                                 t = t.Remove(0, 3) + "VND";
                                 JetInfo.GiaTien = t;
+                                list.Add(JetInfo);
                             }
                             else
                             {
-                                t = "không có";
-                                JetInfo.GiaTien = t;
+                                
                             }
-                            list.Add(JetInfo);
+                            
                         }
                     }
                 }
@@ -299,6 +518,7 @@ namespace SearchFlight.Controllers
 
 
                 #endregion
+
                 #region VN Airlines
                 if (direction == 1)
                     dic = "onewaytravel";
@@ -350,50 +570,55 @@ namespace SearchFlight.Controllers
                         monthfrom = "DEC";
                         break;
                 }
-                string[] datetimeto = dayto.Split('/');
-                string ngayto = datetimeto[0];
-                so = Convert.ToInt32(ngayto);
-                ngayto = so.ToString();
                 string monthto = "";
-                monthto = datetimeto[1];
-                switch (monthto)
+                string ngayto="";
+                if (dayto != null)
                 {
-                    case "01":
-                        monthto = "JAN";
-                        break;
-                    case "02":
-                        monthto = "FEB";
-                        break;
-                    case "03":
-                        monthto = "MAR";
-                        break;
-                    case "04":
-                        monthto = "APR";
-                        break;
-                    case "05":
-                        monthto = "MAY";
-                        break;
-                    case "06":
-                        monthto = "JUN";
-                        break;
-                    case "07":
-                        monthto = "JUL";
-                        break;
-                    case "08":
-                        monthto = "AUG";
-                        break;
-                    case "09":
-                        monthto = "SEP";
-                        break;
-                    case "10":
-                        monthto = "OCT";
-                        break;
-                    case "11":
-                        monthto = "NOV";
-                        break;
-                    case "12":
-                        monthto = "DEC";
-                        break;
+                    string[] datetimeto = dayto.Split('/');
+                    ngayto = datetimeto[0];
+                    so = Convert.ToInt32(ngayto);
+                    ngayto = so.ToString();
+                    monthto = "";
+                    monthto = datetimeto[1];
+                    switch (monthto)
+                    {
+                        case "01":
+                            monthto = "JAN";
+                            break;
+                        case "02":
+                            monthto = "FEB";
+                            break;
+                        case "03":
+                            monthto = "MAR";
+                            break;
+                        case "04":
+                            monthto = "APR";
+                            break;
+                        case "05":
+                            monthto = "MAY";
+                            break;
+                        case "06":
+                            monthto = "JUN";
+                            break;
+                        case "07":
+                            monthto = "JUL";
+                            break;
+                        case "08":
+                            monthto = "AUG";
+                            break;
+                        case "09":
+                            monthto = "SEP";
+                            break;
+                        case "10":
+                            monthto = "OCT";
+                            break;
+                        case "11":
+                            monthto = "NOV";
+                            break;
+                        case "12":
+                            monthto = "DEC";
+                            break;
+                    }
                 }
                 string Url = "https://cat.sabresonicweb.com/SSWVN/meridia?language=vi&posid=B3QE&page=requestAirMessage_air&action=airRequest&realrequestAir=realRequestAir&actionType=nonFlex&classService=CoachClass&currency=VND&"
                 + "depTime=0600"

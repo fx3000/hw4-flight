@@ -61,3 +61,4 @@ input[type="submit"]:hover {
 .search-button{ float: right;}
 .search-result{ margin-top: 20px;float: left;width: 100%;}
 #loadingImage{ margin: 0 auto;display: none;text-align: center;}
+.error-msg{ color: red;font-weight: bold;}

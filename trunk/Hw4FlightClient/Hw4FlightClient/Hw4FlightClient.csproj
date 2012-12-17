@@ -108,6 +108,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AirPort.cs" />
     <Compile Include="Models\DbContext.cs" />
     <Compile Include="Models\FlightInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -11,6 +11,8 @@ namespace Hw4FlightClient.Models
 {
     static public class DbContext
     {
+        private static List<AirPort> airPorts = new List<AirPort>();
+
         public static string HttpGet(string url)
         {
             var req = WebRequest.Create(url) as HttpWebRequest;
@@ -45,6 +47,34 @@ namespace Hw4FlightClient.Models
             var js = new JavaScriptSerializer();
             var flightInfos = js.Deserialize<FlightInfo[]>(json);
             return flightInfos.ToList();
+        }
+    
+        public static List<AirPort>  GetAllAirPort()
+        {
+            var list = new List<AirPort>
+                               {
+                                   new AirPort {Id = "BMT", Name = "Buôn Mê Thuột"},
+                                   new AirPort {Id = "CAH", Name = "Cà Mau (CAH)"},
+                                   new AirPort {Id = "VCS", Name = "Côn Đảo (VCS)"},
+                                   new AirPort {Id = "VCA", Name = "Cần Thơ (VCA)"},
+                                   new AirPort {Id = "HUI", Name = "Huế (HUI)"},
+                                   new AirPort {Id = "HAN", Name = "Hà Nội (HAN)"},
+                                   new AirPort {Id = "NHA", Name = "Hải Phòng (HPH)"},
+                                   new AirPort {Id = "NHA", Name = "Nha Trang (NHA)"},
+                                   new AirPort {Id = "PQC", Name = "Phú Quốc (PQC)"}
+                               };
+
+            return list;
+        }
+
+        static public List<AirPort> SearchAirPort(string str)
+        {
+            if(airPorts == null || airPorts.Count <= 0)
+            {
+                airPorts = GetAllAirPort();
+            }
+
+            return airPorts.Where(airPort => airPort.Name.Contains(str)).ToList();
         }
     }
 }

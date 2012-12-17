@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AirPorts>
+	<Port  id="BMV"  name="Buôn Ma Thuột (BMV)"/>
+	<Port  id="CAH" name="Cà Mau (CAH)"/>
+	<Port  id="VCS" name="Côn Đảo (VCS)"/>
+	<Port  id="VCA" name="Cần Thơ (VCA)"/>
+	<Port  id="HUI" name="Huế (HUI"/>
+	<Port  id="HAN" name="Hà Nội (HAN)"/>
+	<Port  id="HPH" name="Hải Phòng (HPH)"/>
+	<Port  id="NHA" name="Nha Trang (NHA)"/>
+	<Port  id="PQC" name="Phú Quốc (PQC)"/>
+	<Port  id="PXU" name="Pleiku (PXU)"/>
+	<Port  id="UIH" name="Quy Nhơn (UIH)"/>
+	<Port  id="VKG" name="Rạch Giá (VKG)"/>
+	<Port  id="VCL" name="Tam Kỳ (VCL)"/>
+	<Port  id="SGN" name="Tp Hồ Chí Minh (SGN)"/>
+	<Port  id="TBB" name="Tuy Hòa (TBB)"/>
+	<Port  id="VII" name="Vinh (VII)"/>
+	<Port  id="DIN" name="Điện Biên (DIN)"/>
+	<Port  id="DLI" name="Đà Lạt (DLI)"/>
+	<Port  id="DAD" name="Đà Nẵng (DAD)"/>
+	<Port  id="VDH" name="Đồng Hới (VDH)"/>
+</AirPorts>

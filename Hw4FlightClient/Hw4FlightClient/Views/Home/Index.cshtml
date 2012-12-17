@@ -12,16 +12,23 @@
         <table>
             <tbody>
                 <tr>
-                    <td><input type="radio" id="1way"/><span>Một chiều</span></td>
-                    <td><input type="radio" id="2way"/><span>Khứ hồi</span></td>
+                    <td><input type="radio" id="1way" checked="checked" /><span>Một chiều</span></td>
+                    <td><input type="radio" id="2way"><span>Khứ hồi</span></input></td>
                 </tr>
                 <tr>
                     <td><b>Điểm đi:</b><i>Thành phố hoặc tên sân bay</i></td>
                     <td><b>Điểm đến:</b><i>Thành phố hoặc tên sân bay</i></td>
                 </tr>
                 <tr>
-                    <td><input type="text" id="placestart"/></td>
-                    <td><input type="text" id="placeend"/></td>
+                    <td>
+                        <input type="text" id="placestart"/>
+                        <p class="error-msg" id="err-msg-placestart">* Bạn chưa chọn nơi đi</p>
+                    </td>
+
+                    <td>
+                        <input type="text" id="placeend"/>
+                        <p class="error-msg" id="err-msg-placeend">* Bạn chưa chọn nơi đến</p>
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -69,38 +76,71 @@
 </div>
 
 <script>
+    $("#1way").click(function() {
+        //alert($(this).attr('checked'));
+        //if ($(this).attr('checked') == 'checked') return;
+        
+        $(this).attr('checked','checked');
+        $('#2way').removeAttr('checked');
+    });
+    $("#2way").click(function() {
+       
+        $(this).attr('checked','checked');
+        $('#1way').removeAttr('checked');
+    });
+
+    $('.error-msg').hide();
+
+
     $(function () {
+        $('#datestart').datetimepicker({
+            altField: "#timestart",
+            dateFormat: "dd/mm/yy",
+            numberOfMonths: 2,
+            minDate: 0
+        });
+        
         $("#dateend").datetimepicker({
             altField: "#timeend",
-            dateFormat: "dd/mm/yy"
+            hour: 00,
+            minute: 00,
+            dateFormat: "dd/mm/yy",
+            numberOfMonths: 2,
+            minDate: 0
         });
-        $('#datestart').datetimepicker({
-	        altField: "#timestart",
-	        dateFormat: "dd/mm/yy"
-        });
+        
+        var today = new Date();
+        var day = today.getDate + 5;
+        $("#datestart").datetimepicker('setDate', today );
+        
+        $("#dateend").datetimepicker('setDate', day);
+        
     });
 
     function Search() {
-        
+        $('.error-msg').hide();
         var  timefrom = $('#timestart').val();
         var timeto = $('#timeend').val();
-        var direction = 1;
-        var from = $('#placestart').val();;
-        var to = $('#placeend').val(); ;
-        var datefrom = $('#datestart').val(); ;
-        var dateto = $('#dateend').val(); ;
-        //alert(timefrom);
+        var direction = $('#1way').attr('checked') == 'checked' ? 1 : 2;
+        var from = $('#placestart').val();
+        var to = $('#placeend').val();
+        var datefrom = $('#datestart').val();
+        var dateto = $('#dateend').val();
+        //Test input
+        if(from == null || from == ''){$('#err-msg-placestart').show(); return;}
+        if(to == null || to == ''){$('#err-msg-placeend').show(); return;}
+        // Ajax Post
         $.ajax({
-        type: 'POST',
-        url: '/Home/Search?timefrom='+timefrom+'&timeto='+timeto+'&direction='+direction+'&from='+from+'&to='+to+'&datefrom='+datefrom+'&dateto=' + dateto,
-        before: $('#loadingImage').fadeIn("fast"),
-        success: function(result) { 
-            $('#result').html(result);
-            //alert(result);
-            $('#loadingImage').fadeOut("fast");           
-        },
-        complete: function() { $('#loadingImage').fadeOut("fast"); },
-        //timeout: 1000
-    });
+            type: 'POST',
+            url: '/Home/Search?timefrom='+timefrom+'&timeto='+timeto+'&direction='+direction+'&from='+from+'&to='+to+'&datefrom='+datefrom+'&dateto=' + dateto,
+            before: $('#loadingImage').fadeIn("fast"),
+            success: function(result) { 
+                $('#result').html(result);
+                //alert(result);
+                $('#loadingImage').fadeOut("fast");           
+            },
+            complete: function() { $('#loadingImage').fadeOut("fast"); },
+            //timeout: 1000
+        });
     }
-    </script>
+</script>

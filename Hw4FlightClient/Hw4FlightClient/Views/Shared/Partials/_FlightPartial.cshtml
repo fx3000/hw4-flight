@@ -1,0 +1,26 @@
+﻿@model Hw4FlightClient.Models.FlightInfo
+
+<tr class="flight">
+    <td class="cost">
+        <p class="cost-value">@Model.GiaTien.Substring(0, Model.GiaTien.Length - 3)</p>
+        <p>VNĐ</p>
+    </td>
+
+    <td class="start">
+        <p class="time">@Model.TimeFrom</p>
+        <p class="place">@Model.From</p>
+    </td>
+            
+    <td class="end">
+        <p class="time">@Model.TimeTo</p>
+        <p class="place">@Model.To</p>
+    </td>
+            
+    <td class="logo">
+        <img src="@Model.Image" title="@Model.Hang"/>
+    </td>
+            
+    <td class="choise">
+        <a href="@Url.Action("PutTicket", "Home", new{id = Model.Id})">Đặt chỗ</a>
+    </td>
+</tr>

@@ -7,6 +7,7 @@ namespace Hw4FlightClient.Models
 {
     public class FlightInfo
     {
+        public int Id;
         public string From { get; set; }
         public string To { get; set; }
         public string TimeFrom { get; set; }

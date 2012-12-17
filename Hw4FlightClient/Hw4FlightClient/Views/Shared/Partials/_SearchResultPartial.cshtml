@@ -2,13 +2,73 @@
 
 @model List<FlightInfo>
 
+@if (Model == null) {return;}
+
 <div>
     <div class="post-title">
         <a>Tìm được tất cả <span style="color: #F38533; font-size: 120%;">@Model.Count</span> chuyến bay</a>
     </div>
-
-    @foreach (FlightInfo flight in Model)
-    {
-        <h1 class="widget-title">@flight.From</h1>
-    }
+    
+    <div class="controls">
+        <select id="sort">
+            <option value="0">- Chọn cách sắp xếp -</option>
+            <option value="1">Sắp xếp giá vé tăng dần</option>
+            <option value="2">Sắp xếp giá vé giảm dần</option>
+        </select>
+        
+        <select id="filter">
+            <option value="0">- Lọc theo hãng máy bay -</option>
+            <option value="Jet Star">Jet Star</option>
+            <option value="VietName Airlines">Vietnam Airlines</option>
+            <option value="Air Mekong">Air Mekong</option>
+        </select>
+    </div>
+    <div id="loadingImage2">
+            <img src="../../../Contents/Images/loading.gif" />
+        </div>
+    <table class="flights">
+        <tbody>
+            @foreach(FlightInfo flight in Model)
+            {
+                Html.RenderPartial("Partials/_FlightPartial", flight);
+            }
+        </tbody>
+    </table>
 </div>
+
+
+<script>
+    $('#sort').change(function () {
+        //alert(this.val.toString());
+        var type = $(this).val();
+        if(type == 0) return;
+        $.ajax({
+            type: 'POST',
+            url: '/Home/Sort/?type=' + type,
+            before: $('#loadingImage2').fadeIn("fast"),
+            success: function(result) { 
+                $('#result').html(result);
+                //alert(result);
+                $('#loadingImage2').fadeOut("fast");           
+            },
+            complete: function() { $('#loadingImage2').fadeOut("fast"); },
+            //timeout: 1000
+        });
+    });
+    $('#filter').change(function () {
+        var type = $(this).val();
+        if(type == 0) return;
+        $.ajax({
+            type: 'POST',
+            url: '/Home/Filter/?type=' + type,
+            before: $('#loadingImage2').fadeIn("fast"),
+            success: function(result) { 
+                $('#result').html(result);
+                //alert(result);
+                $('#loadingImage2').fadeOut("fast");           
+            },
+            complete: function() { $('#loadingImage2').fadeOut("fast"); },
+            //timeout: 1000
+        });
+    });
+</script>

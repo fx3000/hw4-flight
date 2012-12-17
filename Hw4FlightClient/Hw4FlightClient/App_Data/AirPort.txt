@@ -1,0 +1,22 @@
+﻿{
+	"BMV": "Buôn Ma Thuột (BMV)",
+	"CAH": "Cà Mau (CAH)",
+	"VCS": "Côn Đảo (VCS)",
+	"VCA": "Cần Thơ (VCA)",
+	"HUI": "Huế (HUI)",
+	"HAN": "Hà Nội (HAN)",
+	"HPH": "Hải Phòng (HPH)",
+	"NHA": "Nha Trang (NHA)",
+	"PQC": "Phú Quốc (PQC)
+	"PXU": "Pleiku (PXU)",
+	"UIH": "Quy Nhơn (UIH)",
+	"VKG": "Rạch Giá (VKG)",
+	"VCL": "Tam Kỳ (VCL)",
+	"SGN": "Tp Hồ Chí Minh (SGN)",
+	"TBB": "Tuy Hòa (TBB)",
+	"VII": "Vinh (VII)",
+	"DIN": "Điện Biên (DIN)",
+	"DLI": "Đà Lạt (DLI)",
+	"DAD": "Đà Nẵng (DAD)",
+	"VDH": "Đồng Hới (VDH)"
+}
